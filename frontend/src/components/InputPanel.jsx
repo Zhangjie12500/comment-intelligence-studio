@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { ExternalLink, RefreshCw, MessageSquare, Play, X } from 'lucide-react';
 import Card from './Card';
 
-export default function InputPanel({ onSubmit, isLoading }) {
+export default function InputPanel({ onSubmit, isSubmitting, isPolling }) {
   const [urls, setUrls] = useState('');
   const [limit, setLimit] = useState(20);
   const [forceRefresh, setForceRefresh] = useState(false);
   const [includeReplies, setIncludeReplies] = useState(true);
+
+  const isActive = isSubmitting || isPolling;
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -14,6 +16,15 @@ export default function InputPanel({ onSubmit, isLoading }) {
     if (!list.length) return;
     onSubmit({ urls: list, limit, force_refresh: forceRefresh, include_replies: includeReplies });
   }
+
+  const btnLabel = isSubmitting
+    ? '后端启动中...'
+    : isPolling
+      ? '分析中，请稍候...'
+      : '开始分析';
+
+  const btnBg   = isActive ? 'rgba(255,255,255,0.04)' : '#fafafa';
+  const btnColor = isActive ? 'rgba(255,255,255,0.30)' : '#09090b';
 
   return (
     <Card className="flex flex-col">
@@ -33,7 +44,8 @@ export default function InputPanel({ onSubmit, isLoading }) {
             onChange={e => setUrls(e.target.value)}
             placeholder="粘贴 B站 / YouTube 视频链接，每行一个&#10;&#10;示例：&#10;https://www.bilibili.com/video/BV1GJ411x7h7&#10;https://www.youtube.com/watch?v=dQw4w9WgXcQ"
             rows={7}
-            className="w-full bg-transparent text-sm text-white/80 placeholder-white/25 resize-none outline-none leading-relaxed"
+            disabled={isActive}
+            className="w-full bg-transparent text-sm text-white/80 placeholder-white/25 resize-none outline-none leading-relaxed disabled:opacity-40"
             style={{ fontFamily: 'inherit' }}
           />
         </div>
@@ -54,7 +66,8 @@ export default function InputPanel({ onSubmit, isLoading }) {
                 step={5}
                 value={limit}
                 onChange={e => setLimit(Number(e.target.value))}
-                className="w-24 h-1 rounded-full appearance-none cursor-pointer bg-white/10"
+                disabled={isActive}
+                className="w-24 h-1 rounded-full appearance-none cursor-pointer bg-white/10 disabled:cursor-not-allowed"
               />
               <span className="text-xs font-mono text-white/70 w-8 text-right">{limit}</span>
             </div>
@@ -68,6 +81,7 @@ export default function InputPanel({ onSubmit, isLoading }) {
               value={forceRefresh}
               onChange={setForceRefresh}
               icon={<RefreshCw size={10} />}
+              disabled={isActive}
             />
             <Toggle
               label="包含回复"
@@ -75,6 +89,7 @@ export default function InputPanel({ onSubmit, isLoading }) {
               value={includeReplies}
               onChange={setIncludeReplies}
               icon={<MessageSquare size={10} />}
+              disabled={isActive}
             />
           </div>
         </div>
@@ -83,22 +98,19 @@ export default function InputPanel({ onSubmit, isLoading }) {
         <div className="p-4 mt-auto">
           <button
             type="submit"
-            disabled={isLoading || !urls.trim()}
-            className="w-full py-2.5 rounded-lg text-sm font-medium flex items-center justify-center gap-2 transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed"
-            style={{
-              background: urls.trim() && !isLoading ? '#fafafa' : 'rgba(255,255,255,0.06)',
-              color: urls.trim() && !isLoading ? '#09090b' : 'rgba(255,255,255,0.35)',
-            }}
+            disabled={isActive || !urls.trim()}
+            className="w-full py-2.5 rounded-lg text-sm font-medium flex items-center justify-center gap-2 transition-all duration-150 disabled:cursor-not-allowed"
+            style={{ background: btnBg, color: btnColor }}
           >
-            {isLoading ? (
+            {isActive ? (
               <>
                 <span className="w-3.5 h-3.5 rounded-full border-2 border-current border-t-transparent animate-spin" />
-                正在分析评论...
+                {btnLabel}
               </>
             ) : (
               <>
                 <Play size={13} />
-                开始分析
+                {btnLabel}
               </>
             )}
           </button>
@@ -108,7 +120,7 @@ export default function InputPanel({ onSubmit, isLoading }) {
   );
 }
 
-function Toggle({ label, value, onChange, icon, sub }) {
+function Toggle({ label, value, onChange, icon, sub, disabled }) {
   return (
     <div className="flex items-center justify-between">
       <div className="flex items-center gap-1.5">
@@ -118,8 +130,9 @@ function Toggle({ label, value, onChange, icon, sub }) {
       </div>
       <button
         type="button"
-        onClick={() => onChange(v => !v)}
-        className="w-9 h-5 rounded-full relative transition-all duration-200"
+        onClick={() => !disabled && onChange(v => !v)}
+        disabled={disabled}
+        className="w-9 h-5 rounded-full relative transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
         style={{
           background: value ? 'rgba(250,250,250,0.7)' : 'rgba(255,255,255,0.08)',
           border: `1px solid ${value ? 'rgba(250,250,250,0.3)' : 'rgba(255,255,255,0.1)'}`,

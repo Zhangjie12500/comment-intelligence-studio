@@ -1,20 +1,26 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { Circle } from 'lucide-react';
+import { Circle, AlertTriangle } from 'lucide-react';
 import { createJob, getJob } from './lib/api';
 import InputPanel from './components/InputPanel';
 import JobStatusPanel from './components/JobStatusPanel';
 import TaskCard from './components/TaskCard';
 import AnalysisSection from './components/AnalysisSection';
-import Card from './components/Card';
 
 const POLL_MS = 2000;
+const COLD_START_THRESHOLD_MS = 15000;
 
 export default function App() {
   const [job, setJob] = useState(null);
   const [report, setReport] = useState(null);
+  /** isSubmitting = POST request in flight (cold-start window) */
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  /** isLoading = polling active */
   const [isLoading, setIsLoading] = useState(false);
   const [pageError, setPageError] = useState('');
+  /** coldStartHint = true when POST succeeded but no polling started after 15s */
+  const [coldStartHint, setColdStartHint] = useState(false);
   const pollRef = useRef(null);
+  const submittingSinceRef = useRef(null);
 
   const stopPolling = useCallback(() => {
     if (pollRef.current) { clearInterval(pollRef.current); pollRef.current = null; }
@@ -38,6 +44,10 @@ export default function App() {
 
   const startPolling = useCallback((jobId) => {
     stopPolling();
+    submittingSinceRef.current = null;
+    setColdStartHint(false);
+    setIsSubmitting(false);
+    setIsLoading(true);
     pollRef.current = setInterval(async () => {
       try {
         const data = await getJob(jobId);
@@ -53,30 +63,46 @@ export default function App() {
   }, [stopPolling]);
 
   async function handleSubmit(payload) {
-    setIsLoading(true);
     setPageError('');
     setReport(null);
+    setColdStartHint(false);
     stopPolling();
+    setIsLoading(false);
+
+    // Mark submission start — button enters "后端启动中" state
+    setIsSubmitting(true);
+    submittingSinceRef.current = Date.now();
+
     try {
       const data = await createJob(payload);
       setJob(data);
       setPageError(data.error || '');
-      const allDone = data.tasks?.every(t => t.status === 'done' || t.status === 'failed');
-      if (allDone) {
-        setIsLoading(false);
-        await loadReport(data);
-      } else {
-        startPolling(data.job_id);
-      }
+
+      // Immediate polling start (even if all done, for consistency)
+      startPolling(data.job_id);
     } catch (err) {
-      setPageError(err.message);
-      setIsLoading(false);
+      submittingSinceRef.current = null;
+      setIsSubmitting(false);
+      setPageError(err.message || '请求失败，请检查后端是否启动');
     }
   }
+
+  // Cold-start detector: show hint after 15s if POST succeeded but no job yet
+  useEffect(() => {
+    if (!submittingSinceRef.current) return;
+    const timer = setTimeout(() => {
+      // Still submitting after 15s → cold start likely
+      if (submittingSinceRef.current && !job) {
+        setColdStartHint(true);
+      }
+    }, COLD_START_THRESHOLD_MS);
+    return () => clearTimeout(timer);
+  }, [isSubmitting, job]);
 
   useEffect(() => () => stopPolling(), [stopPolling]);
 
   const tasks = job?.tasks || [];
+  const anySubmitting = isSubmitting || isLoading;
 
   return (
     <div style={{ minHeight: '100vh', background: '#09090b' }}>
@@ -131,6 +157,30 @@ export default function App() {
           </div>
         )}
 
+        {/* cold-start hint */}
+        {coldStartHint && (
+          <div style={{
+            marginBottom: 20,
+            padding: '12px 16px',
+            borderRadius: 10,
+            background: 'rgba(251,191,36,0.06)',
+            border: '1px solid rgba(251,191,36,0.2)',
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: 8,
+          }}>
+            <AlertTriangle size={14} style={{ color: '#fbbf24', marginTop: 1, flexShrink: 0 }} />
+            <div>
+              <p style={{ fontSize: 12, color: '#fbbf24', lineHeight: 1.5, fontWeight: 500 }}>
+                后端可能正在冷启动，首次请求通常需要 20–40 秒，请稍候…
+              </p>
+              <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', marginTop: 3 }}>
+                Render 免费版在 15 分钟无活动后会休眠，唤醒需要等待。
+              </p>
+            </div>
+          </div>
+        )}
+
         <div style={{
           display: 'grid',
           gridTemplateColumns: '300px 1fr 280px',
@@ -139,7 +189,11 @@ export default function App() {
         }}>
           {/* ── Left: Input ── */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            <InputPanel onSubmit={handleSubmit} isLoading={isLoading} />
+            <InputPanel
+              onSubmit={handleSubmit}
+              isSubmitting={isSubmitting}
+              isPolling={isLoading}
+            />
           </div>
 
           {/* ── Center: Analysis ── */}

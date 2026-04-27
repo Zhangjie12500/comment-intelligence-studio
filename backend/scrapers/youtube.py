@@ -18,6 +18,14 @@ class YouTubeError(RuntimeError):
 
 
 def extract_video_id(url: str) -> str:
+    # ── Strategy 1: regex directly on raw URL (fastest, no network needed) ──
+    # Handles all formats without a redirect request.
+    # Pattern A: youtu.be/VIDEO_ID[?...]
+    m = re.search(r"(?:youtu\.be/|youtube\.com/(?:shorts/|embed/|v/))([0-9A-Za-z_-]{6,})", url)
+    if m:
+        return m.group(1)
+
+    # ── Strategy 2: follow redirects and parse query string ──
     u = resolve_url(url)
     p = urlparse(u)
     host = (p.netloc or "").lower().split(":")[0]
@@ -32,10 +40,40 @@ def extract_video_id(url: str) -> str:
         m = re.search(r"/shorts/([0-9A-Za-z_-]{6,})", p.path)
         if m:
             return m.group(1)
-        m = re.search(r"/embed/([0-9A-Za-z_-]{6,})", p.path)
-        if m:
-            return m.group(1)
-    raise YouTubeError("无法从 YouTube 链接解析 videoId")
+
+    raise YouTubeError("无法从 YouTube 链接解析 videoId，请检查链接格式是否正确")
+
+
+# ── Standalone unit tests ──────────────────────────────────────────
+if __name__ == "__main__":
+    cases = [
+        ("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "dQw4w9WgXcQ"),
+        ("https://youtu.be/dQw4w9WgXcQ", "dQw4w9WgXcQ"),
+        ("https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=123", "dQw4w9WgXcQ"),
+        ("https://youtu.be/dQw4w9WgXcQ?t=123", "dQw4w9WgXcQ"),
+        ("https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=xxx&index=5", "dQw4w9WgXcQ"),
+        ("https://youtu.be/abc123XYZ-?t=456", "abc123XYZ"),
+        ("https://www.youtube.com/shorts/abc123XYZ", "abc123XYZ"),
+        ("https://www.youtube.com/embed/abc123XYZ", "abc123XYZ"),
+        ("https://www.youtube.com/v/abc123XYZ", "abc123XYZ"),
+    ]
+    all_pass = True
+    for raw_url, expected in cases:
+        try:
+            result = extract_video_id(raw_url)
+            ok = result == expected
+        except Exception as e:
+            ok = False
+            result = str(e)
+        status = "PASS" if ok else "FAIL"
+        if not ok:
+            all_pass = False
+        print(f"[{status}] {raw_url}")
+        if not ok:
+            print(f"       expected={expected}  got={result}")
+    print()
+    print("All tests passed!" if all_pass else "SOME TESTS FAILED!")
+
 
 
 def is_english(text: str) -> bool:

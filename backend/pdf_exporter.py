@@ -35,30 +35,48 @@ def _exports_base(project_backend_dir: str) -> str:
 
 
 def _try_register_cjk_font() -> None:
-    # Best-effort: register one available CJK font, but never fail.
+    """Try to register a CJK-capable font from common system paths.
+    Returns the registered font name on success, None on complete failure.
+    """
     try:
         from reportlab.pdfbase import pdfmetrics
         from reportlab.pdfbase.ttfonts import TTFont
 
+        # Ordered by likelihood of having good CJK coverage
+        # Format: (path, name) — name must be unique per registration
         candidates = [
-            # Windows
-            r"C:\Windows\Fonts\msyh.ttc",  # Microsoft YaHei
-            r"C:\Windows\Fonts\msyh.ttf",
-            r"C:\Windows\Fonts\simsun.ttc",
-            r"C:\Windows\Fonts\simsun.ttf",
-            # macOS typical (not available on Windows but safe)
-            "/System/Library/Fonts/PingFang.ttc",
-            "/System/Library/Fonts/PingFang SC.ttc",
-            # Linux common
-            "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
-            "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
+            # ── Linux / Render (most likely on production) ──
+            ("/usr/share/fonts/opentype/noto/NotoSansSC-Regular.otf", "CIS_NotoSansSC"),
+            ("/usr/share/fonts/truetype/noto/NotoSansSC-Regular.ttf", "CIS_NotoSansSC"),
+            ("/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc", "CIS_NotoSansSC"),
+            ("/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc", "CIS_NotoSansSC"),
+            ("/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf", "CIS_DroidSans"),
+            ("/usr/share/fonts/opentype/noto/NotoSerifSC-Regular.otf", "CIS_NotoSerifSC"),
+            # ── Windows ──
+            (r"C:\Windows\Fonts\msyh.ttc", "CIS_MSYaHei"),
+            (r"C:\Windows\Fonts\msyh.ttf", "CIS_MSYaHei"),
+            (r"C:\Windows\Fonts\msyhbc.ttc", "CIS_MSYaHei"),
+            (r"C:\Windows\Fonts\SIMSUN.ttc", "CIS_SimSun"),
+            (r"C:\Windows\Fonts\simsum.ttc", "CIS_SimSun"),
+            (r"C:\Windows\Fonts\STKAITI.TTF", "CIS_Kaiti"),
+            (r"C:\Windows\Fonts\STZHONGS.TTF", "CIS_ZhongSong"),
+            # ── macOS ──
+            ("/System/Library/Fonts/PingFang.ttc", "CIS_PingFang"),
+            ("/System/Library/Fonts/PingFang%20SC.ttc", "CIS_PingFang"),
+            ("/Library/Fonts/Arial Unicode.ttf", "CIS_ArialUnicode"),
         ]
-        for p in candidates:
-            if os.path.exists(p):
-                pdfmetrics.registerFont(TTFont("CIS_CJK", p))
-                return
+
+        for path, font_name in candidates:
+            if os.path.exists(path):
+                try:
+                    pdfmetrics.registerFont(TTFont(font_name, path))
+                    return font_name
+                except Exception:
+                    # Font exists but unreadable/broken — try next
+                    continue
     except Exception:
-        return
+        pass
+    return None
 
 
 def export_pdf(
@@ -100,42 +118,29 @@ def export_pdf(
         rightMargin=18 * mm,
         topMargin=16 * mm,
         bottomMargin=16 * mm,
-        title="Comment Intelligence Report",
+        title="评论区分析报告",
     )
 
     styles = getSampleStyleSheet()
-    base_font = styles["Normal"].fontName
-    use_cjk = False
-    try:
-        # If registered, it will be usable by name.
-        from reportlab.pdfbase import pdfmetrics
 
-        pdfmetrics.getFont("CIS_CJK")
-        use_cjk = True
-    except Exception:
-        use_cjk = False
+    # Determine available fonts
+    from reportlab.pdfbase import pdfmetrics
+    from reportlab.pdfbase.ttfonts import TTFont
 
-    title_style = ParagraphStyle(
-        "CIS_Title",
-        parent=styles["Title"],
-        fontName="CIS_CJK" if use_cjk else styles["Title"].fontName,
-        textColor=colors.black,
-        spaceAfter=10,
-    )
-    h_style = ParagraphStyle(
-        "CIS_H",
-        parent=styles["Heading2"],
-        fontName="CIS_CJK" if use_cjk else styles["Heading2"].fontName,
-        textColor=colors.black,
-        spaceBefore=10,
-        spaceAfter=6,
-    )
-    p_style = ParagraphStyle(
-        "CIS_P",
-        parent=styles["BodyText"],
-        fontName="CIS_CJK" if use_cjk else styles["BodyText"].fontName,
-        leading=14,
-    )
+    # Try to register fallback TTF with ASCII glyphs if no CJK font found yet
+    # (reportlab always has Helvetica which handles ASCII fine)
+    _CJK_FONT_NAME = _try_register_cjk_font()  # re-call to get the name; safe (idempotent)
+    _fallback_font = _CJK_FONT_NAME or "Helvetica"
+
+    def _para_style(name: str, base_style_key: str, **kwargs) -> ParagraphStyle:
+        base_s = styles[base_style_key]
+        defaults = dict(fontName=_CJK_FONT_NAME if _CJK_FONT_NAME else base_s.fontName, textColor=colors.black, leading=14)
+        defaults.update(kwargs)
+        return ParagraphStyle(name, parent=base_s, **defaults)
+
+    title_style = _para_style("CIS_Title", "Title", fontSize=16, spaceAfter=10)
+    h_style     = _para_style("CIS_H",     "Heading2", fontSize=12, spaceBefore=10, spaceAfter=6)
+    p_style     = _para_style("CIS_P",     "Normal",   fontSize=10, leading=14)
 
     story: List[Any] = []
     story.append(Paragraph("评论区分析报告", title_style))
@@ -149,13 +154,14 @@ def export_pdf(
         ["question", stance_stats.get("question", 0), "", ""],
     ]
     tbl = Table(stance_table, colWidths=[40 * mm, 25 * mm, 40 * mm, 25 * mm])
+    tbl_font = _CJK_FONT_NAME if _CJK_FONT_NAME else "Helvetica"
     tbl.setStyle(
         TableStyle(
             [
                 ("BOX", (0, 0), (-1, -1), 0.5, colors.grey),
                 ("INNERGRID", (0, 0), (-1, -1), 0.25, colors.lightgrey),
                 ("BACKGROUND", (0, 0), (-1, 0), colors.whitesmoke),
-                ("FONT", (0, 0), (-1, -1), "CIS_CJK" if use_cjk else base_font),
+                ("FONT", (0, 0), (-1, -1), tbl_font),
                 ("FONTSIZE", (0, 0), (-1, -1), 10),
             ]
         )
