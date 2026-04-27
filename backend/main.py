@@ -165,16 +165,15 @@ executor = ThreadPoolExecutor(max_workers=6)
 
 # Allowlist origins for CORS. Set CORS_ORIGINS env var (comma-separated) in production.
 # Example: CORS_ORIGINS=https://your-app.vercel.app,https://your-app-git-branch.vercel.app
-# If set to "*", all origins are allowed (credentials=False).
+# If set to "*", all origins are allowed.
 # If not set, defaults to localhost dev origins only.
+# credentials is always False — this API has no session/auth, credentials not needed.
 _cors_raw = os.getenv("CORS_ORIGINS", "").strip()
-_allow_credentials = False
 
 if _cors_raw == "*":
     _cors_origins = ["*"]
 elif _cors_raw:
     _cors_origins = [o.strip() for o in _cors_raw.split(",") if o.strip()]
-    _allow_credentials = True
 else:
     _cors_origins = ["http://localhost:5173", "http://127.0.0.1:5173"]
 
@@ -182,7 +181,7 @@ app = FastAPI(title=APP_TITLE)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_cors_origins,
-    allow_credentials=_allow_credentials,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
