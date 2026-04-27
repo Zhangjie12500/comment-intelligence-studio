@@ -1,0 +1,1380 @@
+{
+  "job_id": "063wn7euvq7gv9",
+  "status": "done",
+  "error": "",
+  "force_refresh": false,
+  "include_replies": true,
+  "created_at": "2026-04-27 16:23:11",
+  "updated_at": "2026-04-27 16:23:26",
+  "tasks": [
+    {
+      "task": {
+        "task_id": "3fjfo4drcs",
+        "url": "https://www.bilibili.com/video/BV1ZYAQzaEKi/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7e9435332132eb135fd3ef62caab01f2",
+        "platform": "bilibili",
+        "video_id": "BV1ZYAQzaEKi",
+        "status": "done",
+        "source": "fresh",
+        "limit": 40,
+        "include_replies": true,
+        "progress": 0,
+        "raw_count": 40,
+        "cleaned_count": 39,
+        "main_count": 4,
+        "reply_count": 35,
+        "stance_stats": {
+          "support": 4,
+          "oppose": 4,
+          "neutral": 18,
+          "joke": 2,
+          "question": 11
+        },
+        "top_influence_comments": [
+          {
+            "user": "网友方块K",
+            "text": "还真是，现在左右的分野多数时候已经无关紧要了，都是对启蒙和全球化的反对者同盟",
+            "like": 233,
+            "reply_count": 9,
+            "influence_score": 251.0,
+            "stance": "oppose",
+            "translation_zh": ""
+          },
+          {
+            "user": "Luigi_York",
+            "text": "在关于历史哲学的方面我也很赞同up。近几年网上关于代际问题的讨论明显变多了，某种程度上up还真做到了类似咪蒙的，将某种讨论引入公众视野的人。\n但我比较悲观的是，我想，对代际问题的关注，或许也是由我们的处境造就的，和其它历史观相比并没有什么超越性。很难说下一代人会怎么看待这个问题。",
+            "like": 166,
+            "reply_count": 15,
+            "influence_score": 196.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "堂吉诃德対風車",
+            "text": "现代中国人属于是从出生即自带落后就要挨打的穷怕了PTSD了，但在提倡效率的指导下狂奔了几十年，我们的人文艺术建设已经远远落后于理工科了。你可以再春晚看到最先进的机器人，但依然处于老登审美的劣质舞台设计下呈现，这就是忽视文科建设的后遗症。有时候我会觉得哪怕效率低一点也无所谓，关于人的决定，再谨慎也不为过",
+            "like": 166,
+            "reply_count": 12,
+            "influence_score": 190.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "何-夜神月-炅",
+            "text": "看到了十几分钟，确实体会到了UP主的悲观主义。拿哈耶克和凯恩斯的例子，我觉得不恰当吧，确实不存在完全真空的对照实验，但是执剑人在选择道路的时候往往是非常务实的，不是他选择了哈耶克或凯恩斯，而是在某段时期内，哪种举措更效果更好，就用哪个。我们确实无法用对比实验证明，在哪个时代凯就是比哈好，但是二战中表现较好的大国苏美德几乎都选择了政府对经济的强干预，这算是某种必然性吧。批评辉格史观没问题，但是这种批评走向极端就会变成虚无主义",
+            "like": 85,
+            "reply_count": 6,
+            "influence_score": 97.0,
+            "stance": "support",
+            "translation_zh": ""
+          },
+          {
+            "user": "约翰史幂斯",
+            "text": "我甚至觉得落后就要挨打这种国民性也是后构建出来的，为了服务制造业大国的产业定位，比如1840史观",
+            "like": 77,
+            "reply_count": 0,
+            "influence_score": 77.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "江左道卡卡",
+            "text": "我的影响力应该没有那么大哈哈，我只是发现早，经济现状不变，大家早晚都会发现。\n关于第二点按照斯特劳斯豪的理论，仇老/感觉自己的青春被压制这个问题其实只有秋天一代会遇到，冬天和春天代会产生别的困扰，但不是这种困扰，相对乐观一点了。",
+            "like": 67,
+            "reply_count": 0,
+            "influence_score": 67.0,
+            "stance": "joke",
+            "translation_zh": ""
+          },
+          {
+            "user": "江左道卡卡",
+            "text": "有道理的，决断论只在最复杂的系统，最宏观的层面上生效，但是在微观和具体上，离物质界越近的地方，规则就越让人安心。比如钢筋混凝土，达不到载荷要求就是达不到。",
+            "like": 40,
+            "reply_count": 0,
+            "influence_score": 40.0,
+            "stance": "support",
+            "translation_zh": ""
+          },
+          {
+            "user": "九头蛇驻贝克街的Alina",
+            "text": "回复 @安静飘雪花 :一个国家的人文艺术建设不是一两部电影、一两场运动就能评判的；是一个长期的、潜移默化、源远流长的过程",
+            "like": 16,
+            "reply_count": 0,
+            "influence_score": 16.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "堂吉诃德対風車",
+            "text": "回复 @约翰史幂斯 :有时候，关于历史哪怕是近几十年的，我也和盲人摸象一般，所以我过年回去时，都会找机会问问家里老人过去他们自己的亲身经历",
+            "like": 13,
+            "reply_count": 0,
+            "influence_score": 13.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "软皮烤地瓜",
+            "text": "你这么快看完了？",
+            "like": 9,
+            "reply_count": 0,
+            "influence_score": 9.0,
+            "stance": "question",
+            "translation_zh": ""
+          }
+        ],
+        "clusters": [
+          {
+            "title": "还真是现在左右的分野多数时候已经无关紧要了都是对启蒙和全球化的反对者同盟",
+            "keywords": [
+              "还真是现在左右的分野多数时候已经无关紧要了都是对启蒙和全球化的反对者同盟"
+            ],
+            "count": 1,
+            "like_weight": 233,
+            "representative_comments": [
+              {
+                "user": "网友方块K",
+                "text": "还真是，现在左右的分野多数时候已经无关紧要了，都是对启蒙和全球化的反对者同盟",
+                "like": 233
+              }
+            ]
+          },
+          {
+            "title": "在关于历史哲学的方面我也很赞同 近几年网上关于代际问题的讨论明显变多了某种程度上",
+            "keywords": [
+              "在关于历史哲学的方面我也很赞同",
+              "近几年网上关于代际问题的讨论明显变多了某种程度上",
+              "还真做到了类似咪蒙的将某种讨论引入公众视野的人"
+            ],
+            "count": 1,
+            "like_weight": 166,
+            "representative_comments": [
+              {
+                "user": "Luigi_York",
+                "text": "在关于历史哲学的方面我也很赞同up。近几年网上关于代际问题的讨论明显变多了，某种程度上up还真做到了类似咪蒙的，将某种讨论引入公众视野的人。\n但我比较悲观的是，我想，对代际问题的关注，或许也是由我们的处境造就的，和其它历史观相比并没有什么超越性。很难说下一代人会怎么看待这个问题。",
+                "like": 166
+              }
+            ]
+          },
+          {
+            "title": "现代中国人属于是从出生即自带落后就要挨打的穷怕了 ptsd 了但在提倡效率的指导",
+            "keywords": [
+              "现代中国人属于是从出生即自带落后就要挨打的穷怕了",
+              "ptsd",
+              "了但在提倡效率的指导下狂奔了几十年我们的人文艺术建设已经远远落后于理工科了你可以再春晚看到最先进的机器人但依然处于老登审美的劣质舞台设计下呈现这就是忽视文科建设的后遗症有时候我会觉得哪怕效率低一点也无所谓关于人的决定再谨慎也不为过"
+            ],
+            "count": 1,
+            "like_weight": 166,
+            "representative_comments": [
+              {
+                "user": "堂吉诃德対風車",
+                "text": "现代中国人属于是从出生即自带落后就要挨打的穷怕了PTSD了，但在提倡效率的指导下狂奔了几十年，我们的人文艺术建设已经远远落后于理工科了。你可以再春晚看到最先进的机器人，但依然处于老登审美的劣质舞台设计下呈现，这就是忽视文科建设的后遗症。有时候我会觉得哪怕效率低一点也无所谓，关于人的决定，再谨慎也不为过",
+                "like": 166
+              }
+            ]
+          },
+          {
+            "title": "看到了十几分钟确实体会到了 主的悲观主义拿哈耶克和凯恩斯的例子我觉得不恰当吧确实",
+            "keywords": [
+              "看到了十几分钟确实体会到了",
+              "主的悲观主义拿哈耶克和凯恩斯的例子我觉得不恰当吧确实不存在完全真空的对照实验但是执剑人在选择道路的时候往往是非常务实的不是他选择了哈耶克或凯恩斯而是在某段时期内哪种举措更效果更好就用哪个我们确实无法用对比实验证明在哪个时代凯就是比哈好但是二战中表现较好的大国苏美德几乎都选择了政府对经济的强干预这算是某种必然性吧批评辉格史观没问题但是这种批评走向极端就会变成虚无主义"
+            ],
+            "count": 1,
+            "like_weight": 85,
+            "representative_comments": [
+              {
+                "user": "何-夜神月-炅",
+                "text": "看到了十几分钟，确实体会到了UP主的悲观主义。拿哈耶克和凯恩斯的例子，我觉得不恰当吧，确实不存在完全真空的对照实验，但是执剑人在选择道路的时候往往是非常务实的，不是他选择了哈耶克或凯恩斯，而是在某段时期内，哪种举措更效果更好，就用哪个。我们确实无法用对比实验证明，在哪个时代凯就是比哈好，但是二战中表现较好的大国苏美德几乎都选择了政府对经济的强干预，这算是某种必然性吧。批评辉格史观没问题，但是这种批评走向极端就会变成虚无主义",
+                "like": 85
+              }
+            ]
+          },
+          {
+            "title": "我甚至觉得落后就要挨打这种国民性也是后构建出来的为了服务制造业大国的产业定位比如",
+            "keywords": [
+              "我甚至觉得落后就要挨打这种国民性也是后构建出来的为了服务制造业大国的产业定位比如",
+              "史观"
+            ],
+            "count": 1,
+            "like_weight": 77,
+            "representative_comments": [
+              {
+                "user": "约翰史幂斯",
+                "text": "我甚至觉得落后就要挨打这种国民性也是后构建出来的，为了服务制造业大国的产业定位，比如1840史观",
+                "like": 77
+              }
+            ]
+          },
+          {
+            "title": "我的影响力应该没有那么大哈哈我只是发现早经济现状不变大家早晚都会发现 关于第二点",
+            "keywords": [
+              "我的影响力应该没有那么大哈哈我只是发现早经济现状不变大家早晚都会发现",
+              "关于第二点按照斯特劳斯豪的理论仇老",
+              "感觉自己的青春被压制这个问题其实只有秋天一代会遇到冬天和春天代会产生别的困扰但不是这种困扰相对乐观一点了"
+            ],
+            "count": 1,
+            "like_weight": 67,
+            "representative_comments": [
+              {
+                "user": "江左道卡卡",
+                "text": "我的影响力应该没有那么大哈哈，我只是发现早，经济现状不变，大家早晚都会发现。\n关于第二点按照斯特劳斯豪的理论，仇老/感觉自己的青春被压制这个问题其实只有秋天一代会遇到，冬天和春天代会产生别的困扰，但不是这种困扰，相对乐观一点了。",
+                "like": 67
+              }
+            ]
+          },
+          {
+            "title": "有道理的决断论只在最复杂的系统最宏观的层面上生效但是在微观和具体上离物质界越近的",
+            "keywords": [
+              "有道理的决断论只在最复杂的系统最宏观的层面上生效但是在微观和具体上离物质界越近的地方规则就越让人安心比如钢筋混凝土达不到载荷要求就是达不到"
+            ],
+            "count": 1,
+            "like_weight": 40,
+            "representative_comments": [
+              {
+                "user": "江左道卡卡",
+                "text": "有道理的，决断论只在最复杂的系统，最宏观的层面上生效，但是在微观和具体上，离物质界越近的地方，规则就越让人安心。比如钢筋混凝土，达不到载荷要求就是达不到。",
+                "like": 40
+              }
+            ]
+          },
+          {
+            "title": "回复 安静飘雪花 一个国家的人文艺术建设不是一两部电影 一两场运动就能评判的是一",
+            "keywords": [
+              "回复",
+              "安静飘雪花",
+              "一个国家的人文艺术建设不是一两部电影"
+            ],
+            "count": 1,
+            "like_weight": 16,
+            "representative_comments": [
+              {
+                "user": "九头蛇驻贝克街的Alina",
+                "text": "回复 @安静飘雪花 :一个国家的人文艺术建设不是一两部电影、一两场运动就能评判的；是一个长期的、潜移默化、源远流长的过程",
+                "like": 16
+              }
+            ]
+          },
+          {
+            "title": "回复 约翰史幂斯 有时候关于历史哪怕是近几十年的我也和盲人摸象一般所以我过年回去",
+            "keywords": [
+              "回复",
+              "约翰史幂斯",
+              "有时候关于历史哪怕是近几十年的我也和盲人摸象一般所以我过年回去时都会找机会问问家里老人过去他们自己的亲身经历"
+            ],
+            "count": 1,
+            "like_weight": 13,
+            "representative_comments": [
+              {
+                "user": "堂吉诃德対風車",
+                "text": "回复 @约翰史幂斯 :有时候，关于历史哪怕是近几十年的，我也和盲人摸象一般，所以我过年回去时，都会找机会问问家里老人过去他们自己的亲身经历",
+                "like": 13
+              }
+            ]
+          },
+          {
+            "title": "你这么快看完了",
+            "keywords": [
+              "你这么快看完了"
+            ],
+            "count": 1,
+            "like_weight": 9,
+            "representative_comments": [
+              {
+                "user": "软皮烤地瓜",
+                "text": "你这么快看完了？",
+                "like": 9
+              }
+            ]
+          },
+          {
+            "title": "神速啊我还在看开打乱金价",
+            "keywords": [
+              "神速啊我还在看开打乱金价"
+            ],
+            "count": 1,
+            "like_weight": 8,
+            "representative_comments": [
+              {
+                "user": "舟文王L",
+                "text": "神速啊，我还在看开打乱金价",
+                "like": 8
+              }
+            ]
+          },
+          {
+            "title": "从拖延视角下是的也没必要选择一个毕竟争斗本身就是一种拖延神学",
+            "keywords": [
+              "从拖延视角下是的也没必要选择一个毕竟争斗本身就是一种拖延神学"
+            ],
+            "count": 1,
+            "like_weight": 8,
+            "representative_comments": [
+              {
+                "user": "世上醉风真人",
+                "text": "从拖延视角下是的，也没必要选择一个，毕竟争斗本身就是一种拖延神学",
+                "like": 8
+              }
+            ]
+          }
+        ],
+        "controversies": [
+          {
+            "title": "评论区存在反对或质疑声音",
+            "description": "共有 4 条评论表达质疑或反对观点，占比约 10%。",
+            "related_count": 4,
+            "sample_comments": [
+              "还真是，现在左右的分野多数时候已经无关紧要了，都是对启蒙和全球化的反对者同盟"
+            ]
+          },
+          {
+            "title": "评论区存在较多追问和求证",
+            "description": "共有 11 条评论提出问题，占比约 28%。",
+            "related_count": 11,
+            "sample_comments": [
+              "在关于历史哲学的方面我也很赞同up。近几年网上关于代际问题的讨论明显变多了，某种程度上up还真做到了类似咪蒙的，将某种讨论引入公众视野的人。\n但我比较悲观的是，我想，对代际问题的关注，或许也是由我们的处境造就的，和其它历史观相比并没有什么超越性。很难说下一代人会怎么看待这个问题。",
+              "你这么快看完了？"
+            ]
+          },
+          {
+            "title": "支持与反对观点并存",
+            "description": "支持观点 4 条，反对观点 4 条，评论区存在明显观点分歧。",
+            "related_count": 8,
+            "sample_comments": [
+              "还真是，现在左右的分野多数时候已经无关紧要了，都是对启蒙和全球化的反对者同盟",
+              "看到了十几分钟，确实体会到了UP主的悲观主义。拿哈耶克和凯恩斯的例子，我觉得不恰当吧，确实不存在完全真空的对照实验，但是执剑人在选择道路的时候往往是非常务实的，不是他选择了哈耶克或凯恩斯，而是在某段时期内，哪种举措更效果更好，就用哪个。我们确实无法用对比实验证明，在哪个时代凯就是比哈好，但是二战中表现较好的大国苏美德几乎都选择了政府对经济的强干预，这算是某种必然性吧。批评辉格史观没问题，但是这种批评走向极端就会变成虚无主义",
+              "有道理的，决断论只在最复杂的系统，最宏观的层面上生效，但是在微观和具体上，离物质界越近的地方，规则就越让人安心。比如钢筋混凝土，达不到载荷要求就是达不到。"
+            ]
+          }
+        ],
+        "summary": "本次分析共抓取 40 条评论，清洗后保留 39 条（移除空内容/表情/重复等 1 条）。 评论区整体以「中立/补充」为主，共 18 条，占比约 46%。 存在 4 条质疑或反对声音（占比约 10%），评论区存在一定观点分歧。 共有 11 条提问或求证类评论（占比约 28%），部分用户在寻求更多信息。 主要讨论围绕以下主题展开：还真是现在左右的分野多数时候已经无关紧要了都是对启蒙和全球化的反对者同盟、在关于历史哲学的方面我也很赞同 近几年网上关于代际问题的讨论明显变多了某种程度上、现代中国人属于是从出生即自带落后就要挨打的穷怕了 ptsd 了但在提倡效率的指导。 平台：B站（bilibili）。",
+        "files": {
+          "json": "/api/jobs/063wn7euvq7gv9/3fjfo4drcs/comments",
+          "markdown": "/api/jobs/063wn7euvq7gv9/3fjfo4drcs/report",
+          "pdf": "/api/jobs/063wn7euvq7gv9/3fjfo4drcs/pdf"
+        },
+        "error": "",
+        "warnings": [],
+        "created_at": "2026-04-27 16:23:11",
+        "updated_at": "2026-04-27 16:23:24"
+      },
+      "paths": {
+        "comments_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\063wn7euvq7gv9\\3fjfo4drcs\\www-bilibili-com-1928781bbefe.comments.json",
+        "report_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\063wn7euvq7gv9\\3fjfo4drcs\\www-bilibili-com-1928781bbefe.report.md",
+        "pdf_path": "C:\\Users\\15858\\Desktop\\Comment_Intelligence_Reports\\2026-04-27\\bilibili_BV1ZYAQzaEKi_评论分析报告_2026-04-27_1623.pdf"
+      }
+    },
+    {
+      "task": {
+        "task_id": "468oocpata",
+        "url": "https://www.bilibili.com/video/BV16w41187fx/?spm_id_from=333.337.search-card.all.click&vd_source=7e9435332132eb135fd3ef62caab01f2",
+        "platform": "bilibili",
+        "video_id": "BV16w41187fx",
+        "status": "done",
+        "source": "fresh",
+        "limit": 40,
+        "include_replies": true,
+        "progress": 0,
+        "raw_count": 40,
+        "cleaned_count": 38,
+        "main_count": 1,
+        "reply_count": 37,
+        "stance_stats": {
+          "support": 2,
+          "oppose": 0,
+          "neutral": 33,
+          "joke": 0,
+          "question": 3
+        },
+        "top_influence_comments": [
+          {
+            "user": "波粒的二像性",
+            "text": "日本人也真的非常的孤独，他可以孤独到，所有的欲望其实都可以商品化，但是当你把欲望都商品化了之后，人本身可能，就只是商品。讲的太好了！",
+            "like": 40872,
+            "reply_count": 44,
+            "influence_score": 40960.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "超级力竭大王",
+            "text": "人与人之间的社会关系也就变成了商品与商品之间的交换关系，马克思诚不欺我！",
+            "like": 2700,
+            "reply_count": 0,
+            "influence_score": 2700.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "小甲v",
+            "text": "表象是欲望被满足了，实则欲望一直没有被真正满足，剩余没被满足的一部分会潜藏 积压。。。",
+            "like": 781,
+            "reply_count": 0,
+            "influence_score": 781.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "damocjwj",
+            "text": "回复 @五座城 :看资本论越看越上头 它似乎把生活里的一切都说明白了[doge]",
+            "like": 636,
+            "reply_count": 0,
+            "influence_score": 636.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "听澜山君",
+            "text": "我感觉反了吧，是商品化之后所以人才会孤独，而不是一个民族突然陷入集体孤独然后把欲望商品化。有钱人能买到绝大部分东西，而倒逼着拿着有数的钱的普通人只能趋向于压抑.低欲望。比较代表性的例子是视频里的场景，一个男人身上挂着你可以免费跟我抱怨的牌子，因为大部分情况下你要抱怨是要花钱去类似夜总会这种地方。要是一个人就是很有钱，那他可以一天二十四个小时以消费的名义让别人分担自己的负能量。",
+            "like": 387,
+            "reply_count": 0,
+            "influence_score": 387.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "印度赢学正统在米猴",
+            "text": "回复 @ptohe : 弹幕越看越恼火，一堆人还觉得这样挺好的，觉得日本人做的都是自己喜欢的事情真好",
+            "like": 320,
+            "reply_count": 0,
+            "influence_score": 320.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "机械的零",
+            "text": "日本这个风俗，我在外网看到在日留学生都有很多要去玩，甚至专门旅游过去顺便玩的，想想可能也是很难不去吧，就算你没想走着走着突然就在眼里出现，然后动点歪心思，洁身自好就离你越来越远。",
+            "like": 284,
+            "reply_count": 0,
+            "influence_score": 284.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "蛮先生DA",
+            "text": "美式资本主义就是把一切都商品话，包括人，底层管理模式就是这样。",
+            "like": 239,
+            "reply_count": 0,
+            "influence_score": 239.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "天堂的小作坊",
+            "text": "然而更可怕的是，他们很多人明明知道，却无法从那样的社会中抽身，眼睁睁地看着自己被吞噬，像被鲶鱼吃掉的腐烂的河泥一样",
+            "like": 217,
+            "reply_count": 0,
+            "influence_score": 217.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "机械的零",
+            "text": "回复 @avocadoboy : 要接的 不仅接还有专门接待外国人的店，你在休息区甚至能看见白人在等人，而且只要给钱女优你都能约 就你说出名字的那些国人都有约过的 视频里的泷泽萝拉今年上半年一个论坛老哥花了5万去日本找中介约到的",
+            "like": 148,
+            "reply_count": 0,
+            "influence_score": 148.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          }
+        ],
+        "clusters": [
+          {
+            "title": "日本人也真的非常的孤独他可以孤独到所有的欲望其实都可以商品化但是当你把欲望都商品",
+            "keywords": [
+              "日本人也真的非常的孤独他可以孤独到所有的欲望其实都可以商品化但是当你把欲望都商品化了之后人本身可能就只是商品讲的太好了"
+            ],
+            "count": 1,
+            "like_weight": 40872,
+            "representative_comments": [
+              {
+                "user": "波粒的二像性",
+                "text": "日本人也真的非常的孤独，他可以孤独到，所有的欲望其实都可以商品化，但是当你把欲望都商品化了之后，人本身可能，就只是商品。讲的太好了！",
+                "like": 40872
+              }
+            ]
+          },
+          {
+            "title": "人与人之间的社会关系也就变成了商品与商品之间的交换关系马克思诚不欺我",
+            "keywords": [
+              "人与人之间的社会关系也就变成了商品与商品之间的交换关系马克思诚不欺我"
+            ],
+            "count": 1,
+            "like_weight": 2700,
+            "representative_comments": [
+              {
+                "user": "超级力竭大王",
+                "text": "人与人之间的社会关系也就变成了商品与商品之间的交换关系，马克思诚不欺我！",
+                "like": 2700
+              }
+            ]
+          },
+          {
+            "title": "表象是欲望被满足了实则欲望一直没有被真正满足剩余没被满足的一部分会潜藏 积压",
+            "keywords": [
+              "表象是欲望被满足了实则欲望一直没有被真正满足剩余没被满足的一部分会潜藏",
+              "积压"
+            ],
+            "count": 1,
+            "like_weight": 781,
+            "representative_comments": [
+              {
+                "user": "小甲v",
+                "text": "表象是欲望被满足了，实则欲望一直没有被真正满足，剩余没被满足的一部分会潜藏 积压。。。",
+                "like": 781
+              }
+            ]
+          },
+          {
+            "title": "回复 五座城 看资本论越看越上头 它似乎把生活里的一切都说明白了",
+            "keywords": [
+              "回复",
+              "五座城",
+              "看资本论越看越上头"
+            ],
+            "count": 1,
+            "like_weight": 636,
+            "representative_comments": [
+              {
+                "user": "damocjwj",
+                "text": "回复 @五座城 :看资本论越看越上头 它似乎把生活里的一切都说明白了[doge]",
+                "like": 636
+              }
+            ]
+          },
+          {
+            "title": "我感觉反了吧是商品化之后所以人才会孤独而不是一个民族突然陷入集体孤独然后把欲望商",
+            "keywords": [
+              "我感觉反了吧是商品化之后所以人才会孤独而不是一个民族突然陷入集体孤独然后把欲望商品化有钱人能买到绝大部分东西而倒逼着拿着有数的钱的普通人只能趋向于压抑低欲望比较代表性的例子是视频里的场景一个男人身上挂着你可以免费跟我抱怨的牌子因为大部分情况下你要抱怨是要花钱去类似夜总会这种地方要是一个人就是很有钱那他可以一天二十四个小时以消费的名义让别人分担自己的负能量"
+            ],
+            "count": 1,
+            "like_weight": 387,
+            "representative_comments": [
+              {
+                "user": "听澜山君",
+                "text": "我感觉反了吧，是商品化之后所以人才会孤独，而不是一个民族突然陷入集体孤独然后把欲望商品化。有钱人能买到绝大部分东西，而倒逼着拿着有数的钱的普通人只能趋向于压抑.低欲望。比较代表性的例子是视频里的场景，一个男人身上挂着你可以免费跟我抱怨的牌子，因为大部分情况下你要抱怨是要花钱去类似夜总会这种地方。要是一个人就是很有钱，那他可以一天二十四个小时以消费的名义让别人分担自己的负能量。",
+                "like": 387
+              }
+            ]
+          },
+          {
+            "title": "回复 ptohe 弹幕越看越恼火一堆人还觉得这样挺好的觉得日本人做的都是自己喜欢",
+            "keywords": [
+              "回复",
+              "ptohe",
+              "弹幕越看越恼火一堆人还觉得这样挺好的觉得日本人做的都是自己喜欢的事情真好"
+            ],
+            "count": 1,
+            "like_weight": 320,
+            "representative_comments": [
+              {
+                "user": "印度赢学正统在米猴",
+                "text": "回复 @ptohe : 弹幕越看越恼火，一堆人还觉得这样挺好的，觉得日本人做的都是自己喜欢的事情真好",
+                "like": 320
+              }
+            ]
+          },
+          {
+            "title": "日本这个风俗我在外网看到在日留学生都有很多要去玩甚至专门旅游过去顺便玩的想想可能",
+            "keywords": [
+              "日本这个风俗我在外网看到在日留学生都有很多要去玩甚至专门旅游过去顺便玩的想想可能也是很难不去吧就算你没想走着走着突然就在眼里出现然后动点歪心思洁身自好就离你越来越远"
+            ],
+            "count": 1,
+            "like_weight": 284,
+            "representative_comments": [
+              {
+                "user": "机械的零",
+                "text": "日本这个风俗，我在外网看到在日留学生都有很多要去玩，甚至专门旅游过去顺便玩的，想想可能也是很难不去吧，就算你没想走着走着突然就在眼里出现，然后动点歪心思，洁身自好就离你越来越远。",
+                "like": 284
+              }
+            ]
+          },
+          {
+            "title": "美式资本主义就是把一切都商品话包括人底层管理模式就是这样",
+            "keywords": [
+              "美式资本主义就是把一切都商品话包括人底层管理模式就是这样"
+            ],
+            "count": 1,
+            "like_weight": 239,
+            "representative_comments": [
+              {
+                "user": "蛮先生DA",
+                "text": "美式资本主义就是把一切都商品话，包括人，底层管理模式就是这样。",
+                "like": 239
+              }
+            ]
+          },
+          {
+            "title": "然而更可怕的是他们很多人明明知道却无法从那样的社会中抽身眼睁睁地看着自己被吞噬像",
+            "keywords": [
+              "然而更可怕的是他们很多人明明知道却无法从那样的社会中抽身眼睁睁地看着自己被吞噬像被鲶鱼吃掉的腐烂的河泥一样"
+            ],
+            "count": 1,
+            "like_weight": 217,
+            "representative_comments": [
+              {
+                "user": "天堂的小作坊",
+                "text": "然而更可怕的是，他们很多人明明知道，却无法从那样的社会中抽身，眼睁睁地看着自己被吞噬，像被鲶鱼吃掉的腐烂的河泥一样",
+                "like": 217
+              }
+            ]
+          },
+          {
+            "title": "回复 avocadoboy 要接的 不仅接还有专门接待外国人的店你在休息区甚至能",
+            "keywords": [
+              "回复",
+              "avocadoboy",
+              "要接的"
+            ],
+            "count": 1,
+            "like_weight": 148,
+            "representative_comments": [
+              {
+                "user": "机械的零",
+                "text": "回复 @avocadoboy : 要接的 不仅接还有专门接待外国人的店，你在休息区甚至能看见白人在等人，而且只要给钱女优你都能约 就你说出名字的那些国人都有约过的 视频里的泷泽萝拉今年上半年一个论坛老哥花了5万去日本找中介约到的",
+                "like": 148
+              }
+            ]
+          },
+          {
+            "title": "确实是异化了的人在消费和被消费中迷失",
+            "keywords": [
+              "确实是异化了的人在消费和被消费中迷失"
+            ],
+            "count": 1,
+            "like_weight": 147,
+            "representative_comments": [
+              {
+                "user": "塞西莉娅·奥尔卡特",
+                "text": "确实是异化了的人，在消费和被消费中迷失",
+                "like": 147
+              }
+            ]
+          },
+          {
+            "title": "站第一次消费给了饼叔第一次充电留念",
+            "keywords": [
+              "站第一次消费给了饼叔第一次充电留念"
+            ],
+            "count": 1,
+            "like_weight": 136,
+            "representative_comments": [
+              {
+                "user": "你嫌弃破烂抛弃了我呦",
+                "text": "B站第一次消费给了饼叔，第一次充电留念。[呆][呆][呆]",
+                "like": 136
+              }
+            ]
+          }
+        ],
+        "controversies": [
+          {
+            "title": "评论区存在较多追问和求证",
+            "description": "共有 3 条评论提出问题，占比约 7%。",
+            "related_count": 3,
+            "sample_comments": []
+          }
+        ],
+        "summary": "本次分析共抓取 40 条评论，清洗后保留 38 条（移除空内容/表情/重复等 2 条）。 评论区整体以「中立/补充」为主，共 33 条，占比约 86%。 共有 3 条提问或求证类评论（占比约 7%），部分用户在寻求更多信息。 主要讨论围绕以下主题展开：日本人也真的非常的孤独他可以孤独到所有的欲望其实都可以商品化但是当你把欲望都商品、人与人之间的社会关系也就变成了商品与商品之间的交换关系马克思诚不欺我、表象是欲望被满足了实则欲望一直没有被真正满足剩余没被满足的一部分会潜藏 积压。 正面情感占绝对主导，观众整体态度积极。 平台：B站（bilibili）。",
+        "files": {
+          "json": "/api/jobs/063wn7euvq7gv9/468oocpata/comments",
+          "markdown": "/api/jobs/063wn7euvq7gv9/468oocpata/report",
+          "pdf": "/api/jobs/063wn7euvq7gv9/468oocpata/pdf"
+        },
+        "error": "",
+        "warnings": [],
+        "created_at": "2026-04-27 16:23:11",
+        "updated_at": "2026-04-27 16:23:19"
+      },
+      "paths": {
+        "comments_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\063wn7euvq7gv9\\468oocpata\\www-bilibili-com-9da9aacdf6e0.comments.json",
+        "report_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\063wn7euvq7gv9\\468oocpata\\www-bilibili-com-9da9aacdf6e0.report.md",
+        "pdf_path": "C:\\Users\\15858\\Desktop\\Comment_Intelligence_Reports\\2026-04-27\\bilibili_BV16w41187fx_评论分析报告_2026-04-27_1623.pdf"
+      }
+    },
+    {
+      "task": {
+        "task_id": "25n257yjw5",
+        "url": "https://www.bilibili.com/video/BV1VLZ4BgEwC/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7e9435332132eb135fd3ef62caab01f2",
+        "platform": "bilibili",
+        "video_id": "BV1VLZ4BgEwC",
+        "status": "done",
+        "source": "fresh",
+        "limit": 40,
+        "include_replies": true,
+        "progress": 0,
+        "raw_count": 40,
+        "cleaned_count": 40,
+        "main_count": 2,
+        "reply_count": 38,
+        "stance_stats": {
+          "support": 0,
+          "oppose": 0,
+          "neutral": 25,
+          "joke": 3,
+          "question": 12
+        },
+        "top_influence_comments": [
+          {
+            "user": "腹肌练至玖归一",
+            "text": "索多玛这个词，类似于罪恶之城。经常被自游派用来暗指塞里斯。up从自游派转向了，更改id很正常。[doge]",
+            "like": 273,
+            "reply_count": 24,
+            "influence_score": 321.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "刈之秋owo",
+            "text": "你是谁？男通讯录嬉皮士呢？",
+            "like": 175,
+            "reply_count": 20,
+            "influence_score": 215.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "江左道卡卡",
+            "text": "我崆峒",
+            "like": 116,
+            "reply_count": 0,
+            "influence_score": 116.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "江左道卡卡",
+            "text": "回复 @小红帽爱煮虾 : 我自己造的词，从社会政策上说，反新自由主义，强调共同体而非个人原子化，反身份政治，文化上的现实主义，从本体论上说，注重社会幸福的施密特和施特劳斯主义者，后面做一期视频单独说",
+            "like": 111,
+            "reply_count": 0,
+            "influence_score": 111.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "一筒牙签",
+            "text": "🔒已经被某个惠州男0通讯录追出心理阴影了",
+            "like": 53,
+            "reply_count": 0,
+            "influence_score": 53.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "27年沒處理好",
+            "text": "简单来说，就是要吃简直大米了",
+            "like": 49,
+            "reply_count": 0,
+            "influence_score": 49.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "冰川漂流厂",
+            "text": "回复 @江左道卡卡 : 拉美的左翼民粹味。第三道路吗索子？",
+            "like": 22,
+            "reply_count": 0,
+            "influence_score": 22.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "終难还",
+            "text": "回复 @gggdggtsrf :双尾就算了，原教旨精英主义这一块，有点好玩",
+            "like": 22,
+            "reply_count": 0,
+            "influence_score": 22.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "裂谷新月不会发光",
+            "text": "回复 @小红帽爱煮虾 :一代人有一代人的守要保，新保守主义是这样的，保卫我们的现代生活嘛",
+            "like": 18,
+            "reply_count": 0,
+            "influence_score": 18.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "冥灵神华",
+            "text": "回复 @白鸽咕哒子 :标准的兼职做",
+            "like": 16,
+            "reply_count": 0,
+            "influence_score": 16.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          }
+        ],
+        "clusters": [
+          {
+            "title": "索多玛这个词类似于罪恶之城经常被自游派用来暗指塞里斯 从自游派转向了更改 很正常",
+            "keywords": [
+              "索多玛这个词类似于罪恶之城经常被自游派用来暗指塞里斯",
+              "从自游派转向了更改",
+              "很正常"
+            ],
+            "count": 1,
+            "like_weight": 273,
+            "representative_comments": [
+              {
+                "user": "腹肌练至玖归一",
+                "text": "索多玛这个词，类似于罪恶之城。经常被自游派用来暗指塞里斯。up从自游派转向了，更改id很正常。[doge]",
+                "like": 273
+              }
+            ]
+          },
+          {
+            "title": "你是谁男通讯录嬉皮士呢",
+            "keywords": [
+              "你是谁男通讯录嬉皮士呢"
+            ],
+            "count": 1,
+            "like_weight": 175,
+            "representative_comments": [
+              {
+                "user": "刈之秋owo",
+                "text": "你是谁？男通讯录嬉皮士呢？",
+                "like": 175
+              }
+            ]
+          },
+          {
+            "title": "我崆峒",
+            "keywords": [
+              "我崆峒"
+            ],
+            "count": 1,
+            "like_weight": 116,
+            "representative_comments": [
+              {
+                "user": "江左道卡卡",
+                "text": "我崆峒",
+                "like": 116
+              }
+            ]
+          },
+          {
+            "title": "回复 小红帽爱煮虾 我自己造的词从社会政策上说反新自由主义强调共同体而非个人原子",
+            "keywords": [
+              "回复",
+              "小红帽爱煮虾",
+              "我自己造的词从社会政策上说反新自由主义强调共同体而非个人原子化反身份政治文化上的现实主义从本体论上说注重社会幸福的施密特和施特劳斯主义者后面做一期视频单独说"
+            ],
+            "count": 1,
+            "like_weight": 111,
+            "representative_comments": [
+              {
+                "user": "江左道卡卡",
+                "text": "回复 @小红帽爱煮虾 : 我自己造的词，从社会政策上说，反新自由主义，强调共同体而非个人原子化，反身份政治，文化上的现实主义，从本体论上说，注重社会幸福的施密特和施特劳斯主义者，后面做一期视频单独说",
+                "like": 111
+              }
+            ]
+          },
+          {
+            "title": "已经被某个惠州男 通讯录追出心理阴影了",
+            "keywords": [
+              "已经被某个惠州男",
+              "通讯录追出心理阴影了"
+            ],
+            "count": 1,
+            "like_weight": 53,
+            "representative_comments": [
+              {
+                "user": "一筒牙签",
+                "text": "🔒已经被某个惠州男0通讯录追出心理阴影了",
+                "like": 53
+              }
+            ]
+          },
+          {
+            "title": "简单来说就是要吃简直大米了",
+            "keywords": [
+              "简单来说就是要吃简直大米了"
+            ],
+            "count": 1,
+            "like_weight": 49,
+            "representative_comments": [
+              {
+                "user": "27年沒處理好",
+                "text": "简单来说，就是要吃简直大米了",
+                "like": 49
+              }
+            ]
+          },
+          {
+            "title": "回复 江左道卡卡 拉美的左翼民粹味第三道路吗索子",
+            "keywords": [
+              "回复",
+              "江左道卡卡",
+              "拉美的左翼民粹味第三道路吗索子"
+            ],
+            "count": 1,
+            "like_weight": 22,
+            "representative_comments": [
+              {
+                "user": "冰川漂流厂",
+                "text": "回复 @江左道卡卡 : 拉美的左翼民粹味。第三道路吗索子？",
+                "like": 22
+              }
+            ]
+          },
+          {
+            "title": "回复 gggdggtsrf 双尾就算了原教旨精英主义这一块有点好玩",
+            "keywords": [
+              "回复",
+              "gggdggtsrf",
+              "双尾就算了原教旨精英主义这一块有点好玩"
+            ],
+            "count": 1,
+            "like_weight": 22,
+            "representative_comments": [
+              {
+                "user": "終难还",
+                "text": "回复 @gggdggtsrf :双尾就算了，原教旨精英主义这一块，有点好玩",
+                "like": 22
+              }
+            ]
+          },
+          {
+            "title": "回复 小红帽爱煮虾 一代人有一代人的守要保新保守主义是这样的保卫我们的现代生活嘛",
+            "keywords": [
+              "回复",
+              "小红帽爱煮虾",
+              "一代人有一代人的守要保新保守主义是这样的保卫我们的现代生活嘛"
+            ],
+            "count": 1,
+            "like_weight": 18,
+            "representative_comments": [
+              {
+                "user": "裂谷新月不会发光",
+                "text": "回复 @小红帽爱煮虾 :一代人有一代人的守要保，新保守主义是这样的，保卫我们的现代生活嘛",
+                "like": 18
+              }
+            ]
+          },
+          {
+            "title": "回复 白鸽咕哒子 标准的兼职做",
+            "keywords": [
+              "回复",
+              "白鸽咕哒子",
+              "标准的兼职做"
+            ],
+            "count": 1,
+            "like_weight": 16,
+            "representative_comments": [
+              {
+                "user": "冥灵神华",
+                "text": "回复 @白鸽咕哒子 :标准的兼职做",
+                "like": 16
+              }
+            ]
+          },
+          {
+            "title": "保守左派是个啥难绷",
+            "keywords": [
+              "保守左派是个啥难绷"
+            ],
+            "count": 1,
+            "like_weight": 15,
+            "representative_comments": [
+              {
+                "user": "小红帽爱煮虾",
+                "text": "保守左派是个啥？难绷",
+                "like": 15
+              }
+            ]
+          },
+          {
+            "title": "回复 小红帽爱煮虾 看到这个词第一反应就是斯大林主义",
+            "keywords": [
+              "回复",
+              "小红帽爱煮虾",
+              "看到这个词第一反应就是斯大林主义"
+            ],
+            "count": 1,
+            "like_weight": 13,
+            "representative_comments": [
+              {
+                "user": "杰西高圧锅",
+                "text": "回复 @小红帽爱煮虾 :看到这个词第一反应就是斯大林主义",
+                "like": 13
+              }
+            ]
+          }
+        ],
+        "controversies": [
+          {
+            "title": "评论区存在较多追问和求证",
+            "description": "共有 12 条评论提出问题，占比约 30%。",
+            "related_count": 12,
+            "sample_comments": [
+              "你是谁？男通讯录嬉皮士呢？",
+              "回复 @江左道卡卡 : 拉美的左翼民粹味。第三道路吗索子？"
+            ]
+          }
+        ],
+        "summary": "本次分析共抓取 40 条评论，清洗后保留 40 条（移除空内容/表情/重复等 0 条）。 评论区整体以「中立/补充」为主，共 25 条，占比约 62%。 共有 12 条提问或求证类评论（占比约 30%），部分用户在寻求更多信息。 主要讨论围绕以下主题展开：索多玛这个词类似于罪恶之城经常被自游派用来暗指塞里斯 从自游派转向了更改 很正常、你是谁男通讯录嬉皮士呢、我崆峒。 平台：B站（bilibili）。",
+        "files": {
+          "json": "/api/jobs/063wn7euvq7gv9/25n257yjw5/comments",
+          "markdown": "/api/jobs/063wn7euvq7gv9/25n257yjw5/report",
+          "pdf": "/api/jobs/063wn7euvq7gv9/25n257yjw5/pdf"
+        },
+        "error": "",
+        "warnings": [],
+        "created_at": "2026-04-27 16:23:11",
+        "updated_at": "2026-04-27 16:23:21"
+      },
+      "paths": {
+        "comments_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\063wn7euvq7gv9\\25n257yjw5\\www-bilibili-com-ae1f25a60ffc.comments.json",
+        "report_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\063wn7euvq7gv9\\25n257yjw5\\www-bilibili-com-ae1f25a60ffc.report.md",
+        "pdf_path": "C:\\Users\\15858\\Desktop\\Comment_Intelligence_Reports\\2026-04-27\\bilibili_BV1VLZ4BgEwC_评论分析报告_2026-04-27_1623.pdf"
+      }
+    },
+    {
+      "task": {
+        "task_id": "48h2lnv7ga",
+        "url": "https://www.bilibili.com/video/BV1sN4y1m7gw/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7e9435332132eb135fd3ef62caab01f2",
+        "platform": "bilibili",
+        "video_id": "BV1sN4y1m7gw",
+        "status": "done",
+        "source": "fresh",
+        "limit": 40,
+        "include_replies": true,
+        "progress": 0,
+        "raw_count": 40,
+        "cleaned_count": 39,
+        "main_count": 3,
+        "reply_count": 36,
+        "stance_stats": {
+          "support": 0,
+          "oppose": 1,
+          "neutral": 26,
+          "joke": 3,
+          "question": 9
+        },
+        "top_influence_comments": [
+          {
+            "user": "网友方块K",
+            "text": "（补档）看完了，真的感触颇深，这30年既是棺木又是子宫，摇篮曲和唢呐的合奏穿透一眼到头的人生",
+            "like": 423,
+            "reply_count": 10,
+            "influence_score": 443.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "落叶古木心",
+            "text": "还没看完，写点东西\n后现代带来的解构主义会无限制地破坏道德、法律、伦理等等，因为这些都会落实到现实，道德就是你当了渣男会被别人谴责，法律就是你杀了人就得进小黑屋，伦理就是你上了你妹妹要注意产检，除非你有可靠的办法去逃避这些惩罚。社会给普通人带来的约束惯性在后现代人面前是崩溃的，是无力的。当然，当所有价值层面的东西崩溃了，那么就得面临现实最冰冷的打击，而不是顾其左右而言他。但是，一个合格的后现代人，是不会在乎审判在乎法理的，他应该明白自己的乐趣所在，也明白自己的乐趣后面是一片空白一片虚无。在明白了这些还干了很多狗屁倒灶的事情后，如果有人证明了地狱的真实存在，那就赶紧改换信仰，自己干过的事情得自己擦屁股。",
+            "like": 211,
+            "reply_count": 10,
+            "influence_score": 231.0,
+            "stance": "joke",
+            "translation_zh": ""
+          },
+          {
+            "user": "星云频道小dd",
+            "text": "涨价去库存并不是中国市场的“见顶”，而是政府用了一个简单而偷懒的方法作弊式地开了一个新市场，棚改带来的市场既不是消费主义的市场也不是生产性消费的市场，因此中国的消费主义市场还有非常广阔的空间。相比之下，家电下乡那次才算是一个正常的扩张消费主义市场的行为。\n\n一个简单的例子就是拼多多等的下沉市场，中国的消费主义一直盯着中产（但是哪个国家不是呢？），是因为中国还有着十分庞大的穷人群体。真正改善这个群体收入的话，中国的消费主义还有一个非常夸张的生长空间。",
+            "like": 146,
+            "reply_count": 26,
+            "influence_score": 198.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "custodibus",
+            "text": "过去的房产已经消耗了部分人今后全部的资金，在他们还完负债前消费是可以忽略不计的。而且消费是要在对未来有良好预期或对保障体系有信心的前提下进行的，如果没有就会更倾向于进行基本的生存性的消费[doge]",
+            "like": 30,
+            "reply_count": 0,
+            "influence_score": 30.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "莫长啸",
+            "text": "回复 @柳梦灬青山丶 :难度不大，国内现在基本没有进行任何关于劳工权益的改革，我相信但凡进行一点点微小的改革都能产生极大的效用。",
+            "like": 30,
+            "reply_count": 0,
+            "influence_score": 30.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "flam1ng",
+            "text": "回复 @星际游行2 :解构主义就是只剩下纯粹的形式，把具有先验神圣的字眼转化成纯粹的符号，从而瓦解字眼中的价值，使其完全变成一种行为。这种行为就必定是无意义的，从而来讽刺所谓的叙事手段。\n比起局部，结构主义更加注重的是整体的纯粹符号逻辑和实质的行为，但是抛弃了一切意义，是纯粹现象的叙述。",
+            "like": 21,
+            "reply_count": 0,
+            "influence_score": 21.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "我記得天氣很熱",
+            "text": "文豪……",
+            "like": 16,
+            "reply_count": 0,
+            "influence_score": 16.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "Bostonjr",
+            "text": "想到了万青的秦皇岛",
+            "like": 12,
+            "reply_count": 0,
+            "influence_score": 12.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "长河碧落",
+            "text": "道德与伦理不是这样的……好像谈到伦理就是乱l啥的……道德更强调个体的或者说道德主体，伦理则强调人与人的关系。比如您跟我就属于是伦理关系。而且伦理与道德通常意义上应该是中性词……（甚至在西方伦理和道德就是一个词……只是从黑格尔开始对此进行了划分……）",
+            "like": 12,
+            "reply_count": 0,
+            "influence_score": 12.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "莫趣ryo",
+            "text": "回复 @莫长啸 :相信我，改不了了",
+            "like": 12,
+            "reply_count": 0,
+            "influence_score": 12.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          }
+        ],
+        "clusters": [
+          {
+            "title": "补档 看完了真的感触颇深这 年既是棺木又是子宫摇篮曲和唢呐的合奏穿透一眼到头的人",
+            "keywords": [
+              "补档",
+              "看完了真的感触颇深这",
+              "年既是棺木又是子宫摇篮曲和唢呐的合奏穿透一眼到头的人生"
+            ],
+            "count": 1,
+            "like_weight": 423,
+            "representative_comments": [
+              {
+                "user": "网友方块K",
+                "text": "（补档）看完了，真的感触颇深，这30年既是棺木又是子宫，摇篮曲和唢呐的合奏穿透一眼到头的人生",
+                "like": 423
+              }
+            ]
+          },
+          {
+            "title": "还没看完写点东西 后现代带来的解构主义会无限制地破坏道德 法律 伦理等等因为这些",
+            "keywords": [
+              "还没看完写点东西",
+              "后现代带来的解构主义会无限制地破坏道德",
+              "法律"
+            ],
+            "count": 1,
+            "like_weight": 211,
+            "representative_comments": [
+              {
+                "user": "落叶古木心",
+                "text": "还没看完，写点东西\n后现代带来的解构主义会无限制地破坏道德、法律、伦理等等，因为这些都会落实到现实，道德就是你当了渣男会被别人谴责，法律就是你杀了人就得进小黑屋，伦理就是你上了你妹妹要注意产检，除非你有可靠的办法去逃避这些惩罚。社会给普通人带来的约束惯性在后现代人面前是崩溃的，是无力的。当然，当所有价值层面的东西崩溃了，那么就得面临现实最冰冷的打击，而不是顾其左右而言他。但是，一个合格的后现代人，是不会在乎审判在乎法理的，他应该明白自己的乐趣所在，也明白自己的乐趣后面是一片空白一片虚无。在明白了这些还干了很多狗屁倒灶的事情后，如果有人证明了地狱的真实存在，那就赶紧改换信仰，自己干过的事情得自己擦屁股。",
+                "like": 211
+              }
+            ]
+          },
+          {
+            "title": "涨价去库存并不是中国市场的见顶而是政府用了一个简单而偷懒的方法作弊式地开了一个新",
+            "keywords": [
+              "涨价去库存并不是中国市场的见顶而是政府用了一个简单而偷懒的方法作弊式地开了一个新市场棚改带来的市场既不是消费主义的市场也不是生产性消费的市场因此中国的消费主义市场还有非常广阔的空间相比之下家电下乡那次才算是一个正常的扩张消费主义市场的行为",
+              "一个简单的例子就是拼多多等的下沉市场中国的消费主义一直盯着中产",
+              "但是哪个国家不是呢"
+            ],
+            "count": 1,
+            "like_weight": 146,
+            "representative_comments": [
+              {
+                "user": "星云频道小dd",
+                "text": "涨价去库存并不是中国市场的“见顶”，而是政府用了一个简单而偷懒的方法作弊式地开了一个新市场，棚改带来的市场既不是消费主义的市场也不是生产性消费的市场，因此中国的消费主义市场还有非常广阔的空间。相比之下，家电下乡那次才算是一个正常的扩张消费主义市场的行为。\n\n一个简单的例子就是拼多多等的下沉市场，中国的消费主义一直盯着中产（但是哪个国家不是呢？），是因为中国还有着十分庞大的穷人群体。真正改善这个群体收入的话，中国的消费主义还有一个非常夸张的生长空间。",
+                "like": 146
+              }
+            ]
+          },
+          {
+            "title": "过去的房产已经消耗了部分人今后全部的资金在他们还完负债前消费是可以忽略不计的而且",
+            "keywords": [
+              "过去的房产已经消耗了部分人今后全部的资金在他们还完负债前消费是可以忽略不计的而且消费是要在对未来有良好预期或对保障体系有信心的前提下进行的如果没有就会更倾向于进行基本的生存性的消费",
+              "doge"
+            ],
+            "count": 1,
+            "like_weight": 30,
+            "representative_comments": [
+              {
+                "user": "custodibus",
+                "text": "过去的房产已经消耗了部分人今后全部的资金，在他们还完负债前消费是可以忽略不计的。而且消费是要在对未来有良好预期或对保障体系有信心的前提下进行的，如果没有就会更倾向于进行基本的生存性的消费[doge]",
+                "like": 30
+              }
+            ]
+          },
+          {
+            "title": "回复 柳梦灬青山丶 难度不大国内现在基本没有进行任何关于劳工权益的改革我相信但凡",
+            "keywords": [
+              "回复",
+              "柳梦灬青山丶",
+              "难度不大国内现在基本没有进行任何关于劳工权益的改革我相信但凡进行一点点微小的改革都能产生极大的效用"
+            ],
+            "count": 1,
+            "like_weight": 30,
+            "representative_comments": [
+              {
+                "user": "莫长啸",
+                "text": "回复 @柳梦灬青山丶 :难度不大，国内现在基本没有进行任何关于劳工权益的改革，我相信但凡进行一点点微小的改革都能产生极大的效用。",
+                "like": 30
+              }
+            ]
+          },
+          {
+            "title": "回复 星际游行 解构主义就是只剩下纯粹的形式把具有先验神圣的字眼转化成纯粹的符号",
+            "keywords": [
+              "回复",
+              "星际游行",
+              "解构主义就是只剩下纯粹的形式把具有先验神圣的字眼转化成纯粹的符号从而瓦解字眼中的价值使其完全变成一种行为这种行为就必定是无意义的从而来讽刺所谓的叙事手段"
+            ],
+            "count": 1,
+            "like_weight": 21,
+            "representative_comments": [
+              {
+                "user": "flam1ng",
+                "text": "回复 @星际游行2 :解构主义就是只剩下纯粹的形式，把具有先验神圣的字眼转化成纯粹的符号，从而瓦解字眼中的价值，使其完全变成一种行为。这种行为就必定是无意义的，从而来讽刺所谓的叙事手段。\n比起局部，结构主义更加注重的是整体的纯粹符号逻辑和实质的行为，但是抛弃了一切意义，是纯粹现象的叙述。",
+                "like": 21
+              }
+            ]
+          },
+          {
+            "title": "文豪",
+            "keywords": [
+              "文豪"
+            ],
+            "count": 1,
+            "like_weight": 16,
+            "representative_comments": [
+              {
+                "user": "我記得天氣很熱",
+                "text": "文豪……",
+                "like": 16
+              }
+            ]
+          },
+          {
+            "title": "想到了万青的秦皇岛",
+            "keywords": [
+              "想到了万青的秦皇岛"
+            ],
+            "count": 1,
+            "like_weight": 12,
+            "representative_comments": [
+              {
+                "user": "Bostonjr",
+                "text": "想到了万青的秦皇岛",
+                "like": 12
+              }
+            ]
+          },
+          {
+            "title": "道德与伦理不是这样的 好像谈到伦理就是乱 啥的 道德更强调个体的或者说道德主体伦",
+            "keywords": [
+              "道德与伦理不是这样的",
+              "好像谈到伦理就是乱",
+              "啥的"
+            ],
+            "count": 1,
+            "like_weight": 12,
+            "representative_comments": [
+              {
+                "user": "长河碧落",
+                "text": "道德与伦理不是这样的……好像谈到伦理就是乱l啥的……道德更强调个体的或者说道德主体，伦理则强调人与人的关系。比如您跟我就属于是伦理关系。而且伦理与道德通常意义上应该是中性词……（甚至在西方伦理和道德就是一个词……只是从黑格尔开始对此进行了划分……）",
+                "like": 12
+              }
+            ]
+          },
+          {
+            "title": "回复 莫长啸 相信我改不了了",
+            "keywords": [
+              "回复",
+              "莫长啸",
+              "相信我改不了了"
+            ],
+            "count": 1,
+            "like_weight": 12,
+            "representative_comments": [
+              {
+                "user": "莫趣ryo",
+                "text": "回复 @莫长啸 :相信我，改不了了",
+                "like": 12
+              }
+            ]
+          },
+          {
+            "title": "回复 custodibus 真实今年买了一辆车价格比从小到大除吃和教育以外加起来",
+            "keywords": [
+              "回复",
+              "custodibus",
+              "真实今年买了一辆车价格比从小到大除吃和教育以外加起来还要多更何况房子鹅城的税已经收到"
+            ],
+            "count": 1,
+            "like_weight": 10,
+            "representative_comments": [
+              {
+                "user": "am阿慢",
+                "text": "回复 @custodibus : 真实，今年买了一辆车，价格比从小到大除吃和教育以外加起来还要多，更何况房子。鹅城的税已经收到90年之后了。不做大蛋糕哪来的钱消费啊[doge]",
+                "like": 10
+              }
+            ]
+          },
+          {
+            "title": "回复 莫长啸 改不动这么说拿我自己 打比方吧我家里之前做生意还可以",
+            "keywords": [
+              "回复",
+              "莫长啸",
+              "改不动这么说拿我自己"
+            ],
+            "count": 1,
+            "like_weight": 8,
+            "representative_comments": [
+              {
+                "user": "旧日遗民-赞美愚者",
+                "text": "回复 @莫长啸 : 改不动这么说拿我自己 打比方吧，我家里之前做生意，还可以 一病直接回到解放前，啥也没了，连房子都买不起，婚也结不起，女朋友说了没房子不结婚，我一个月深圳1.5w，扣掉社保 真正每个月到手就 13000多左右，一个月房租水电网2000一个月吃饭一个月4000，每个月我妈医院最少2500的药，剩下的偶尔卖个衣服鞋子，剩下的买不起房的，这两年it不好我一个月目前1.1w到手9000 哪里买的起房子，我都考虑跑非洲看看有没有机会，我想法去年就和up说的一样最好乱起来越乱越好真的，真的就这样的想法。我同学疫情之前在非洲开赌场一年可以赚个40w刀，很羡慕。这年头说实话讲良心的都死的很惨。没良心的才活的很好。做好人好事人家也不会记得你的好。",
+                "like": 8
+              }
+            ]
+          }
+        ],
+        "controversies": [
+          {
+            "title": "评论区存在反对或质疑声音",
+            "description": "共有 1 条评论表达质疑或反对观点，占比约 2%。",
+            "related_count": 1,
+            "sample_comments": []
+          },
+          {
+            "title": "评论区存在较多追问和求证",
+            "description": "共有 9 条评论提出问题，占比约 23%。",
+            "related_count": 9,
+            "sample_comments": [
+              "涨价去库存并不是中国市场的“见顶”，而是政府用了一个简单而偷懒的方法作弊式地开了一个新市场，棚改带来的市场既不是消费主义的市场也不是生产性消费的市场，因此中国的消费主义市场还有非常广阔的空间。相比之下，家电下乡那次才算是一个正常的扩张消费主义市场的行为。\n\n一个简单的例子就是拼多多等的下沉市场，中国的消费主义一直盯着中产（但是哪个国家不是呢？），是因为中国还有着十分庞大的穷人群体。真正改善这个群体收入的话，中国的消费主义还有一个非常夸张的生长空间。"
+            ]
+          }
+        ],
+        "summary": "本次分析共抓取 40 条评论，清洗后保留 39 条（移除空内容/表情/重复等 1 条）。 评论区整体以「中立/补充」为主，共 26 条，占比约 66%。 存在 1 条质疑或反对声音（占比约 2%），评论区存在一定观点分歧。 共有 9 条提问或求证类评论（占比约 23%），部分用户在寻求更多信息。 主要讨论围绕以下主题展开：补档 看完了真的感触颇深这 年既是棺木又是子宫摇篮曲和唢呐的合奏穿透一眼到头的人、还没看完写点东西 后现代带来的解构主义会无限制地破坏道德 法律 伦理等等因为这些、涨价去库存并不是中国市场的见顶而是政府用了一个简单而偷懒的方法作弊式地开了一个新。 平台：B站（bilibili）。",
+        "files": {
+          "json": "/api/jobs/063wn7euvq7gv9/48h2lnv7ga/comments",
+          "markdown": "/api/jobs/063wn7euvq7gv9/48h2lnv7ga/report",
+          "pdf": "/api/jobs/063wn7euvq7gv9/48h2lnv7ga/pdf"
+        },
+        "error": "",
+        "warnings": [],
+        "created_at": "2026-04-27 16:23:11",
+        "updated_at": "2026-04-27 16:23:26"
+      },
+      "paths": {
+        "comments_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\063wn7euvq7gv9\\48h2lnv7ga\\www-bilibili-com-46ea1709b165.comments.json",
+        "report_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\063wn7euvq7gv9\\48h2lnv7ga\\www-bilibili-com-46ea1709b165.report.md",
+        "pdf_path": "C:\\Users\\15858\\Desktop\\Comment_Intelligence_Reports\\2026-04-27\\bilibili_BV1sN4y1m7gw_评论分析报告_2026-04-27_1623.pdf"
+      }
+    }
+  ]
+}

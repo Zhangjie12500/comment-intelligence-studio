@@ -1,0 +1,30 @@
+# Vercel CLI deployment
+# 1. Install Vercel CLI: npm i -g vercel
+# 2. cd frontend
+# 3. vercel login
+# 4. vercel --prod
+#    - Set Environment Variables:
+#      VITE_API_BASE_URL = https://your-backend-service.onrender.com/api
+
+{
+  "name": "comment-intelligence-studio-frontend",
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "VITE_API_BASE_URL": "@backend-api-url"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "job_id": "r91u2fnw3htabc",
+  "status": "done",
+  "error": "",
+  "force_refresh": true,
+  "include_replies": true,
+  "created_at": "2026-04-27 15:21:47",
+  "updated_at": "2026-04-27 15:21:56",
+  "tasks": [
+    {
+      "task": {
+        "task_id": "4o6ozns0p2",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "platform": "youtube",
+        "video_id": "dQw4w9WgXcQ",
+        "status": "done",
+        "source": "fresh",
+        "limit": 20,
+        "include_replies": true,
+        "progress": 0,
+        "raw_count": 20,
+        "cleaned_count": 18,
+        "main_count": 1,
+        "reply_count": 17,
+        "stance_stats": {
+          "support": 0,
+          "oppose": 0,
+          "neutral": 0,
+          "joke": 0,
+          "question": 0
+        },
+        "top_influence_comments": [],
+        "clusters": [],
+        "controversies": [],
+        "files": {
+          "json": "/api/jobs/r91u2fnw3htabc/4o6ozns0p2/comments",
+          "markdown": "/api/jobs/r91u2fnw3htabc/4o6ozns0p2/report",
+          "pdf": "/api/jobs/r91u2fnw3htabc/4o6ozns0p2/pdf"
+        },
+        "error": "",
+        "warnings": [],
+        "created_at": "2026-04-27 15:21:47",
+        "updated_at": "2026-04-27 15:21:56"
+      },
+      "paths": {
+        "comments_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\r91u2fnw3htabc\\4o6ozns0p2\\www-youtube-com-df2c6f7afc1a.comments.json",
+        "report_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\r91u2fnw3htabc\\4o6ozns0p2\\www-youtube-com-df2c6f7afc1a.report.md",
+        "pdf_path": "C:\\Users\\15858\\Desktop\\Comment_Intelligence_Reports\\2026-04-27\\youtube_dQw4w9WgXcQ_评论分析报告_2026-04-27_1521.pdf"
+      }
+    }
+  ]
+}

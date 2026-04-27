@@ -1,0 +1,17 @@
+# Railway deployment — paste this into railway.app project setup
+# Project > Add New > Blank Project > Connect GitHub repo
+
+# railway.toml
+[railway]
+  entrypoint = "uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
+
+[railway.variables]
+  PYTHON_VERSION = "3.11"
+
+# Environment Variables (set in Railway dashboard > Variables):
+#   YOUTUBE_API_KEY = your_key_here
+#   OPENAI_API_KEY = your_key_here
+#   CORS_ORIGINS = https://your-frontend.vercel.app
+
+# Build command (automatically runs):
+#   pip install -r requirements.txt

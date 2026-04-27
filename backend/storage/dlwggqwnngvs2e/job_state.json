@@ -1,0 +1,354 @@
+{
+  "job_id": "dlwggqwnngvs2e",
+  "status": "done",
+  "error": "",
+  "force_refresh": false,
+  "include_replies": true,
+  "created_at": "2026-04-27 17:11:01",
+  "updated_at": "2026-04-27 17:11:05",
+  "tasks": [
+    {
+      "task": {
+        "task_id": "hp28ddbcm3",
+        "url": "https://www.bilibili.com/video/BV1VLZ4BgEwC/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7e9435332132eb135fd3ef62caab01f2",
+        "platform": "bilibili",
+        "video_id": "BV1VLZ4BgEwC",
+        "status": "done",
+        "source": "fresh",
+        "limit": 20,
+        "include_replies": true,
+        "progress": 0,
+        "raw_count": 20,
+        "cleaned_count": 20,
+        "main_count": 1,
+        "reply_count": 19,
+        "stance_stats": {
+          "support": 0,
+          "oppose": 0,
+          "neutral": 14,
+          "joke": 0,
+          "question": 6
+        },
+        "top_influence_comments": [
+          {
+            "user": "腹肌练至玖归一",
+            "text": "索多玛这个词，类似于罪恶之城。经常被自游派用来暗指塞里斯。up从自游派转向了，更改id很正常。[doge]",
+            "like": 273,
+            "reply_count": 24,
+            "influence_score": 321.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "江左道卡卡",
+            "text": "回复 @小红帽爱煮虾 : 我自己造的词，从社会政策上说，反新自由主义，强调共同体而非个人原子化，反身份政治，文化上的现实主义，从本体论上说，注重社会幸福的施密特和施特劳斯主义者，后面做一期视频单独说",
+            "like": 111,
+            "reply_count": 0,
+            "influence_score": 111.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "27年沒處理好",
+            "text": "简单来说，就是要吃简直大米了",
+            "like": 49,
+            "reply_count": 0,
+            "influence_score": 49.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "冰川漂流厂",
+            "text": "回复 @江左道卡卡 : 拉美的左翼民粹味。第三道路吗索子？",
+            "like": 22,
+            "reply_count": 0,
+            "influence_score": 22.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "裂谷新月不会发光",
+            "text": "回复 @小红帽爱煮虾 :一代人有一代人的守要保，新保守主义是这样的，保卫我们的现代生活嘛",
+            "like": 18,
+            "reply_count": 0,
+            "influence_score": 18.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "冥灵神华",
+            "text": "回复 @白鸽咕哒子 :标准的兼职做",
+            "like": 16,
+            "reply_count": 0,
+            "influence_score": 16.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "小红帽爱煮虾",
+            "text": "保守左派是个啥？难绷",
+            "like": 15,
+            "reply_count": 0,
+            "influence_score": 15.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "杰西高圧锅",
+            "text": "回复 @小红帽爱煮虾 :看到这个词第一反应就是斯大林主义",
+            "like": 13,
+            "reply_count": 0,
+            "influence_score": 13.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "白鸽咕哒子",
+            "text": "回复 @江左道卡卡 :这样算得上是兼职左吗",
+            "like": 10,
+            "reply_count": 0,
+            "influence_score": 10.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "花园小鱼-official",
+            "text": "我寻思索多玛怎么也不和赛力斯沾边啊，光是奢靡挥霍堕落享乐白头鹰就甩我们九条街，我们还在为消费不足发愁呢……",
+            "like": 10,
+            "reply_count": 0,
+            "influence_score": 10.0,
+            "stance": "question",
+            "translation_zh": ""
+          }
+        ],
+        "clusters": [
+          {
+            "title": "索多玛这个词类似于罪恶之城经常被自游派用来暗指塞里斯 从自游派转向了更改 很正常",
+            "keywords": [
+              "索多玛这个词类似于罪恶之城经常被自游派用来暗指塞里斯",
+              "从自游派转向了更改",
+              "很正常"
+            ],
+            "count": 1,
+            "like_weight": 273,
+            "representative_comments": [
+              {
+                "user": "腹肌练至玖归一",
+                "text": "索多玛这个词，类似于罪恶之城。经常被自游派用来暗指塞里斯。up从自游派转向了，更改id很正常。[doge]",
+                "like": 273
+              }
+            ]
+          },
+          {
+            "title": "回复 小红帽爱煮虾 我自己造的词从社会政策上说反新自由主义强调共同体而非个人原子",
+            "keywords": [
+              "回复",
+              "小红帽爱煮虾",
+              "我自己造的词从社会政策上说反新自由主义强调共同体而非个人原子化反身份政治文化上的现实主义从本体论上说注重社会幸福的施密特和施特劳斯主义者后面做一期视频单独说"
+            ],
+            "count": 1,
+            "like_weight": 111,
+            "representative_comments": [
+              {
+                "user": "江左道卡卡",
+                "text": "回复 @小红帽爱煮虾 : 我自己造的词，从社会政策上说，反新自由主义，强调共同体而非个人原子化，反身份政治，文化上的现实主义，从本体论上说，注重社会幸福的施密特和施特劳斯主义者，后面做一期视频单独说",
+                "like": 111
+              }
+            ]
+          },
+          {
+            "title": "简单来说就是要吃简直大米了",
+            "keywords": [
+              "简单来说就是要吃简直大米了"
+            ],
+            "count": 1,
+            "like_weight": 49,
+            "representative_comments": [
+              {
+                "user": "27年沒處理好",
+                "text": "简单来说，就是要吃简直大米了",
+                "like": 49
+              }
+            ]
+          },
+          {
+            "title": "回复 江左道卡卡 拉美的左翼民粹味第三道路吗索子",
+            "keywords": [
+              "回复",
+              "江左道卡卡",
+              "拉美的左翼民粹味第三道路吗索子"
+            ],
+            "count": 1,
+            "like_weight": 22,
+            "representative_comments": [
+              {
+                "user": "冰川漂流厂",
+                "text": "回复 @江左道卡卡 : 拉美的左翼民粹味。第三道路吗索子？",
+                "like": 22
+              }
+            ]
+          },
+          {
+            "title": "回复 小红帽爱煮虾 一代人有一代人的守要保新保守主义是这样的保卫我们的现代生活嘛",
+            "keywords": [
+              "回复",
+              "小红帽爱煮虾",
+              "一代人有一代人的守要保新保守主义是这样的保卫我们的现代生活嘛"
+            ],
+            "count": 1,
+            "like_weight": 18,
+            "representative_comments": [
+              {
+                "user": "裂谷新月不会发光",
+                "text": "回复 @小红帽爱煮虾 :一代人有一代人的守要保，新保守主义是这样的，保卫我们的现代生活嘛",
+                "like": 18
+              }
+            ]
+          },
+          {
+            "title": "回复 白鸽咕哒子 标准的兼职做",
+            "keywords": [
+              "回复",
+              "白鸽咕哒子",
+              "标准的兼职做"
+            ],
+            "count": 1,
+            "like_weight": 16,
+            "representative_comments": [
+              {
+                "user": "冥灵神华",
+                "text": "回复 @白鸽咕哒子 :标准的兼职做",
+                "like": 16
+              }
+            ]
+          },
+          {
+            "title": "保守左派是个啥难绷",
+            "keywords": [
+              "保守左派是个啥难绷"
+            ],
+            "count": 1,
+            "like_weight": 15,
+            "representative_comments": [
+              {
+                "user": "小红帽爱煮虾",
+                "text": "保守左派是个啥？难绷",
+                "like": 15
+              }
+            ]
+          },
+          {
+            "title": "回复 小红帽爱煮虾 看到这个词第一反应就是斯大林主义",
+            "keywords": [
+              "回复",
+              "小红帽爱煮虾",
+              "看到这个词第一反应就是斯大林主义"
+            ],
+            "count": 1,
+            "like_weight": 13,
+            "representative_comments": [
+              {
+                "user": "杰西高圧锅",
+                "text": "回复 @小红帽爱煮虾 :看到这个词第一反应就是斯大林主义",
+                "like": 13
+              }
+            ]
+          },
+          {
+            "title": "回复 江左道卡卡 这样算得上是兼职左吗",
+            "keywords": [
+              "回复",
+              "江左道卡卡",
+              "这样算得上是兼职左吗"
+            ],
+            "count": 1,
+            "like_weight": 10,
+            "representative_comments": [
+              {
+                "user": "白鸽咕哒子",
+                "text": "回复 @江左道卡卡 :这样算得上是兼职左吗",
+                "like": 10
+              }
+            ]
+          },
+          {
+            "title": "我寻思索多玛怎么也不和赛力斯沾边啊光是奢靡挥霍堕落享乐白头鹰就甩我们九条街我们还",
+            "keywords": [
+              "我寻思索多玛怎么也不和赛力斯沾边啊光是奢靡挥霍堕落享乐白头鹰就甩我们九条街我们还在为消费不足发愁呢"
+            ],
+            "count": 1,
+            "like_weight": 10,
+            "representative_comments": [
+              {
+                "user": "花园小鱼-official",
+                "text": "我寻思索多玛怎么也不和赛力斯沾边啊，光是奢靡挥霍堕落享乐白头鹰就甩我们九条街，我们还在为消费不足发愁呢……",
+                "like": 10
+              }
+            ]
+          },
+          {
+            "title": "回复 白鸽咕哒子 反伦理化 现实主义左强调结构层面",
+            "keywords": [
+              "回复",
+              "白鸽咕哒子",
+              "反伦理化"
+            ],
+            "count": 1,
+            "like_weight": 9,
+            "representative_comments": [
+              {
+                "user": "VexonFaron",
+                "text": "回复 @白鸽咕哒子 :反伦理化+现实主义左，强调结构层面",
+                "like": 9
+              }
+            ]
+          },
+          {
+            "title": "回复 康维新 国内才哪儿到哪牢 及其粉丝不过是互联网民粹的小注脚作为新自最坚固堡",
+            "keywords": [
+              "回复",
+              "康维新",
+              "国内才哪儿到哪牢"
+            ],
+            "count": 1,
+            "like_weight": 5,
+            "representative_comments": [
+              {
+                "user": "冰川漂流厂",
+                "text": "回复 @康维新 :国内才哪儿到哪，牢A及其粉丝不过是互联网民粹的小注脚，作为新自最坚固堡垒的⏰不到施密特时刻你觉得民粹有上桌可能性？",
+                "like": 5
+              }
+            ]
+          }
+        ],
+        "controversies": [
+          {
+            "title": "评论区存在较多追问和求证",
+            "description": "共有 6 条评论提出问题，占比约 30%。",
+            "related_count": 6,
+            "sample_comments": [
+              "回复 @江左道卡卡 : 拉美的左翼民粹味。第三道路吗索子？",
+              "保守左派是个啥？难绷",
+              "我寻思索多玛怎么也不和赛力斯沾边啊，光是奢靡挥霍堕落享乐白头鹰就甩我们九条街，我们还在为消费不足发愁呢……"
+            ]
+          }
+        ],
+        "summary": "本次分析共抓取 20 条评论，清洗后保留 20 条（移除空内容/表情/重复等 0 条）。 评论区整体以「中立/补充」为主，共 14 条，占比约 70%。 共有 6 条提问或求证类评论（占比约 30%），部分用户在寻求更多信息。 主要讨论围绕以下主题展开：索多玛这个词类似于罪恶之城经常被自游派用来暗指塞里斯 从自游派转向了更改 很正常、回复 小红帽爱煮虾 我自己造的词从社会政策上说反新自由主义强调共同体而非个人原子、简单来说就是要吃简直大米了。 平台：B站（bilibili）。",
+        "files": {
+          "json": "/api/jobs/dlwggqwnngvs2e/hp28ddbcm3/comments",
+          "markdown": "/api/jobs/dlwggqwnngvs2e/hp28ddbcm3/report",
+          "pdf": "/api/jobs/dlwggqwnngvs2e/hp28ddbcm3/pdf"
+        },
+        "error": "",
+        "warnings": [],
+        "created_at": "2026-04-27 17:11:01",
+        "updated_at": "2026-04-27 17:11:05"
+      },
+      "paths": {
+        "comments_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\dlwggqwnngvs2e\\hp28ddbcm3\\www-bilibili-com-ae1f25a60ffc.comments.json",
+        "report_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\dlwggqwnngvs2e\\hp28ddbcm3\\www-bilibili-com-ae1f25a60ffc.report.md",
+        "pdf_path": "C:\\Users\\15858\\Desktop\\Comment_Intelligence_Reports\\2026-04-27\\bilibili_BV1VLZ4BgEwC_评论分析报告_2026-04-27_1711.pdf"
+      }
+    }
+  ]
+}

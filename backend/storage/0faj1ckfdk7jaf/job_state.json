@@ -1,0 +1,48 @@
+{
+  "job_id": "0faj1ckfdk7jaf",
+  "force_refresh": false,
+  "include_replies": false,
+  "tasks": [
+    {
+      "task": {
+        "task_id": "nz7fuxab8b",
+        "url": "https://www.bilibili.com/video/BV1xx411c7mD",
+        "platform": "bilibili",
+        "video_id": "BV1xx411c7mD",
+        "status": "done",
+        "source": "cache",
+        "limit": 10,
+        "include_replies": false,
+        "progress": 0,
+        "raw_count": 10,
+        "cleaned_count": 10,
+        "main_count": 10,
+        "reply_count": 0,
+        "stance_stats": {
+          "support": 0,
+          "oppose": 0,
+          "neutral": 0,
+          "joke": 0,
+          "question": 0
+        },
+        "top_influence_comments": [],
+        "clusters": [],
+        "controversies": [],
+        "files": {
+          "json": "/api/jobs/0faj1ckfdk7jaf/nz7fuxab8b/comments",
+          "markdown": "/api/jobs/0faj1ckfdk7jaf/nz7fuxab8b/report",
+          "pdf": "/api/jobs/0faj1ckfdk7jaf/nz7fuxab8b/pdf"
+        },
+        "error": "",
+        "warnings": [],
+        "created_at": "2026-04-27 14:05:19",
+        "updated_at": "2026-04-27 14:05:20"
+      },
+      "paths": {
+        "comments_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\0faj1ckfdk7jaf\\nz7fuxab8b\\www-bilibili-com-45944adcae0b.comments.json",
+        "report_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\0faj1ckfdk7jaf\\nz7fuxab8b\\www-bilibili-com-45944adcae0b.report.md",
+        "pdf_path": "C:\\Users\\15858\\Desktop\\Comment_Intelligence_Reports\\2026-04-27\\bilibili_BV1xx411c7mD_评论分析报告_2026-04-27_1405.pdf"
+      }
+    }
+  ]
+}

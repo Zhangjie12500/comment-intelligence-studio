@@ -1,0 +1,693 @@
+{
+  "job_id": "07aqysymujzxqd",
+  "status": "done",
+  "error": "",
+  "force_refresh": true,
+  "include_replies": true,
+  "created_at": "2026-04-27 16:12:15",
+  "updated_at": "2026-04-27 16:12:24",
+  "tasks": [
+    {
+      "task": {
+        "task_id": "j7ib9qpv2a",
+        "url": "https://www.bilibili.com/video/BV1GJ411x7h7",
+        "platform": "bilibili",
+        "video_id": "BV1GJ411x7h7",
+        "status": "done",
+        "source": "fresh",
+        "limit": 20,
+        "include_replies": true,
+        "progress": 0,
+        "raw_count": 20,
+        "cleaned_count": 20,
+        "main_count": 1,
+        "reply_count": 19,
+        "stance_stats": {
+          "support": 2,
+          "oppose": 1,
+          "neutral": 15,
+          "joke": 0,
+          "question": 2
+        },
+        "top_influence_comments": [
+          {
+            "user": "谁厨烫门",
+            "text": "靠这个牢牢记住了 so do I 和 so I do 的区别…",
+            "like": 268134,
+            "reply_count": 733,
+            "influence_score": 269600.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "神仙B-",
+            "text": "不是so do I，是so⬆️ do⬆️ I↗️↗️↗️",
+            "like": 10085,
+            "reply_count": 0,
+            "influence_score": 10085.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "二氧化氮有毒",
+            "text": "so↑ do↓ I↑",
+            "like": 10018,
+            "reply_count": 0,
+            "influence_score": 10018.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "亓官半烟",
+            "text": "回复 @yy9077041 :so do I我也是 ，so I do我确实这么做了，因为这歌里有You know the rules and so do I嘛，所以so do I是我也是[妙啊]",
+            "like": 2697,
+            "reply_count": 0,
+            "influence_score": 2697.0,
+            "stance": "support",
+            "translation_zh": ""
+          },
+          {
+            "user": "寒剑向林1",
+            "text": "回复 @想和aoko酱贴贴 :所以做我[doge]",
+            "like": 2214,
+            "reply_count": 0,
+            "influence_score": 2214.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "苍术泡茶",
+            "text": "回复 @寒剑向林 :所以我做[doge]",
+            "like": 899,
+            "reply_count": 0,
+            "influence_score": 899.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "九磅十五便士の青春",
+            "text": "一个是也的意思，一个是确实，加强程度的意思，我以前老分不清楚，现在记特别牢",
+            "like": 735,
+            "reply_count": 0,
+            "influence_score": 735.0,
+            "stance": "support",
+            "translation_zh": ""
+          },
+          {
+            "user": "大盘鸡南波湾",
+            "text": "英语老师可以含笑九泉了",
+            "like": 677,
+            "reply_count": 0,
+            "influence_score": 677.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "秦始皇派蒙恬去修铁道",
+            "text": "讲道理真挺好听的[tv_目瞪口呆]",
+            "like": 474,
+            "reply_count": 0,
+            "influence_score": 474.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "阿帕基不喝阿帕茶",
+            "text": "回复 @DIANA_麓熙 :我是知道的，我故意的[doge]",
+            "like": 439,
+            "reply_count": 0,
+            "influence_score": 439.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          }
+        ],
+        "clusters": [
+          {
+            "title": "靠这个牢牢记住了 的区别",
+            "keywords": [
+              "靠这个牢牢记住了",
+              "的区别"
+            ],
+            "count": 1,
+            "like_weight": 268134,
+            "representative_comments": [
+              {
+                "user": "谁厨烫门",
+                "text": "靠这个牢牢记住了 so do I 和 so I do 的区别…",
+                "like": 268134
+              }
+            ]
+          },
+          {
+            "title": "不是",
+            "keywords": [
+              "不是"
+            ],
+            "count": 1,
+            "like_weight": 10085,
+            "representative_comments": [
+              {
+                "user": "神仙B-",
+                "text": "不是so do I，是so⬆️ do⬆️ I↗️↗️↗️",
+                "like": 10085
+              }
+            ]
+          },
+          {
+            "title": "so↑ do↓ i↑",
+            "keywords": [
+              "so↑ do↓ i↑"
+            ],
+            "count": 1,
+            "like_weight": 10018,
+            "representative_comments": [
+              {
+                "user": "二氧化氮有毒",
+                "text": "so↑ do↓ I↑",
+                "like": 10018
+              }
+            ]
+          },
+          {
+            "title": "回复 我也是 我确实这么做了因为这歌里有 you",
+            "keywords": [
+              "回复",
+              "我也是",
+              "我确实这么做了因为这歌里有"
+            ],
+            "count": 1,
+            "like_weight": 2697,
+            "representative_comments": [
+              {
+                "user": "亓官半烟",
+                "text": "回复 @yy9077041 :so do I我也是 ，so I do我确实这么做了，因为这歌里有You know the rules and so do I嘛，所以so do I是我也是[妙啊]",
+                "like": 2697
+              }
+            ]
+          },
+          {
+            "title": "回复 想和 aoko 酱贴贴",
+            "keywords": [
+              "回复",
+              "想和",
+              "aoko"
+            ],
+            "count": 1,
+            "like_weight": 2214,
+            "representative_comments": [
+              {
+                "user": "寒剑向林1",
+                "text": "回复 @想和aoko酱贴贴 :所以做我[doge]",
+                "like": 2214
+              }
+            ]
+          },
+          {
+            "title": "回复 寒剑向林 所以我做 doge",
+            "keywords": [
+              "回复",
+              "寒剑向林",
+              "所以我做"
+            ],
+            "count": 1,
+            "like_weight": 899,
+            "representative_comments": [
+              {
+                "user": "苍术泡茶",
+                "text": "回复 @寒剑向林 :所以我做[doge]",
+                "like": 899
+              }
+            ]
+          },
+          {
+            "title": "一个是也的意思一个是确实加强程度的意思我以前老分不清楚现在记特别牢",
+            "keywords": [
+              "一个是也的意思一个是确实加强程度的意思我以前老分不清楚现在记特别牢"
+            ],
+            "count": 1,
+            "like_weight": 735,
+            "representative_comments": [
+              {
+                "user": "九磅十五便士の青春",
+                "text": "一个是也的意思，一个是确实，加强程度的意思，我以前老分不清楚，现在记特别牢",
+                "like": 735
+              }
+            ]
+          },
+          {
+            "title": "英语老师可以含笑九泉了",
+            "keywords": [
+              "英语老师可以含笑九泉了"
+            ],
+            "count": 1,
+            "like_weight": 677,
+            "representative_comments": [
+              {
+                "user": "大盘鸡南波湾",
+                "text": "英语老师可以含笑九泉了",
+                "like": 677
+              }
+            ]
+          },
+          {
+            "title": "讲道理真挺好听的 目瞪口呆",
+            "keywords": [
+              "讲道理真挺好听的",
+              "目瞪口呆"
+            ],
+            "count": 1,
+            "like_weight": 474,
+            "representative_comments": [
+              {
+                "user": "秦始皇派蒙恬去修铁道",
+                "text": "讲道理真挺好听的[tv_目瞪口呆]",
+                "like": 474
+              }
+            ]
+          },
+          {
+            "title": "回复 diana 麓熙 我是知道的我故意的",
+            "keywords": [
+              "回复",
+              "diana",
+              "麓熙"
+            ],
+            "count": 1,
+            "like_weight": 439,
+            "representative_comments": [
+              {
+                "user": "阿帕基不喝阿帕茶",
+                "text": "回复 @DIANA_麓熙 :我是知道的，我故意的[doge]",
+                "like": 439
+              }
+            ]
+          },
+          {
+            "title": "人废话鬼补充 doge doge doge",
+            "keywords": [
+              "人废话鬼补充",
+              "doge"
+            ],
+            "count": 1,
+            "like_weight": 353,
+            "representative_comments": [
+              {
+                "user": "lifesparkling",
+                "text": "人废话，鬼补充[doge][doge][doge]",
+                "like": 353
+              }
+            ]
+          },
+          {
+            "title": "咋记的啊",
+            "keywords": [
+              "咋记的啊"
+            ],
+            "count": 1,
+            "like_weight": 285,
+            "representative_comments": [
+              {
+                "user": "网恋被骗三伯筷",
+                "text": "咋记的啊",
+                "like": 285
+              }
+            ]
+          }
+        ],
+        "controversies": [
+          {
+            "title": "评论区存在反对或质疑声音",
+            "description": "共有 1 条评论表达质疑或反对观点，占比约 5%。",
+            "related_count": 1,
+            "sample_comments": []
+          },
+          {
+            "title": "评论区存在较多追问和求证",
+            "description": "共有 2 条评论提出问题，占比约 10%。",
+            "related_count": 2,
+            "sample_comments": []
+          },
+          {
+            "title": "支持与反对观点并存",
+            "description": "支持观点 2 条，反对观点 1 条，评论区存在明显观点分歧。",
+            "related_count": 3,
+            "sample_comments": [
+              "回复 @yy9077041 :so do I我也是 ，so I do我确实这么做了，因为这歌里有You know the rules and so do I嘛，所以so do I是我也是[妙啊]",
+              "一个是也的意思，一个是确实，加强程度的意思，我以前老分不清楚，现在记特别牢"
+            ]
+          }
+        ],
+        "summary": "本次分析共抓取 20 条评论，清洗后保留 20 条（移除空内容/表情/重复等 0 条）。 评论区整体以「中立/补充」为主，共 15 条，占比约 75%。 存在 1 条质疑或反对声音（占比约 5%），评论区存在一定观点分歧。 共有 2 条提问或求证类评论（占比约 10%），部分用户在寻求更多信息。 主要讨论围绕以下主题展开：靠这个牢牢记住了 的区别、不是、so↑ do↓ i↑。 平台：B站（bilibili）。",
+        "files": {
+          "json": "/api/jobs/07aqysymujzxqd/j7ib9qpv2a/comments",
+          "markdown": "/api/jobs/07aqysymujzxqd/j7ib9qpv2a/report",
+          "pdf": "/api/jobs/07aqysymujzxqd/j7ib9qpv2a/pdf"
+        },
+        "error": "",
+        "warnings": [],
+        "created_at": "2026-04-27 16:12:15",
+        "updated_at": "2026-04-27 16:12:22"
+      },
+      "paths": {
+        "comments_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\07aqysymujzxqd\\j7ib9qpv2a\\www-bilibili-com-f9811c938a3b.comments.json",
+        "report_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\07aqysymujzxqd\\j7ib9qpv2a\\www-bilibili-com-f9811c938a3b.report.md",
+        "pdf_path": "C:\\Users\\15858\\Desktop\\Comment_Intelligence_Reports\\2026-04-27\\bilibili_BV1GJ411x7h7_评论分析报告_2026-04-27_1612.pdf"
+      }
+    },
+    {
+      "task": {
+        "task_id": "punmws6you",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "platform": "youtube",
+        "video_id": "dQw4w9WgXcQ",
+        "status": "done",
+        "source": "fresh",
+        "limit": 20,
+        "include_replies": true,
+        "progress": 0,
+        "raw_count": 20,
+        "cleaned_count": 18,
+        "main_count": 1,
+        "reply_count": 17,
+        "stance_stats": {
+          "support": 0,
+          "oppose": 0,
+          "neutral": 18,
+          "joke": 0,
+          "question": 0
+        },
+        "top_influence_comments": [
+          {
+            "user": "@YouTube",
+            "text": "can confirm: he never gave us up",
+            "like": 229657,
+            "reply_count": 0,
+            "influence_score": 229657.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@linganguliguliwatcha",
+            "text": "YOUTUBE AND ONE LIKE WOOHAAAAH",
+            "like": 6560,
+            "reply_count": 0,
+            "influence_score": 6560.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@_bugrabilgin",
+            "text": "HEY YOUTUBE",
+            "like": 2779,
+            "reply_count": 0,
+            "influence_score": 2779.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@NashiraArif",
+            "text": "new comment alert",
+            "like": 1844,
+            "reply_count": 0,
+            "influence_score": 1844.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@ShyGuy_cc",
+            "text": "Youtube accidently got rickrolled",
+            "like": 974,
+            "reply_count": 0,
+            "influence_score": 974.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@jennaortega-m4m",
+            "text": "oop 3rd didnt realise youtube was here😄",
+            "like": 874,
+            "reply_count": 0,
+            "influence_score": 874.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@FactusCactus",
+            "text": "Dear team YT,\n-Kindly bring back dislikes\n-Kindly promote underrated creators more \nAnd kindly stop showing me with channels that I've marked with \"do not recommend\"\nAnd last but not the least- - -delete YT shorts forever from this holy planet",
+            "like": 843,
+            "reply_count": 0,
+            "influence_score": 843.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@TheAngelofBattle99",
+            "text": "He's ingrained in our brains at this point. Such a devoted man.",
+            "like": 644,
+            "reply_count": 0,
+            "influence_score": 644.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@fishunboxing",
+            "text": "make this appear on everyone's homepages for a day",
+            "like": 513,
+            "reply_count": 0,
+            "influence_score": 513.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@hinzbx",
+            "text": "@FactusCactus also fix the homepage. I want my 4 videos per row back!",
+            "like": 240,
+            "reply_count": 0,
+            "influence_score": 240.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          }
+        ],
+        "clusters": [
+          {
+            "title": "can confirm never gave",
+            "keywords": [
+              "can",
+              "confirm",
+              "never"
+            ],
+            "count": 1,
+            "like_weight": 229657,
+            "representative_comments": [
+              {
+                "user": "@YouTube",
+                "text": "can confirm: he never gave us up",
+                "like": 229657
+              }
+            ]
+          },
+          {
+            "title": "youtube and one like",
+            "keywords": [
+              "youtube",
+              "and",
+              "one"
+            ],
+            "count": 1,
+            "like_weight": 6560,
+            "representative_comments": [
+              {
+                "user": "@linganguliguliwatcha",
+                "text": "YOUTUBE AND ONE LIKE WOOHAAAAH",
+                "like": 6560
+              }
+            ]
+          },
+          {
+            "title": "hey youtube",
+            "keywords": [
+              "hey",
+              "youtube"
+            ],
+            "count": 1,
+            "like_weight": 2779,
+            "representative_comments": [
+              {
+                "user": "@_bugrabilgin",
+                "text": "HEY YOUTUBE",
+                "like": 2779
+              }
+            ]
+          },
+          {
+            "title": "new comment alert",
+            "keywords": [
+              "new",
+              "comment",
+              "alert"
+            ],
+            "count": 1,
+            "like_weight": 1844,
+            "representative_comments": [
+              {
+                "user": "@NashiraArif",
+                "text": "new comment alert",
+                "like": 1844
+              }
+            ]
+          },
+          {
+            "title": "youtube accidently got rickrolled",
+            "keywords": [
+              "youtube",
+              "accidently",
+              "got"
+            ],
+            "count": 1,
+            "like_weight": 974,
+            "representative_comments": [
+              {
+                "user": "@ShyGuy_cc",
+                "text": "Youtube accidently got rickrolled",
+                "like": 974
+              }
+            ]
+          },
+          {
+            "title": "oop didnt realise youtube",
+            "keywords": [
+              "oop",
+              "didnt",
+              "realise"
+            ],
+            "count": 1,
+            "like_weight": 874,
+            "representative_comments": [
+              {
+                "user": "@jennaortega-m4m",
+                "text": "oop 3rd didnt realise youtube was here😄",
+                "like": 874
+              }
+            ]
+          },
+          {
+            "title": "dear team kindly bring",
+            "keywords": [
+              "dear",
+              "team",
+              "kindly"
+            ],
+            "count": 1,
+            "like_weight": 843,
+            "representative_comments": [
+              {
+                "user": "@FactusCactus",
+                "text": "Dear team YT,\n-Kindly bring back dislikes\n-Kindly promote underrated creators more \nAnd kindly stop showing me with channels that I've marked with \"do not recommend\"\nAnd last but not the least- - -delete YT shorts forever from this holy planet",
+                "like": 843
+              }
+            ]
+          },
+          {
+            "title": "hes ingrained our brains",
+            "keywords": [
+              "hes",
+              "ingrained",
+              "our"
+            ],
+            "count": 1,
+            "like_weight": 644,
+            "representative_comments": [
+              {
+                "user": "@TheAngelofBattle99",
+                "text": "He's ingrained in our brains at this point. Such a devoted man.",
+                "like": 644
+              }
+            ]
+          },
+          {
+            "title": "make this appear everyones",
+            "keywords": [
+              "make",
+              "this",
+              "appear"
+            ],
+            "count": 1,
+            "like_weight": 513,
+            "representative_comments": [
+              {
+                "user": "@fishunboxing",
+                "text": "make this appear on everyone's homepages for a day",
+                "like": 513
+              }
+            ]
+          },
+          {
+            "title": "factuscactus also fix the",
+            "keywords": [
+              "factuscactus",
+              "also",
+              "fix"
+            ],
+            "count": 1,
+            "like_weight": 240,
+            "representative_comments": [
+              {
+                "user": "@hinzbx",
+                "text": "@FactusCactus also fix the homepage. I want my 4 videos per row back!",
+                "like": 240
+              }
+            ]
+          },
+          {
+            "title": "omg",
+            "keywords": [
+              "omg"
+            ],
+            "count": 1,
+            "like_weight": 212,
+            "representative_comments": [
+              {
+                "user": "@estestargamesofficial",
+                "text": "Omg",
+                "like": 212
+              }
+            ]
+          },
+          {
+            "title": "even youtube got rickrolled",
+            "keywords": [
+              "even",
+              "youtube",
+              "got"
+            ],
+            "count": 1,
+            "like_weight": 153,
+            "representative_comments": [
+              {
+                "user": "@someone_hate3970",
+                "text": "even in 2025 youtube  got rickrolled.. maybe there is hope for humanity after all",
+                "like": 153
+              }
+            ]
+          }
+        ],
+        "controversies": [],
+        "summary": "本次分析共抓取 20 条评论，清洗后保留 18 条（移除空内容/表情/重复等 2 条）。 评论区整体以「中立/补充」为主，共 18 条，占比约 100%。 主要讨论围绕以下主题展开：can confirm never gave、youtube and one like、hey youtube。 平台：YouTube。",
+        "files": {
+          "json": "/api/jobs/07aqysymujzxqd/punmws6you/comments",
+          "markdown": "/api/jobs/07aqysymujzxqd/punmws6you/report",
+          "pdf": "/api/jobs/07aqysymujzxqd/punmws6you/pdf"
+        },
+        "error": "",
+        "warnings": [],
+        "created_at": "2026-04-27 16:12:15",
+        "updated_at": "2026-04-27 16:12:24"
+      },
+      "paths": {
+        "comments_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\07aqysymujzxqd\\punmws6you\\www-youtube-com-df2c6f7afc1a.comments.json",
+        "report_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\07aqysymujzxqd\\punmws6you\\www-youtube-com-df2c6f7afc1a.report.md",
+        "pdf_path": "C:\\Users\\15858\\Desktop\\Comment_Intelligence_Reports\\2026-04-27\\youtube_dQw4w9WgXcQ_评论分析报告_2026-04-27_1612.pdf"
+      }
+    }
+  ]
+}

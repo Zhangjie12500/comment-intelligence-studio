@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: comment-intelligence-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: YOUTUBE_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        # 部署后替换为你的 Vercel 前端 URL
+        # 格式: https://your-frontend-app.vercel.app
+        # 多个用逗号分隔
+        value: https://your-frontend.vercel.app
+      - key: PYTHON_VERSION
+        value: "3.11"
