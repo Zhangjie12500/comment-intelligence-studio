@@ -18,28 +18,42 @@ class YouTubeError(RuntimeError):
 
 
 def extract_video_id(url: str) -> str:
-    # ── Strategy 1: regex directly on raw URL (fastest, no network needed) ──
-    # Handles all formats without a redirect request.
+    # ── Strategy 1: regex directly on raw URL (no network needed) ──
     # Pattern A: youtu.be/VIDEO_ID[?...]
-    m = re.search(r"(?:youtu\.be/|youtube\.com/(?:shorts/|embed/|v/))([0-9A-Za-z_-]{6,})", url)
+    m = re.search(r"youtu\.be/([0-9A-Za-z_-]{6,})", url)
+    if m:
+        return m.group(1)
+
+    # Pattern B: youtube.com/(watch|shorts|embed|v)/VIDEO_ID
+    m = re.search(r"youtube\.com/(?:watch|shorts|embed|v)/(?:[^/?&]+/)*([0-9A-Za-z_-]{6,})", url)
+    if m:
+        return m.group(1)
+
+    # Pattern C: youtube.com/watch?v=VIDEO_ID[&...]
+    # Extract video ID from query string via regex on raw URL (avoids network request)
+    m = re.search(r"youtube\.com/(?:watch)?\?[^#]*[?&]v=([0-9A-Za-z_-]{6,})", url)
     if m:
         return m.group(1)
 
     # ── Strategy 2: follow redirects and parse query string ──
-    u = resolve_url(url)
-    p = urlparse(u)
-    host = (p.netloc or "").lower().split(":")[0]
-    if host.endswith("youtu.be"):
-        vid = p.path.strip("/").split("/")[0]
-        if vid:
-            return vid
-    if host.endswith("youtube.com"):
-        q = parse_qs(p.query)
-        if "v" in q and q["v"]:
-            return q["v"][0]
-        m = re.search(r"/shorts/([0-9A-Za-z_-]{6,})", p.path)
-        if m:
-            return m.group(1)
+    # Only used when URL is a redirect target (e.g. youtu.be short link resolved)
+    try:
+        u = resolve_url(url)
+        p = urlparse(u)
+        host = (p.netloc or "").lower().split(":")[0]
+        if host.endswith("youtu.be"):
+            vid = p.path.strip("/").split("/")[0]
+            if vid:
+                return vid
+        if host.endswith("youtube.com"):
+            q = parse_qs(p.query)
+            if "v" in q and q["v"]:
+                return q["v"][0]
+            m = re.search(r"/shorts/([0-9A-Za-z_-]{6,})", p.path)
+            if m:
+                return m.group(1)
+    except Exception:
+        pass
 
     raise YouTubeError("无法从 YouTube 链接解析 videoId，请检查链接格式是否正确")
 
@@ -48,14 +62,18 @@ def extract_video_id(url: str) -> str:
 if __name__ == "__main__":
     cases = [
         ("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "dQw4w9WgXcQ"),
-        ("https://youtu.be/dQw4w9WgXcQ", "dQw4w9WgXcQ"),
         ("https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=123", "dQw4w9WgXcQ"),
-        ("https://youtu.be/dQw4w9WgXcQ?t=123", "dQw4w9WgXcQ"),
         ("https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=xxx&index=5", "dQw4w9WgXcQ"),
+        ("https://youtube.com/watch?v=dQw4w9WgXcQ", "dQw4w9WgXcQ"),
+        ("https://www.youtube.com/watch?v=QVSoNEqdXvU", "QVSoNEqdXvU"),
+        ("https://youtu.be/dQw4w9WgXcQ", "dQw4w9WgXcQ"),
+        ("https://youtu.be/dQw4w9WgXcQ?t=123", "dQw4w9WgXcQ"),
         ("https://youtu.be/abc123XYZ-?t=456", "abc123XYZ"),
         ("https://www.youtube.com/shorts/abc123XYZ", "abc123XYZ"),
         ("https://www.youtube.com/embed/abc123XYZ", "abc123XYZ"),
         ("https://www.youtube.com/v/abc123XYZ", "abc123XYZ"),
+        ("https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=123#comment", "dQw4w9WgXcQ"),
+        ("https://www.youtube.com/shorts/xyz789?v=dQw4w9WgXcQ", "dQw4w9WgXcQ"),
     ]
     all_pass = True
     for raw_url, expected in cases:
