@@ -186,6 +186,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# ── Startup diagnostics ─────────────────────────────────────────────
+_log_cors = os.getenv("CORS_ORIGINS", "").strip()
+print(f"[CIS] CORS_ORIGINS env      = {repr(_log_cors)}")
+print(f"[CIS] Final allow_origins   = {_cors_origins}")
+print(f"[CIS] allow_credentials      = False")
+print(f"[CIS] allow_methods/headers = *")
+print(f"[CIS] App ready at http://0.0.0.0:8010")
+
 
 def _task_dir(job_id: str, task_id: str) -> str:
     return os.path.join(STORAGE_DIR, job_id, task_id)
@@ -468,4 +476,17 @@ async def download_pdf(job_id: str, task_id: str):
 @app.get("/api/health")
 async def health():
     return JSONResponse({"ok": True, "jobs": len(jobs)})
+
+
+@app.get("/api/cors-diagnostic")
+async def cors_diagnostic():
+    """Debug: returns the effective CORS configuration."""
+    raw = os.getenv("CORS_ORIGINS", "").strip()
+    return {
+        "CORS_ORIGINS_raw": raw or "(not set — defaults to localhost)",
+        "effective_allow_origins": _cors_origins,
+        "allow_credentials": False,
+        "allow_methods": "*",
+        "allow_headers": "*",
+    }
 
