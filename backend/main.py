@@ -137,7 +137,7 @@ def detect_platform(url: str) -> Platform:
         return Platform.bilibili
     if host.endswith("youtube.com") or host.endswith("youtu.be"):
         return Platform.youtube
-    raise ValueError("无法识别平台：仅支持 bilibili.com/b23.tv 与 youtube.com/youtu.be")
+    raise ValueError("无法识别平台：仅支持 bilibili.com/b23.tv 与 youtube.com/youtu.be 的视频链接")
 
 
 class TaskState:
@@ -393,7 +393,7 @@ async def create_job(req: JobCreateRequest) -> JobCreateResponse:
         )
         if platform is None or not vid:
             ti.status = TaskStatus.failed
-            ti.error = "URL 解析失败：请确认是 bilibili.com/b23.tv 或 youtube.com/youtu.be 的有效视频链接"
+            ti.error = "URL 解析失败：仅支持 bilibili.com/b23.tv（BV号）或 youtube.com/youtu.be（VIDEO_ID）的有效视频链接"
         job.tasks[task_id] = TaskState(ti)
         tasks.append(ti)
 

@@ -30,8 +30,9 @@ def extract_video_id(url: str) -> str:
         return m.group(1)
 
     # Pattern C: youtube.com/watch?v=VIDEO_ID[&...]
-    # Extract video ID from query string via regex on raw URL (avoids network request)
-    m = re.search(r"youtube\.com/(?:watch)?\?[^#]*[?&]v=([0-9A-Za-z_-]{6,})", url)
+    # Handles: watch?v=ID, watch?v=ID&t=123, watch?v=ID&list=xxx, etc.
+    # Note: [^#]*? (non-greedy) is essential; greedy [^#]* causes backtracking issues
+    m = re.search(r"youtube\.com/watch\?[^#]*?v=([0-9A-Za-z_-]{6,})", url)
     if m:
         return m.group(1)
 
