@@ -135,6 +135,28 @@ def _map_api_error(j: Dict[str, Any]) -> Optional[str]:
     return None
 
 
+def _is_comment_removed(sn: Dict[str, Any]) -> bool:
+    """Check if a comment is marked as removed/deleted/unavailable."""
+    text_display = sn.get("textDisplay") or ""
+    text_raw = sn.get("textOriginal") or ""
+    author_channel_id = sn.get("authorChannelId") or {}
+    
+    # Check for removed markers in text
+    removed_markers = ["removed", "deleted", "unavailable", "[deleted]", "[removed]", "此评论已被删除"]
+    if any(marker.lower() in text_display.lower() for marker in removed_markers):
+        return True
+    if any(marker.lower() in text_raw.lower() for marker in removed_markers):
+        return True
+    
+    # Check for missing author (common indicator of removed comments)
+    if not author_channel_id or (isinstance(author_channel_id, dict) and not author_channel_id.get("value")):
+        # Author channel ID is empty - likely a removed comment
+        if not text_display or text_display.strip() == "":
+            return True
+    
+    return False
+
+
 def fetch_comments(url: str, limit: int) -> List[Dict[str, Any]]:
     api_key = os.getenv("YOUTUBE_API_KEY")
     if not api_key:
@@ -146,6 +168,7 @@ def fetch_comments(url: str, limit: int) -> List[Dict[str, Any]]:
 
     comments: List[Dict[str, Any]] = []
     page_token: Optional[str] = None
+    skipped_removed = 0
 
     while len(comments) < limit:
         sleep_polite()
@@ -171,9 +194,22 @@ def fetch_comments(url: str, limit: int) -> List[Dict[str, Any]]:
         for it in items:
             if len(comments) >= limit:
                 break
+            
             sn = ((it.get("snippet") or {}).get("topLevelComment") or {}).get("snippet") or {}
+            
+            # Skip removed/deleted comments
+            if _is_comment_removed(sn):
+                skipped_removed += 1
+                continue
+            
             user = sn.get("authorDisplayName") or ""
             text = sn.get("textDisplay") or ""
+            
+            # Skip if text is empty after removal check
+            if not text or not text.strip():
+                skipped_removed += 1
+                continue
+            
             like = int(sn.get("likeCount") or 0)
             published = sn.get("publishedAt") or ""
             t_local = published
@@ -192,6 +228,7 @@ def fetch_comments(url: str, limit: int) -> List[Dict[str, Any]]:
                 "type": "main",
                 "parent": "",
                 "translation_zh": "",
+                "is_removed": False,
             }
             if is_english(text):
                 rec["translation_zh"] = translate_to_zh(text) or ""
@@ -224,9 +261,22 @@ def fetch_comments(url: str, limit: int) -> List[Dict[str, Any]]:
                         for ri in r_items:
                             if len(comments) >= limit:
                                 break
+                            
                             rsn = (ri.get("snippet") or {})
+                            
+                            # Skip removed/deleted replies
+                            if _is_comment_removed(rsn):
+                                skipped_removed += 1
+                                continue
+                            
                             r_user = rsn.get("authorDisplayName") or ""
                             r_text = rsn.get("textDisplay") or ""
+                            
+                            # Skip if text is empty after removal check
+                            if not r_text or not r_text.strip():
+                                skipped_removed += 1
+                                continue
+                            
                             r_like = int(rsn.get("likeCount") or 0)
                             r_pub = rsn.get("publishedAt") or ""
                             r_local = r_pub
@@ -244,6 +294,7 @@ def fetch_comments(url: str, limit: int) -> List[Dict[str, Any]]:
                                 "type": "reply",
                                 "parent": text,
                                 "translation_zh": "",
+                                "is_removed": False,
                             }
                             if is_english(r_text):
                                 rrec["translation_zh"] = translate_to_zh(r_text) or ""
@@ -255,6 +306,10 @@ def fetch_comments(url: str, limit: int) -> List[Dict[str, Any]]:
         page_token = j.get("nextPageToken")
         if not page_token:
             break
+
+    # Log skipped removed comments for debugging
+    if skipped_removed > 0:
+        print(f"[youtube] Skipped {skipped_removed} removed/deleted comments")
 
     return comments[:limit]
 

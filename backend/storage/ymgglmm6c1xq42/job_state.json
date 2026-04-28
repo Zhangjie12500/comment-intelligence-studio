@@ -1,0 +1,93 @@
+{
+  "job_id": "ymgglmm6c1xq42",
+  "status": "failed",
+  "error": "'removed'",
+  "force_refresh": false,
+  "include_replies": true,
+  "created_at": "2026-04-28 21:23:19",
+  "updated_at": "2026-04-28 21:23:26",
+  "tasks": [
+    {
+      "task": {
+        "task_id": "h2ikftu3dn",
+        "url": "https://www.youtube.com/watch?v=I0DrcsDf3Os",
+        "platform": "youtube",
+        "video_id": "I0DrcsDf3Os",
+        "status": "failed",
+        "source": "fresh",
+        "limit": 50,
+        "include_replies": true,
+        "progress": 0,
+        "raw_count": 50,
+        "cleaned_count": 0,
+        "main_count": 0,
+        "reply_count": 0,
+        "stance_stats": {
+          "support": 0,
+          "oppose": 0,
+          "neutral": 0,
+          "joke": 0,
+          "question": 0
+        },
+        "top_influence_comments": [],
+        "clusters": [],
+        "controversies": [],
+        "summary": "",
+        "video_summary": {
+          "has_subtitle": false,
+          "summary": "",
+          "key_points": [],
+          "accuracy_note": ""
+        },
+        "video_type": {
+          "primary": "",
+          "secondary": "",
+          "confidence": 0.0,
+          "reason": ""
+        },
+        "cleaning_summary": {
+          "original_count": 0,
+          "cleaned_count": 0,
+          "removed_count": 0,
+          "low_info_count": 0,
+          "duplicate_count": 0,
+          "strategy": ""
+        },
+        "content_comment_comparison": {
+          "video_focus": [],
+          "audience_focus": [],
+          "gap_analysis": "",
+          "audience_needs": [],
+          "missed_topics": []
+        },
+        "visualization_recommendation": {
+          "chart_type": "",
+          "reason": "",
+          "fallback": "",
+          "data_status": "insufficient"
+        },
+        "heatmap_data": {
+          "x_axis": [],
+          "y_axis": [],
+          "unit": "评论倾向值",
+          "value_explanation": "",
+          "values": []
+        },
+        "files": {
+          "json": "",
+          "markdown": "",
+          "pdf": ""
+        },
+        "error": "'removed'",
+        "warnings": [],
+        "created_at": "2026-04-28 21:23:19",
+        "updated_at": "2026-04-28 21:23:26"
+      },
+      "paths": {
+        "comments_path": "",
+        "report_path": "",
+        "pdf_path": ""
+      }
+    }
+  ]
+}

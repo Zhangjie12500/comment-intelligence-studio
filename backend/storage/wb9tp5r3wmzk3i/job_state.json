@@ -1,0 +1,431 @@
+{
+  "job_id": "wb9tp5r3wmzk3i",
+  "status": "done",
+  "error": "",
+  "force_refresh": false,
+  "include_replies": true,
+  "created_at": "2026-04-28 20:49:22",
+  "updated_at": "2026-04-28 20:49:31",
+  "tasks": [
+    {
+      "task": {
+        "task_id": "c72wdhhpx6",
+        "url": "https://www.bilibili.com/video/BV1iHXsBfEjJ/?spm_id_from=333.337.search-card.all.click&vd_source=7e9435332132eb135fd3ef62caab01f2",
+        "platform": "bilibili",
+        "video_id": "BV1iHXsBfEjJ",
+        "status": "done",
+        "source": "cache",
+        "limit": 50,
+        "include_replies": true,
+        "progress": 0,
+        "raw_count": 50,
+        "cleaned_count": 50,
+        "main_count": 5,
+        "reply_count": 45,
+        "stance_stats": {
+          "support": 5,
+          "oppose": 1,
+          "neutral": 35,
+          "joke": 0,
+          "question": 9
+        },
+        "top_influence_comments": [
+          {
+            "user": "被风吹过的夏天uu",
+            "text": "感觉up可以把能量 怪兽15号再加一个便携档位，自带百W快充线加长柱体，好用又好携带，昨天刚到的",
+            "like": 117,
+            "reply_count": 18,
+            "influence_score": 153.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "努力生活开心到老",
+            "text": "真有这么多人买这些好几百的充电宝吗？19元的怪兽，美团，小电之类的，充一次充满足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，100元能用5年，为啥要买这些100+的呢。除了野外或者徒步，我真没遇上一天要用充电宝，充满两次的场景",
+            "like": 37,
+            "reply_count": 44,
+            "influence_score": 125.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "银河光泛海",
+            "text": "我买的是西圣半固态充电宝，很好用，额定容量有6600mAh的差不多可以给手机充2-3次",
+            "like": 40,
+            "reply_count": 4,
+            "influence_score": 48.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "不爱喝奶茶的NAICHA",
+            "text": "你这种话适用于任何场景，比如:\n真有这么多人买这些好几千的手机吗？几百块的入门级之类的，能打电话刷视频足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，几百元能用5年，为啥要买这些几千甚至一万多的呢。除了游戏或者vlog，我真没遇上要用几千块钱手机的场景",
+            "like": 43,
+            "reply_count": 0,
+            "influence_score": 43.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "greenlemon__",
+            "text": "跟着up买了西圣pbs，确实和我之前的充电宝不一样，充得挺快的，也不会发烫",
+            "like": 36,
+            "reply_count": 3,
+            "influence_score": 42.0,
+            "stance": "support",
+            "translation_zh": ""
+          },
+          {
+            "user": "戏罢曾无理曲时",
+            "text": "现在买充电宝还是买半固态电芯的吧，我之前买的都不耐用，买了西圣的半固态充电宝之后很久没换过了",
+            "like": 37,
+            "reply_count": 1,
+            "influence_score": 39.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "别打了我是酱油g",
+            "text": "自带线充电速度最高真有百瓦吗",
+            "like": 19,
+            "reply_count": 0,
+            "influence_score": 19.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "努力生活开心到老",
+            "text": "回复 @无瑕・爱莉希雅 :好久没遇到一个真的被营销到深信的人了，充电宝的意义是什么，能随身带带任何地方才能有你后面的意义，国内安检有严有松，你这个说法，一看就是不怎么出差，或者出行的。充电宝最大的意义是用的时候就在身上。而你，我的朋友，你已经被营销傻了，容量，快充，在你不能随身带的情况下就是虚无。不管是美团还是怪兽或者小电街电，我都能带上飞机高铁，而且没有租金，回家就能补电。当你在上飞机高铁时，充电宝被扣，你就知道20元买一个能用的充电宝的意义了",
+            "like": 12,
+            "reply_count": 0,
+            "influence_score": 12.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "黄麒fish",
+            "text": "大部分学生党吧 要带去学校",
+            "like": 7,
+            "reply_count": 0,
+            "influence_score": 7.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "123好哈",
+            "text": "他这个长柱体大概多大，想买一个这个出差用，又怕不方便",
+            "like": 5,
+            "reply_count": 0,
+            "influence_score": 5.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          }
+        ],
+        "clusters": [
+          {
+            "title": "感觉 可以把能量 怪兽 号再加一个便携档位自带百",
+            "keywords": [
+              "感觉",
+              "可以把能量",
+              "怪兽"
+            ],
+            "count": 1,
+            "like_weight": 117,
+            "representative_comments": [
+              {
+                "user": "被风吹过的夏天uu",
+                "text": "感觉up可以把能量 怪兽15号再加一个便携档位，自带百W快充线加长柱体，好用又好携带，昨天刚到的",
+                "like": 117
+              }
+            ]
+          },
+          {
+            "title": "你这种话适用于任何场景比如 真有这么多人买这些好几千的手机吗几百块的入门级之类的",
+            "keywords": [
+              "你这种话适用于任何场景比如",
+              "真有这么多人买这些好几千的手机吗几百块的入门级之类的能打电话刷视频足够了还能带着去任何地方某多上一搜一大堆买一个用一年几百元能用",
+              "年为啥要买这些几千甚至一万多的呢除了游戏或者"
+            ],
+            "count": 1,
+            "like_weight": 43,
+            "representative_comments": [
+              {
+                "user": "不爱喝奶茶的NAICHA",
+                "text": "你这种话适用于任何场景，比如:\n真有这么多人买这些好几千的手机吗？几百块的入门级之类的，能打电话刷视频足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，几百元能用5年，为啥要买这些几千甚至一万多的呢。除了游戏或者vlog，我真没遇上要用几千块钱手机的场景",
+                "like": 43
+              }
+            ]
+          },
+          {
+            "title": "我买的是西圣半固态充电宝很好用额定容量有 mah 的差不多可以给手机充",
+            "keywords": [
+              "我买的是西圣半固态充电宝很好用额定容量有",
+              "mah",
+              "的差不多可以给手机充"
+            ],
+            "count": 1,
+            "like_weight": 40,
+            "representative_comments": [
+              {
+                "user": "银河光泛海",
+                "text": "我买的是西圣半固态充电宝，很好用，额定容量有6600mAh的差不多可以给手机充2-3次",
+                "like": 40
+              }
+            ]
+          },
+          {
+            "title": "现在买充电宝还是买半固态电芯的吧我之前买的都不耐用买了西圣的半固态充电宝之后很久",
+            "keywords": [
+              "现在买充电宝还是买半固态电芯的吧我之前买的都不耐用买了西圣的半固态充电宝之后很久没换过了"
+            ],
+            "count": 1,
+            "like_weight": 37,
+            "representative_comments": [
+              {
+                "user": "戏罢曾无理曲时",
+                "text": "现在买充电宝还是买半固态电芯的吧，我之前买的都不耐用，买了西圣的半固态充电宝之后很久没换过了",
+                "like": 37
+              }
+            ]
+          },
+          {
+            "title": "真有这么多人买这些好几百的充电宝吗 元的怪兽美团小电之类的充一次充满足够了还能带",
+            "keywords": [
+              "真有这么多人买这些好几百的充电宝吗",
+              "元的怪兽美团小电之类的充一次充满足够了还能带着去任何地方某多上一搜一大堆买一个用一年",
+              "元能用"
+            ],
+            "count": 1,
+            "like_weight": 37,
+            "representative_comments": [
+              {
+                "user": "努力生活开心到老",
+                "text": "真有这么多人买这些好几百的充电宝吗？19元的怪兽，美团，小电之类的，充一次充满足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，100元能用5年，为啥要买这些100+的呢。除了野外或者徒步，我真没遇上一天要用充电宝，充满两次的场景",
+                "like": 37
+              }
+            ]
+          },
+          {
+            "title": "跟着 买了西圣 pbs 确实和我之前的充电宝不一样充得挺快的也不会发烫",
+            "keywords": [
+              "跟着",
+              "买了西圣",
+              "pbs"
+            ],
+            "count": 1,
+            "like_weight": 36,
+            "representative_comments": [
+              {
+                "user": "greenlemon__",
+                "text": "跟着up买了西圣pbs，确实和我之前的充电宝不一样，充得挺快的，也不会发烫",
+                "like": 36
+              }
+            ]
+          },
+          {
+            "title": "自带线充电速度最高真有百瓦吗",
+            "keywords": [
+              "自带线充电速度最高真有百瓦吗"
+            ],
+            "count": 1,
+            "like_weight": 19,
+            "representative_comments": [
+              {
+                "user": "别打了我是酱油g",
+                "text": "自带线充电速度最高真有百瓦吗",
+                "like": 19
+              }
+            ]
+          },
+          {
+            "title": "回复 无瑕 爱莉希雅 好久没遇到一个真的被营销到深信的人了充电宝的意义是什么能随",
+            "keywords": [
+              "回复",
+              "无瑕",
+              "爱莉希雅"
+            ],
+            "count": 1,
+            "like_weight": 12,
+            "representative_comments": [
+              {
+                "user": "努力生活开心到老",
+                "text": "回复 @无瑕・爱莉希雅 :好久没遇到一个真的被营销到深信的人了，充电宝的意义是什么，能随身带带任何地方才能有你后面的意义，国内安检有严有松，你这个说法，一看就是不怎么出差，或者出行的。充电宝最大的意义是用的时候就在身上。而你，我的朋友，你已经被营销傻了，容量，快充，在你不能随身带的情况下就是虚无。不管是美团还是怪兽或者小电街电，我都能带上飞机高铁，而且没有租金，回家就能补电。当你在上飞机高铁时，充电宝被扣，你就知道20元买一个能用的充电宝的意义了",
+                "like": 12
+              }
+            ]
+          },
+          {
+            "title": "大部分学生党吧 要带去学校",
+            "keywords": [
+              "大部分学生党吧",
+              "要带去学校"
+            ],
+            "count": 1,
+            "like_weight": 7,
+            "representative_comments": [
+              {
+                "user": "黄麒fish",
+                "text": "大部分学生党吧 要带去学校",
+                "like": 7
+              }
+            ]
+          },
+          {
+            "title": "他这个长柱体大概多大想买一个这个出差用又怕不方便",
+            "keywords": [
+              "他这个长柱体大概多大想买一个这个出差用又怕不方便"
+            ],
+            "count": 1,
+            "like_weight": 5,
+            "representative_comments": [
+              {
+                "user": "123好哈",
+                "text": "他这个长柱体大概多大，想买一个这个出差用，又怕不方便",
+                "like": 5
+              }
+            ]
+          },
+          {
+            "title": "回复 努力生活开心到老 当充电效率低到用 块的充电宝还不如用个卡片充电头路边找个",
+            "keywords": [
+              "回复",
+              "努力生活开心到老",
+              "当充电效率低到用"
+            ],
+            "count": 1,
+            "like_weight": 4,
+            "representative_comments": [
+              {
+                "user": "无瑕・爱莉希雅",
+                "text": "回复 @努力生活开心到老 :当充电效率低到用20块的充电宝，还不如用个卡片充电头路边找个店铺插座10分钟解决电量",
+                "like": 4
+              }
+            ]
+          },
+          {
+            "title": "容量虚不虚长途出差用要能多充几次",
+            "keywords": [
+              "容量虚不虚长途出差用要能多充几次"
+            ],
+            "count": 1,
+            "like_weight": 3,
+            "representative_comments": [
+              {
+                "user": "苦果Yi是果",
+                "text": "容量虚不虚，长途出差用，要能多充几次",
+                "like": 3
+              }
+            ]
+          }
+        ],
+        "controversies": [
+          {
+            "title": "评论区存在反对或质疑声音",
+            "description": "共有 1 条评论表达质疑或反对观点，占比约 2%。",
+            "related_count": 1,
+            "sample_comments": []
+          },
+          {
+            "title": "评论区存在较多追问和求证",
+            "description": "共有 9 条评论提出问题，占比约 18%。",
+            "related_count": 9,
+            "sample_comments": [
+              "真有这么多人买这些好几百的充电宝吗？19元的怪兽，美团，小电之类的，充一次充满足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，100元能用5年，为啥要买这些100+的呢。除了野外或者徒步，我真没遇上一天要用充电宝，充满两次的场景",
+              "你这种话适用于任何场景，比如:\n真有这么多人买这些好几千的手机吗？几百块的入门级之类的，能打电话刷视频足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，几百元能用5年，为啥要买这些几千甚至一万多的呢。除了游戏或者vlog，我真没遇上要用几千块钱手机的场景",
+              "回复 @无瑕・爱莉希雅 :好久没遇到一个真的被营销到深信的人了，充电宝的意义是什么，能随身带带任何地方才能有你后面的意义，国内安检有严有松，你这个说法，一看就是不怎么出差，或者出行的。充电宝最大的意义是用的时候就在身上。而你，我的朋友，你已经被营销傻了，容量，快充，在你不能随身带的情况下就是虚无。不管是美团还是怪兽或者小电街电，我都能带上飞机高铁，而且没有租金，回家就能补电。当你在上飞机高铁时，充电宝被扣，你就知道20元买一个能用的充电宝的意义了"
+            ]
+          },
+          {
+            "title": "支持与反对观点并存",
+            "description": "支持观点 5 条，反对观点 1 条，评论区存在明显观点分歧。",
+            "related_count": 6,
+            "sample_comments": [
+              "跟着up买了西圣pbs，确实和我之前的充电宝不一样，充得挺快的，也不会发烫"
+            ]
+          }
+        ],
+        "summary": "本次分析共抓取 50 条评论，清洗后保留 50 条（移除空内容/表情/重复等 0 条）。 评论区整体以「中立/补充」为主，共 35 条，占比约 70%。 存在 1 条质疑或反对声音（占比约 2%），评论区存在一定观点分歧。 共有 9 条提问或求证类评论（占比约 18%），部分用户在寻求更多信息。 主要讨论围绕以下主题展开：感觉 可以把能量 怪兽 号再加一个便携档位自带百、你这种话适用于任何场景比如 真有这么多人买这些好几千的手机吗几百块的入门级之类的、我买的是西圣半固态充电宝很好用额定容量有 mah 的差不多可以给手机充。 正面情感占绝对主导，观众整体态度积极。 平台：B站（bilibili）。",
+        "video_summary": {
+          "has_subtitle": false,
+          "summary": "视频标题：未知\n\n基于评论分析，视频内容摘要：\n感觉up可以把能量 怪兽15号再加一个便携档位，自带百W快充线加长柱体，好用又好携带，昨天刚到的 真有这么多人买这些好几百的充电宝吗？19元的怪兽，美团，小电之类的，充一次充满足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，100元能用5年，为啥要买这些100+的呢。除了野外或者徒步，我真没遇上一天要用充电宝，充满两次的场景 我买的是西圣半固态充电宝，很好用，额定容量有6600mAh的差不多可以给手机充2-3次 你这种话适用于任何场景，比如:\n真有这么多人买这些好几千的手机吗？几百块的入门级之类的，能打电话刷视频足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，几百元能用...",
+          "key_points": [
+            "真有这么多人",
+            "还能带着去任",
+            "何地方",
+            "某多上一搜一",
+            "大堆"
+          ],
+          "accuracy_note": "未检测到字幕，此摘要基于视频标题和评论内容生成，准确性较低"
+        },
+        "video_type": {
+          "primary": "测评类",
+          "secondary": "攻略类",
+          "confidence": 0.33,
+          "reason": "根据关键词「使用感受」判断为测评类内容，辅以攻略类特征"
+        },
+        "cleaning_summary": {
+          "original_count": 50,
+          "cleaned_count": 50,
+          "removed_count": 0,
+          "low_info_count": 0,
+          "duplicate_count": 0,
+          "strategy": "严格策略：重点过滤低信息密度评论，保留高质量反馈"
+        },
+        "content_comment_comparison": {
+          "video_focus": [
+            "真有这么多人",
+            "还能带着去任",
+            "何地方",
+            "某多上一搜一",
+            "大堆"
+          ],
+          "audience_focus": [
+            "感觉 可以把能量 怪兽 号再加一个便携档位自带百",
+            "你这种话适用于任何场景比如 真有这么多人买这些好几千的手机吗",
+            "我买的是西圣半固态充电宝很好用额定容量有 mah 的差不多可",
+            "现在买充电宝还是买半固态电芯的吧我之前买的都不耐用买了西圣的",
+            "真有这么多人买这些好几百的充电宝吗 元的怪兽美团小电之类的充"
+          ],
+          "gap_analysis": "视频侧重但评论较少提及：真有这么多人、还能带着去任、何地方；评论区关注但视频未深入：真有这么多人买这些好几百的充电宝吗 元的怪兽美团小电之类的充、你这种话适用于任何场景比如 真有这么多人买这些好几千的手机吗、现在买充电宝还是买半固态电芯的吧我之前买的都不耐用买了西圣的",
+          "audience_needs": [],
+          "missed_topics": [
+            "真有这么多人买这些好几百的充电宝吗 元的怪兽美团小电之类的充",
+            "你这种话适用于任何场景比如 真有这么多人买这些好几千的手机吗",
+            "现在买充电宝还是买半固态电芯的吧我之前买的都不耐用买了西圣的",
+            "价格/性价比讨论",
+            "购买渠道/优惠信息"
+          ]
+        },
+        "visualization_recommendation": {
+          "chart_type": "heatmap",
+          "reason": "适合展示商品/产品 × 评价维度的对比分析，直观呈现各商品优劣势",
+          "fallback": "基础立场分布饼图 + 高赞评论列表",
+          "data_status": "ready"
+        },
+        "heatmap_data": {
+          "x_axis": [],
+          "y_axis": [],
+          "unit": "评论倾向值",
+          "value_explanation": "该数值基于评论数量、语义相关性和情绪倾向估算，仅代表评论区反馈，不代表客观评分。",
+          "values": []
+        },
+        "files": {
+          "json": "/api/jobs/wb9tp5r3wmzk3i/c72wdhhpx6/comments",
+          "markdown": "/api/jobs/wb9tp5r3wmzk3i/c72wdhhpx6/report",
+          "pdf": "/api/jobs/wb9tp5r3wmzk3i/c72wdhhpx6/pdf"
+        },
+        "error": "",
+        "warnings": [
+          "字幕检测: 无"
+        ],
+        "created_at": "2026-04-28 20:49:22",
+        "updated_at": "2026-04-28 20:49:31"
+      },
+      "paths": {
+        "comments_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\wb9tp5r3wmzk3i\\c72wdhhpx6\\www-bilibili-com-fc7fc3c14529.comments.json",
+        "report_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\wb9tp5r3wmzk3i\\c72wdhhpx6\\www-bilibili-com-fc7fc3c14529.report.md",
+        "pdf_path": "C:\\Users\\15858\\Desktop\\Comment_Intelligence_Reports\\2026-04-28\\bilibili_BV1iHXsBfEjJ_report_2026-04-28_2049.pdf"
+      }
+    }
+  ]
+}

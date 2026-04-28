@@ -1,10 +1,13 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { Circle, AlertTriangle } from 'lucide-react';
+import { Circle, Download, Info, FileJson, FileDown, FileText } from 'lucide-react';
 import { createJob, getJob } from './lib/api';
 import InputPanel from './components/InputPanel';
 import JobStatusPanel from './components/JobStatusPanel';
 import TaskCard from './components/TaskCard';
 import AnalysisSection from './components/AnalysisSection';
+import LoadingState from './components/LoadingState';
+import { ErrorBanner, WarningBanner, ErrorCard, EmptyState } from './components/StatusStates';
+import AiChatBox from "./components/AiChatBox";
 
 const POLL_MS = 2000;
 const COLD_START_THRESHOLD_MS = 15000;
@@ -12,12 +15,9 @@ const COLD_START_THRESHOLD_MS = 15000;
 export default function App() {
   const [job, setJob] = useState(null);
   const [report, setReport] = useState(null);
-  /** isSubmitting = POST request in flight (cold-start window) */
   const [isSubmitting, setIsSubmitting] = useState(false);
-  /** isLoading = polling active */
   const [isLoading, setIsLoading] = useState(false);
   const [pageError, setPageError] = useState('');
-  /** coldStartHint = true when POST succeeded but no polling started after 15s */
   const [coldStartHint, setColdStartHint] = useState(false);
   const pollRef = useRef(null);
   const submittingSinceRef = useRef(null);
@@ -68,8 +68,6 @@ export default function App() {
     setColdStartHint(false);
     stopPolling();
     setIsLoading(false);
-
-    // Mark submission start — button enters "后端启动中" state
     setIsSubmitting(true);
     submittingSinceRef.current = Date.now();
 
@@ -77,8 +75,6 @@ export default function App() {
       const data = await createJob(payload);
       setJob(data);
       setPageError(data.error || '');
-
-      // Immediate polling start (even if all done, for consistency)
       startPolling(data.job_id);
     } catch (err) {
       submittingSinceRef.current = null;
@@ -87,11 +83,10 @@ export default function App() {
     }
   }
 
-  // Cold-start detector: show hint after 15s if POST succeeded but no job yet
+  // Cold-start detector
   useEffect(() => {
     if (!submittingSinceRef.current) return;
     const timer = setTimeout(() => {
-      // Still submitting after 15s → cold start likely
       if (submittingSinceRef.current && !job) {
         setColdStartHint(true);
       }
@@ -102,92 +97,134 @@ export default function App() {
   useEffect(() => () => stopPolling(), [stopPolling]);
 
   const tasks = job?.tasks || [];
-  const anySubmitting = isSubmitting || isLoading;
+  const anyActive = isSubmitting || isLoading;
+  const isAnalyzing = isLoading && !job?.tasks?.every(t => t.status === 'done' || t.status === 'failed');
+  const allDone = tasks.length > 0 && tasks.every(t => t.status === 'done' || t.status === 'failed');
+
+  // Get done tasks for export
+  const doneTasks = tasks.filter(t => t.status === 'done');
 
   return (
-    <div style={{ minHeight: '100vh', background: '#09090b' }}>
+    <div style={{ minHeight: '100vh', background: '#F7F8FA' }}>
       {/* ── Header ── */}
       <header style={{
-        borderBottom: '1px solid rgba(255,255,255,0.07)',
+        borderBottom: '1px solid #E5E7EB',
         padding: '0 32px',
-        height: 56,
+        height: 64,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        flexShrink: 0,
+        background: '#FFFFFF',
         position: 'sticky',
         top: 0,
-        zIndex: 50,
-        background: 'rgba(9,9,11,0.85)',
-        backdropFilter: 'blur(12px)',
+        zIndex: 100,
       }}>
-        <div>
-          <h1 style={{ fontSize: 15, fontWeight: 600, color: '#fafafa', lineHeight: 1.2 }}>
-            评论区智能分析工作台
-          </h1>
-          <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)', marginTop: 1 }}>
-            B站 &amp; YouTube 评论分析引擎
-          </p>
-        </div>
-        <div className="flex items-center gap-2">
-          <Circle size={7} className="text-green-400 fill-green-400" />
-          <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)' }}>后端在线 · 端口 8010</span>
-        </div>
-      </header>
-
-      {/* ── Main grid ── */}
-      <main style={{
-        padding: '24px 32px 48px',
-        maxWidth: 1400,
-        margin: '0 auto',
-      }}>
-        {/* page-level error */}
-        {pageError && (
-          <div style={{
-            marginBottom: 20,
-            padding: '12px 16px',
-            borderRadius: 10,
-            background: 'rgba(248,113,113,0.08)',
-            border: '1px solid rgba(248,113,113,0.2)',
-            display: 'flex',
-            alignItems: 'flex-start',
-            gap: 8,
-          }}>
-            <span style={{ fontSize: 12, color: '#f87171', lineHeight: 1.6 }}>{pageError}</span>
-          </div>
-        )}
-
-        {/* cold-start hint */}
-        {coldStartHint && (
-          <div style={{
-            marginBottom: 20,
-            padding: '12px 16px',
-            borderRadius: 10,
-            background: 'rgba(251,191,36,0.06)',
-            border: '1px solid rgba(251,191,36,0.2)',
-            display: 'flex',
-            alignItems: 'flex-start',
-            gap: 8,
-          }}>
-            <AlertTriangle size={14} style={{ color: '#fbbf24', marginTop: 1, flexShrink: 0 }} />
+        {/* Logo & Title */}
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
+            {/* Logo mark */}
+            <div style={{
+              width: 36,
+              height: 36,
+              borderRadius: 10,
+              background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 2px 8px rgba(37, 99, 235, 0.25)',
+            }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.3-4.3"/>
+              </svg>
+            </div>
             <div>
-              <p style={{ fontSize: 12, color: '#fbbf24', lineHeight: 1.5, fontWeight: 500 }}>
-                后端可能正在冷启动，首次请求通常需要 20–40 秒，请稍候…
-              </p>
-              <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', marginTop: 3 }}>
-                Render 免费版在 15 分钟无活动后会休眠，唤醒需要等待。
+              <h1 style={{ fontSize: 18, fontWeight: 700, color: '#111827', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+                ViewLens
+              </h1>
+              <p style={{ fontSize: 11, color: '#9CA3AF', marginTop: 1 }}>
+                AI-powered video comment insight system
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Right side actions */}
+        <div className="flex items-center gap-3">
+          {/* Export buttons */}
+          {allDone && doneTasks.length > 0 && (
+            <div className="flex items-center gap-2 mr-4">
+              <ExportButton 
+                href={`/api/jobs/${job.job_id}/${doneTasks[0].task_id}/comments`}
+                icon={<FileJson size={14} />}
+                label="JSON"
+              />
+              <ExportButton 
+                href={`/api/jobs/${job.job_id}/${doneTasks[0].task_id}/report`}
+                icon={<FileText size={14} />}
+                label="Markdown"
+              />
+              <ExportButton 
+                href={`/api/jobs/${job.job_id}/${doneTasks[0].task_id}/pdf`}
+                icon={<FileDown size={14} />}
+                label="PDF"
+              />
+            </div>
+          )}
+
+          {/* About */}
+          <button 
+            className="btn-secondary"
+            onClick={() => {
+              alert('ViewLens v1.0\n\nAI-powered video comment insight system for Bilibili & YouTube.\n\nBuilt with React + ECharts');
+            }}
+          >
+            <Info size={14} />
+            About
+          </button>
+
+          {/* Status indicator */}
+          <div className="flex items-center gap-2 pl-3" style={{ borderLeft: '1px solid #E5E7EB' }}>
+            <Circle size={8} fill="#10B981" className="text-[#10B981]" />
+            <span style={{ fontSize: 12, color: '#6B7280' }}>Jason</span>
+          </div>
+        </div>
+      </header>
+
+      {/* ── Main Content ── */}
+      <main style={{
+        padding: '32px',
+        maxWidth: 1440,
+        margin: '0 auto',
+      }}>
+        {/* Error Banner */}
+        {pageError && (
+          <ErrorBanner 
+            error={pageError} 
+            onDismiss={() => setPageError('')} 
+          />
         )}
 
+        {/* Cold Start Warning */}
+        {coldStartHint && (
+          <WarningBanner 
+            title="后端可能正在冷启动"
+            onDismiss={() => setColdStartHint(false)}
+          >
+            首次请求通常需要 20–40 秒，请稍候…
+            <br />
+            Render 免费版在 15 分钟无活动后会休眠，唤醒需要等待。
+          </WarningBanner>
+        )}
+
+        {/* Three Column Layout */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '300px 1fr 280px',
-          gap: 20,
+          gridTemplateColumns: '340px 1fr 320px',
+          gap: 24,
           alignItems: 'start',
         }}>
-          {/* ── Left: Input ── */}
+          {/* ── Left: Input Panel ── */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             <InputPanel
               onSubmit={handleSubmit}
@@ -196,23 +233,44 @@ export default function App() {
             />
           </div>
 
-          {/* ── Center: Analysis ── */}
+          {/* ── Center: Analysis Results ── */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            <AnalysisSection report={report} job={job} />
+            {/* Loading State */}
+            {anyActive && !allDone && (
+              <LoadingState job={job} isSubmitting={isSubmitting} />
+            )}
+
+            {/* Analysis Section */}
+            <AnalysisSection 
+              report={report} 
+              job={job} 
+              isLoading={anyActive}
+            />
           </div>
 
-          {/* ── Right: Job status + tasks ── */}
+          {/* ── Right: Job Status + Tasks ── */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             <JobStatusPanel job={job} />
 
             {/* Task cards */}
             {tasks.length > 0 && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                <div style={{ padding: '0 4px', display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', color: 'rgba(255,255,255,0.25)', textTransform: 'uppercase' }}>
+                <div style={{ 
+                  padding: '0 4px', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  gap: 12,
+                }}>
+                  <span style={{ 
+                    fontSize: 11, 
+                    fontWeight: 600, 
+                    letterSpacing: '0.08em', 
+                    color: '#9CA3AF', 
+                    textTransform: 'uppercase'
+                  }}>
                     任务列表
                   </span>
-                  <div style={{ flex: 1, height: 1, background: 'rgba(255,255,255,0.06)' }} />
+                  <div style={{ flex: 1, height: 1, background: '#E5E7EB' }} />
                 </div>
                 {tasks.map((t, i) => (
                   <TaskCard key={t.task_id || i} task={t} jobId={job.job_id} index={i} />
@@ -221,7 +279,52 @@ export default function App() {
             )}
           </div>
         </div>
+        {report && <AiChatBox analysis={report} />}
       </main>
+
+      {/* ── Footer ── */}
+      <footer style={{
+        borderTop: '1px solid #E5E7EB',
+        padding: '24px 32px',
+        textAlign: 'center',
+        background: '#FFFFFF',
+      }}>
+        <p style={{ fontSize: 12, color: '#9CA3AF' }}>
+          ViewLens · AI-powered video comment insight system · Built by Jason
+        </p>
+      </footer>
     </div>
+  );
+}
+
+// Export Button Component
+function ExportButton({ href, icon, label }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-180"
+      style={{
+        background: '#F3F4F6',
+        border: '1px solid #E5E7EB',
+        color: '#374151',
+      }}
+      onMouseEnter={e => {
+        e.currentTarget.style.background = '#2563EB';
+        e.currentTarget.style.color = '#FFFFFF';
+        e.currentTarget.style.borderColor = '#2563EB';
+        e.currentTarget.style.transform = 'translateY(-1px)';
+      }}
+      onMouseLeave={e => {
+        e.currentTarget.style.background = '#F3F4F6';
+        e.currentTarget.style.color = '#374151';
+        e.currentTarget.style.borderColor = '#E5E7EB';
+        e.currentTarget.style.transform = 'translateY(0)';
+      }}
+    >
+      {icon}
+      {label}
+    </a>
   );
 }

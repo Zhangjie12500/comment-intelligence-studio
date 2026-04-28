@@ -1,0 +1,414 @@
+{
+  "job_id": "qinuucs11xae2e",
+  "status": "done",
+  "error": "",
+  "force_refresh": false,
+  "include_replies": true,
+  "created_at": "2026-04-28 21:59:55",
+  "updated_at": "2026-04-28 22:00:05",
+  "tasks": [
+    {
+      "task": {
+        "task_id": "prahm4ha3m",
+        "url": "https://www.youtube.com/watch?v=I0DrcsDf3Os",
+        "platform": "youtube",
+        "video_id": "I0DrcsDf3Os",
+        "status": "done",
+        "source": "cache",
+        "limit": 200,
+        "include_replies": true,
+        "progress": 0,
+        "raw_count": 200,
+        "cleaned_count": 198,
+        "main_count": 183,
+        "reply_count": 15,
+        "stance_stats": {
+          "support": 12,
+          "oppose": 0,
+          "neutral": 146,
+          "joke": 9,
+          "question": 31
+        },
+        "top_influence_comments": [
+          {
+            "user": "@digisatori",
+            "text": "嘉宾的优秀毋庸置疑，我对主播的这个优秀的采访更加印象深刻。既非常好的引导了问答的方向，做了足够多的挖掘，又能让嘉宾畅所欲言不喧宾夺主。其丰富的知识储备和共情能力让人印象深刻。",
+            "like": 140,
+            "reply_count": 0,
+            "influence_score": 140.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@tylerhuang3414",
+            "text": "“不去想那些宏伟叙事，专注当下要做的事”，“一致性”",
+            "like": 27,
+            "reply_count": 0,
+            "influence_score": 27.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@yl6908",
+            "text": "看到嘉宾，以为看到了柯洁和李世石的脸合二为一了。😆",
+            "like": 25,
+            "reply_count": 0,
+            "influence_score": 25.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@xingyiding3077",
+            "text": "我并不完全认同公开作业或直接给出答案的做法。一旦答案摆在眼前，大多数人就不再思考了，这对个人长期的发展其实是不利的。真正的成长来自于独立完成思考和推演的过程，而不是结果本身。\n更让我感到矛盾的是：一个人通过大量思考提升了自己，随后却告诉他人“别浪费时间了”，这种逻辑本身就存在问题。\n同时，我对当前 AI 的发展是有疑问的。我的孩子，可能不会再像我们这一代人那样，愿意花上几个小时，甚至一整天去反复思考和解决一个问题。但恰恰是这种缓慢、艰难的思考过程，构成了人类持续进步的根本。",
+            "like": 15,
+            "reply_count": 0,
+            "influence_score": 15.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "@alisonqiu4741",
+            "text": "我的天啊，我的回答思考都是设定好的，这种确定论完全震惊到了… 无法想象翁是怎么有勇气去面对这虚无。以前坚定自己的信念，但现在看到了尽头。",
+            "like": 9,
+            "reply_count": 0,
+            "influence_score": 9.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "@zhenyujin7841",
+            "text": "“想要做有影响力的事情”思维真的很西方",
+            "like": 9,
+            "reply_count": 0,
+            "influence_score": 9.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@MC-ye8mi",
+            "text": "在为作业信息差开源就能看出来他是善人，因为不少人是肯定不会怎么做的，这会把考试的bar拉高了，不利于自己利益。",
+            "like": 6,
+            "reply_count": 0,
+            "influence_score": 6.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "@yangliu7494",
+            "text": "你们不觉得翁同学很cute吗？尤其很自信的说“是的“的时候，哈哈哈。谢谢分享。希望翁同学能就宿命论那部分再展开说说。想听你如何验证宿命论的。",
+            "like": 5,
+            "reply_count": 0,
+            "influence_score": 5.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "@Aiden-Yu-666",
+            "text": "好喜欢这个 podcast！作为一个大一学生 真的很受感触。对于 Impact这块主持人反问的问题，我想说“想帮助更多的人”本身就是让自己过得开心的一种方式。所有人对人生成功的定义都不应该一样，所以 GPA 不行。如果你是一个喜欢悠闲生活的人，”生活悠闲自在吗“就是评判你成功的标准，而不是”帮助别人“。这没有好坏优劣之分，每个人生来不同",
+            "like": 5,
+            "reply_count": 0,
+            "influence_score": 5.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@zouqingping2665",
+            "text": "我发现这个采访的人跟被采访的人完全不在一个层次上。",
+            "like": 5,
+            "reply_count": 0,
+            "influence_score": 5.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          }
+        ],
+        "clusters": [
+          {
+            "title": "嘉宾的优秀毋庸置疑我对主播的这个优秀的采访更加印象深刻既非常好的引导了问答的方向",
+            "keywords": [
+              "嘉宾的优秀毋庸置疑我对主播的这个优秀的采访更加印象深刻既非常好的引导了问答的方向做了足够多的挖掘又能让嘉宾畅所欲言不喧宾夺主其丰富的知识储备和共情能力让人印象深刻"
+            ],
+            "count": 1,
+            "like_weight": 140,
+            "representative_comments": [
+              {
+                "user": "@digisatori",
+                "text": "嘉宾的优秀毋庸置疑，我对主播的这个优秀的采访更加印象深刻。既非常好的引导了问答的方向，做了足够多的挖掘，又能让嘉宾畅所欲言不喧宾夺主。其丰富的知识储备和共情能力让人印象深刻。",
+                "like": 140
+              }
+            ]
+          },
+          {
+            "title": "不去想那些宏伟叙事专注当下要做的事一致性",
+            "keywords": [
+              "不去想那些宏伟叙事专注当下要做的事一致性"
+            ],
+            "count": 1,
+            "like_weight": 27,
+            "representative_comments": [
+              {
+                "user": "@tylerhuang3414",
+                "text": "“不去想那些宏伟叙事，专注当下要做的事”，“一致性”",
+                "like": 27
+              }
+            ]
+          },
+          {
+            "title": "看到嘉宾以为看到了柯洁和李世石的脸合二为一了",
+            "keywords": [
+              "看到嘉宾以为看到了柯洁和李世石的脸合二为一了"
+            ],
+            "count": 1,
+            "like_weight": 25,
+            "representative_comments": [
+              {
+                "user": "@yl6908",
+                "text": "看到嘉宾，以为看到了柯洁和李世石的脸合二为一了。😆",
+                "like": 25
+              }
+            ]
+          },
+          {
+            "title": "我并不完全认同公开作业或直接给出答案的做法一旦答案摆在眼前大多数人就不再思考了这",
+            "keywords": [
+              "我并不完全认同公开作业或直接给出答案的做法一旦答案摆在眼前大多数人就不再思考了这对个人长期的发展其实是不利的真正的成长来自于独立完成思考和推演的过程而不是结果本身",
+              "更让我感到矛盾的是一个人通过大量思考提升了自己随后却告诉他人别浪费时间了这种逻辑本身就存在问题",
+              "同时我对当前"
+            ],
+            "count": 1,
+            "like_weight": 15,
+            "representative_comments": [
+              {
+                "user": "@xingyiding3077",
+                "text": "我并不完全认同公开作业或直接给出答案的做法。一旦答案摆在眼前，大多数人就不再思考了，这对个人长期的发展其实是不利的。真正的成长来自于独立完成思考和推演的过程，而不是结果本身。\n更让我感到矛盾的是：一个人通过大量思考提升了自己，随后却告诉他人“别浪费时间了”，这种逻辑本身就存在问题。\n同时，我对当前 AI 的发展是有疑问的。我的孩子，可能不会再像我们这一代人那样，愿意花上几个小时，甚至一整天去反复思考和解决一个问题。但恰恰是这种缓慢、艰难的思考过程，构成了人类持续进步的根本。",
+                "like": 15
+              }
+            ]
+          },
+          {
+            "title": "我的天啊我的回答思考都是设定好的这种确定论完全震惊到了 无法想象翁是怎么有勇气去",
+            "keywords": [
+              "我的天啊我的回答思考都是设定好的这种确定论完全震惊到了",
+              "无法想象翁是怎么有勇气去面对这虚无以前坚定自己的信念但现在看到了尽头"
+            ],
+            "count": 1,
+            "like_weight": 9,
+            "representative_comments": [
+              {
+                "user": "@alisonqiu4741",
+                "text": "我的天啊，我的回答思考都是设定好的，这种确定论完全震惊到了… 无法想象翁是怎么有勇气去面对这虚无。以前坚定自己的信念，但现在看到了尽头。",
+                "like": 9
+              }
+            ]
+          },
+          {
+            "title": "想要做有影响力的事情思维真的很西方",
+            "keywords": [
+              "想要做有影响力的事情思维真的很西方"
+            ],
+            "count": 1,
+            "like_weight": 9,
+            "representative_comments": [
+              {
+                "user": "@zhenyujin7841",
+                "text": "“想要做有影响力的事情”思维真的很西方",
+                "like": 9
+              }
+            ]
+          },
+          {
+            "title": "在为作业信息差开源就能看出来他是善人因为不少人是肯定不会怎么做的这会把考试的 b",
+            "keywords": [
+              "在为作业信息差开源就能看出来他是善人因为不少人是肯定不会怎么做的这会把考试的",
+              "bar",
+              "拉高了不利于自己利益"
+            ],
+            "count": 1,
+            "like_weight": 6,
+            "representative_comments": [
+              {
+                "user": "@MC-ye8mi",
+                "text": "在为作业信息差开源就能看出来他是善人，因为不少人是肯定不会怎么做的，这会把考试的bar拉高了，不利于自己利益。",
+                "like": 6
+              }
+            ]
+          },
+          {
+            "title": "你们不觉得翁同学很 cute 吗尤其很自信的说是的的时候哈哈哈谢谢分享希望翁同学",
+            "keywords": [
+              "你们不觉得翁同学很",
+              "cute",
+              "吗尤其很自信的说是的的时候哈哈哈谢谢分享希望翁同学能就宿命论那部分再展开说说想听你如何验证宿命论的"
+            ],
+            "count": 1,
+            "like_weight": 5,
+            "representative_comments": [
+              {
+                "user": "@yangliu7494",
+                "text": "你们不觉得翁同学很cute吗？尤其很自信的说“是的“的时候，哈哈哈。谢谢分享。希望翁同学能就宿命论那部分再展开说说。想听你如何验证宿命论的。",
+                "like": 5
+              }
+            ]
+          },
+          {
+            "title": "好喜欢这个 podcast 作为一个大一学生 真的很受感触对于",
+            "keywords": [
+              "好喜欢这个",
+              "podcast",
+              "作为一个大一学生"
+            ],
+            "count": 1,
+            "like_weight": 5,
+            "representative_comments": [
+              {
+                "user": "@Aiden-Yu-666",
+                "text": "好喜欢这个 podcast！作为一个大一学生 真的很受感触。对于 Impact这块主持人反问的问题，我想说“想帮助更多的人”本身就是让自己过得开心的一种方式。所有人对人生成功的定义都不应该一样，所以 GPA 不行。如果你是一个喜欢悠闲生活的人，”生活悠闲自在吗“就是评判你成功的标准，而不是”帮助别人“。这没有好坏优劣之分，每个人生来不同",
+                "like": 5
+              }
+            ]
+          },
+          {
+            "title": "我发现这个采访的人跟被采访的人完全不在一个层次上",
+            "keywords": [
+              "我发现这个采访的人跟被采访的人完全不在一个层次上"
+            ],
+            "count": 1,
+            "like_weight": 5,
+            "representative_comments": [
+              {
+                "user": "@zouqingping2665",
+                "text": "我发现这个采访的人跟被采访的人完全不在一个层次上。",
+                "like": 5
+              }
+            ]
+          },
+          {
+            "title": "google 的这种 infra 的哲学是",
+            "keywords": [
+              "google",
+              "的这种",
+              "infra"
+            ],
+            "count": 1,
+            "like_weight": 5,
+            "representative_comments": [
+              {
+                "user": "@econsh",
+                "text": "Google的这种infra的哲学是Gemini能翻盘的重要地气",
+                "like": 5
+              }
+            ]
+          },
+          {
+            "title": "可能你 overestimate phd 快速假设",
+            "keywords": [
+              "可能你",
+              "overestimate",
+              "phd"
+            ],
+            "count": 1,
+            "like_weight": 4,
+            "representative_comments": [
+              {
+                "user": "@mengyanxiao6838",
+                "text": "可能你overestimate了phd 快速假设 快速验证，思考和迭代的这种能力。认为在phd的阶段才能训练和学习到，然而在工业界和真正的商业世界，这只是非常非常之基础的敲门砖能力。几乎在工程领域 或者商业领域小有一点成就的人，都会有这样pdca的逻辑闭环和验证能力",
+                "like": 4
+              }
+            ]
+          }
+        ],
+        "controversies": [
+          {
+            "title": "评论区存在较多追问和求证",
+            "description": "共有 31 条评论提出问题，占比约 15%。",
+            "related_count": 31,
+            "sample_comments": [
+              "我并不完全认同公开作业或直接给出答案的做法。一旦答案摆在眼前，大多数人就不再思考了，这对个人长期的发展其实是不利的。真正的成长来自于独立完成思考和推演的过程，而不是结果本身。\n更让我感到矛盾的是：一个人通过大量思考提升了自己，随后却告诉他人“别浪费时间了”，这种逻辑本身就存在问题。\n同时，我对当前 AI 的发展是有疑问的。我的孩子，可能不会再像我们这一代人那样，愿意花上几个小时，甚至一整天去反复思考和解决一个问题。但恰恰是这种缓慢、艰难的思考过程，构成了人类持续进步的根本。",
+              "我的天啊，我的回答思考都是设定好的，这种确定论完全震惊到了… 无法想象翁是怎么有勇气去面对这虚无。以前坚定自己的信念，但现在看到了尽头。",
+              "在为作业信息差开源就能看出来他是善人，因为不少人是肯定不会怎么做的，这会把考试的bar拉高了，不利于自己利益。"
+            ]
+          }
+        ],
+        "summary": "本次分析共抓取 200 条评论，清洗后保留 198 条（移除空内容/表情/重复等 2 条）。 评论区整体以「中立/补充」为主，共 146 条，占比约 73%。 共有 31 条提问或求证类评论（占比约 15%），部分用户在寻求更多信息。 主要讨论围绕以下主题展开：嘉宾的优秀毋庸置疑我对主播的这个优秀的采访更加印象深刻既非常好的引导了问答的方向、不去想那些宏伟叙事专注当下要做的事一致性、看到嘉宾以为看到了柯洁和李世石的脸合二为一了。 正面情感占绝对主导，观众整体态度积极。 平台：YouTube。",
+        "video_summary": {
+          "has_subtitle": false,
+          "summary": "视频标题：未知\n\n基于评论分析，视频内容摘要：\n嘉宾的优秀毋庸置疑，我对主播的这个优秀的采访更加印象深刻。既非常好的引导了问答的方向，做了足够多的挖掘，又能让嘉宾畅所欲言不喧宾夺主。其丰富的知识储备和共情能力让人印象深刻。 “不去想那些宏伟叙事，专注当下要做的事”，“一致性” 看到嘉宾，以为看到了柯洁和李世石的脸合二为一了。😆 我并不完全认同公开作业或直接给出答案的做法。一旦答案摆在眼前，大多数人就不再思考了，这对个人长期的发展其实是不利的。真正的成长来自于独立完成思考和推演的过程，而不是结果本身。\n更让我感到矛盾的是：一个人通过大量思考提升了自己，随后却告诉他人“别浪费时间了”，这种逻辑本身就存在问题。\n同时，我对当前 AI 的发展是有疑...",
+          "key_points": [
+            "嘉宾的优秀毋",
+            "庸置疑",
+            "我对主播的这",
+            "个优秀的采访",
+            "更加印象深刻"
+          ],
+          "accuracy_note": "未检测到字幕，此摘要基于视频标题和评论内容生成，准确性较低"
+        },
+        "video_type": {
+          "primary": "攻略类",
+          "secondary": "科普类",
+          "confidence": 0.33,
+          "reason": "根据关键词「怎么」判断为攻略类内容，辅以科普类特征"
+        },
+        "cleaning_summary": {
+          "original_count": 200,
+          "cleaned_count": 198,
+          "removed_count": 2,
+          "low_info_count": 0,
+          "duplicate_count": 1,
+          "strategy": "严格策略：过滤闲聊类评论，保留实用建议和问题"
+        },
+        "content_comment_comparison": {
+          "video_focus": [
+            "嘉宾的优秀毋",
+            "庸置疑",
+            "我对主播的这",
+            "个优秀的采访",
+            "更加印象深刻"
+          ],
+          "audience_focus": [
+            "嘉宾的优秀毋庸置疑我对主播的这个优秀的采访更加印象深刻既非常",
+            "不去想那些宏伟叙事专注当下要做的事一致性",
+            "看到嘉宾以为看到了柯洁和李世石的脸合二为一了",
+            "我并不完全认同公开作业或直接给出答案的做法一旦答案摆在眼前大",
+            "我的天啊我的回答思考都是设定好的这种确定论完全震惊到了 无法"
+          ],
+          "gap_analysis": "视频侧重但评论较少提及：我对主播的这、个优秀的采访、庸置疑；评论区关注但视频未深入：不去想那些宏伟叙事专注当下要做的事一致性、我并不完全认同公开作业或直接给出答案的做法一旦答案摆在眼前大、看到嘉宾以为看到了柯洁和李世石的脸合二为一了",
+          "audience_needs": [],
+          "missed_topics": [
+            "不去想那些宏伟叙事专注当下要做的事一致性",
+            "我并不完全认同公开作业或直接给出答案的做法一旦答案摆在眼前大",
+            "看到嘉宾以为看到了柯洁和李世石的脸合二为一了",
+            "常见问题/避坑指南"
+          ]
+        },
+        "visualization_recommendation": {
+          "chart_type": "高频问题卡片 + 关键词云",
+          "reason": "适合展示攻略中的常见问题和关键步骤，帮助观众快速定位所需信息",
+          "fallback": "分步骤信息卡片 + 问题汇总",
+          "data_status": "ready"
+        },
+        "heatmap_data": {
+          "x_axis": [],
+          "y_axis": [],
+          "unit": "评论倾向值",
+          "value_explanation": "当前视频类型不适用热力图分析。",
+          "values": []
+        },
+        "files": {
+          "json": "/api/jobs/qinuucs11xae2e/prahm4ha3m/comments",
+          "markdown": "/api/jobs/qinuucs11xae2e/prahm4ha3m/report",
+          "pdf": "/api/jobs/qinuucs11xae2e/prahm4ha3m/pdf"
+        },
+        "error": "",
+        "warnings": [
+          "字幕检测: 无"
+        ],
+        "created_at": "2026-04-28 21:59:55",
+        "updated_at": "2026-04-28 22:00:05"
+      },
+      "paths": {
+        "comments_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\qinuucs11xae2e\\prahm4ha3m\\www-youtube-com-d755fba1233c.comments.json",
+        "report_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\qinuucs11xae2e\\prahm4ha3m\\www-youtube-com-d755fba1233c.report.md",
+        "pdf_path": "C:\\Users\\15858\\Desktop\\Comment_Intelligence_Reports\\2026-04-28\\youtube_I0DrcsDf3Os_report_2026-04-28_2200.pdf"
+      }
+    }
+  ]
+}

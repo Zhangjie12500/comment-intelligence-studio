@@ -91,6 +91,12 @@ def export_pdf(
     clusters: List[Dict[str, Any]],
     controversies: List[Dict[str, Any]],
     summary_lines: List[str],
+    video_summary: Optional[Dict[str, Any]] = None,
+    video_type: Optional[Dict[str, Any]] = None,
+    cleaning_summary: Optional[Dict[str, Any]] = None,
+    content_comment_comparison: Optional[Dict[str, Any]] = None,
+    visualization_recommendation: Optional[Dict[str, Any]] = None,
+    heatmap_data: Optional[Dict[str, Any]] = None,
 ) -> str:
     """
     Generate PDF report. Must never raise in caller; caller should wrap try/except.
@@ -123,7 +129,7 @@ def export_pdf(
         rightMargin=18 * mm,
         topMargin=16 * mm,
         bottomMargin=16 * mm,
-        title="Comment Analysis Report",
+        title="ViewLens Video Comment Analysis Report",
     )
 
     styles = getSampleStyleSheet()
@@ -141,13 +147,164 @@ def export_pdf(
     title_s  = _style("CIS_Title", "Title", fontSize=16, spaceAfter=10)
     h_s      = _style("CIS_H",     "Heading2", fontSize=12, spaceBefore=10, spaceAfter=6)
     body_s   = _style("CIS_P",     "Normal",   fontSize=10, leading=14)
+    note_s   = _style("CIS_Note",   "Normal",   fontSize=9, leading=13, textColor=colors.HexColor('#B45309'))
 
     story: List[Any] = []
 
     # ── Header ──
-    story.append(Paragraph("Comment Intelligence Report / 评论分析报告", title_s))
+    story.append(Paragraph("ViewLens Video Comment Analysis Report / 视频评论分析报告", title_s))
     story.append(Paragraph(f"Platform: {platform}   Video ID: {video_id}", body_s))
     story.append(Spacer(1, 8))
+
+    # ── Video Type Section ──
+    if video_type and video_type.get("primary"):
+        story.append(Paragraph("Video Type / 视频类型判断", h_s))
+        primary = video_type.get("primary", "")
+        secondary = video_type.get("secondary", "")
+        confidence = video_type.get("confidence", 0)
+        reason = video_type.get("reason", "")
+        story.append(Paragraph(f"<b>Primary / 主类型:</b> {primary}", body_s))
+        if secondary:
+            story.append(Paragraph(f"<b>Secondary / 辅助类型:</b> {secondary}", body_s))
+        story.append(Paragraph(f"<b>Confidence / 置信度:</b> {confidence * 100:.0f}%", body_s))
+        if reason:
+            story.append(Paragraph(f"<b>Reason / 判断理由:</b> {reason}", body_s))
+        story.append(Spacer(1, 8))
+
+    # ── Cleaning Summary Section ──
+    if cleaning_summary:
+        story.append(Paragraph("Cleaning Summary / 数据清洗概览", h_s))
+        orig = cleaning_summary.get("original_count", 0)
+        cleaned = cleaning_summary.get("cleaned_count", 0)
+        removed = cleaning_summary.get("removed_count", 0)
+        low_info = cleaning_summary.get("low_info_count", 0)
+        dup = cleaning_summary.get("duplicate_count", 0)
+        strategy = cleaning_summary.get("strategy", "")
+        story.append(Paragraph(f"Original / 原始: {orig}  |  Cleaned / 清洗后: {cleaned}  |  Removed / 删除: {removed}", body_s))
+        story.append(Paragraph(f"Low-info / 低信息密度: {low_info}  |  Duplicates / 重复: {dup}", body_s))
+        if strategy:
+            story.append(Paragraph(f"<i>Strategy / 策略: {strategy}</i>", note_s))
+        story.append(Spacer(1, 8))
+
+    # ── Video Summary Section ──
+    if video_summary:
+        story.append(Paragraph("Video Content Summary / 视频内容摘要", h_s))
+        
+        # Subtitle status
+        has_subtitle = video_summary.get("has_subtitle", False)
+        subtitle_status = "Yes / 有字幕" if has_subtitle else "No / 无字幕"
+        story.append(Paragraph(f"<b>Subtitle / 字幕:</b> {subtitle_status}", body_s))
+        
+        # Summary text
+        summary_text = video_summary.get("summary", "")
+        if summary_text:
+            story.append(Paragraph(f"<b>Summary / 摘要:</b>", body_s))
+            story.append(Paragraph(summary_text, body_s))
+        
+        # Key points
+        key_points = video_summary.get("key_points", []) or []
+        if key_points:
+            story.append(Spacer(1, 4))
+            story.append(Paragraph("<b>Key Points / 关键内容:</b>", body_s))
+            for i, point in enumerate(key_points, 1):
+                point_text = str(point)[:100]
+                story.append(Paragraph(f"{i}. {point_text}", body_s))
+        
+        # Accuracy note
+        accuracy_note = video_summary.get("accuracy_note", "")
+        if accuracy_note:
+            story.append(Spacer(1, 4))
+            story.append(Paragraph(f"<i>Note / 备注: {accuracy_note}</i>", note_s))
+        
+        story.append(Spacer(1, 8))
+
+    # ── Content-Comment Comparison Section ──
+    if content_comment_comparison:
+        story.append(Paragraph("Content-Comment Comparison / 内容-评论对照分析", h_s))
+        video_focus = content_comment_comparison.get("video_focus", []) or []
+        audience_focus = content_comment_comparison.get("audience_focus", []) or []
+        gap_analysis = content_comment_comparison.get("gap_analysis", "")
+        audience_needs = content_comment_comparison.get("audience_needs", []) or []
+        missed_topics = content_comment_comparison.get("missed_topics", []) or []
+        
+        if video_focus:
+            story.append(Paragraph(f"<b>Video Focus / 视频关注点:</b> {', '.join(video_focus)}", body_s))
+        if audience_focus:
+            story.append(Paragraph(f"<b>Audience Focus / 评论区关注点:</b> {', '.join(audience_focus)}", body_s))
+        if gap_analysis:
+            story.append(Paragraph(f"<b>Gap Analysis / 差异分析:</b> {gap_analysis}", body_s))
+        if audience_needs:
+            story.append(Paragraph("<b>Audience Needs / 观众需求:</b>", body_s))
+            for need in audience_needs[:5]:
+                story.append(Paragraph(f"  - {need}", body_s))
+        if missed_topics:
+            story.append(Paragraph(f"<b>Missed Topics / 遗漏话题:</b> {', '.join(missed_topics)}", body_s))
+        story.append(Spacer(1, 8))
+
+    # ── Visualization Recommendation Section ──
+    if visualization_recommendation:
+        story.append(Paragraph("Visualization Recommendation / 推荐可视化方式", h_s))
+        chart_type = visualization_recommendation.get("chart_type", "")
+        reason = visualization_recommendation.get("reason", "")
+        data_status = visualization_recommendation.get("data_status", "insufficient")
+        fallback = visualization_recommendation.get("fallback", "")
+        status_text = "Ready / 充足" if data_status == "ready" else "Insufficient / 不足"
+        story.append(Paragraph(f"<b>Recommended Chart / 推荐图表:</b> {chart_type}", body_s))
+        story.append(Paragraph(f"<b>Reason / 推荐理由:</b> {reason}", body_s))
+        story.append(Paragraph(f"<b>Data Status / 数据状态:</b> {status_text}", body_s))
+        if fallback:
+            story.append(Paragraph(f"<b>Fallback / 降级方案:</b> {fallback}", body_s))
+        story.append(Spacer(1, 8))
+
+    # ── Heatmap Section ──
+    if heatmap_data and heatmap_data.get("data_status") == "ready":
+        story.append(Paragraph("Heatmap Analysis / 热力图分析", h_s))
+        x_axis = heatmap_data.get("x_axis", [])
+        y_axis = heatmap_data.get("y_axis", [])
+        unit = heatmap_data.get("unit", "评论倾向值")
+        explanation = heatmap_data.get("value_explanation", "")
+        values = heatmap_data.get("values", [])
+
+        story.append(Paragraph(f"<b>Dimensions / 维度:</b> {', '.join(x_axis)}", body_s))
+        story.append(Paragraph(f"<b>Products / 商品:</b> {', '.join(y_axis)}", body_s))
+        story.append(Paragraph(f"<b>Unit / 单位:</b> {unit}", body_s))
+        if explanation:
+            story.append(Paragraph(f"<i>{explanation}</i>", note_s))
+
+        # Build heatmap data table
+        if x_axis and y_axis and values:
+            # Table header
+            table_data = [["商品 \\ 维度"] + x_axis]
+
+            # Build rows for each product
+            value_map = {(v.get("product", ""), v.get("aspect", "")): v for v in values}
+
+            for prod in y_axis:
+                row = [prod]
+                for asp in x_axis:
+                    cell_data = value_map.get((prod, asp), {})
+                    val = cell_data.get("value", 0)
+                    sentiment = cell_data.get("sentiment", "neutral")
+                    count = cell_data.get("count", 0)
+                    cell_text = f"{val:.0f}({sentiment[0]}) n={count}"
+                    row.append(cell_text)
+                table_data.append(row)
+
+            # Create table
+            col_width = 30 * mm if len(x_axis) <= 4 else 20 * mm
+            tbl = Table(table_data, colWidths=[35 * mm] + [col_width] * len(x_axis))
+            tbl.setStyle(TableStyle([
+                ("BACKGROUND", (0, 0), (-1, 0), colors.lightgrey),
+                ("BACKGROUND", (0, 0), (0, -1), colors.lightgrey),
+                ("BOX", (0, 0), (-1, -1), 0.5, colors.grey),
+                ("INNERGRID", (0, 0), (-1, -1), 0.25, colors.lightgrey),
+                ("FONTNAME", (0, 0), (-1, -1), _ASCII_FONT),
+                ("FONTSIZE", (0, 0), (-1, -1), 7),
+                ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+                ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+            ]))
+            story.append(tbl)
+        story.append(Spacer(1, 8))
 
     # ── Stance Stats ──
     story.append(Paragraph("Stance Distribution / 立场分布", h_s))
@@ -233,6 +390,13 @@ def export_pdf(
     else:
         for line in summary_lines[:10]:
             story.append(Paragraph(f"- {line}", body_s))
+
+    # ── Footer ──
+    story.append(Spacer(1, 16))
+    story.append(Paragraph(
+        f"<i>Generated by ViewLens on {datetime.now().strftime('%Y-%m-%d %H:%M')}</i>",
+        _style("Footer", "Normal", fontSize=8, textColor=colors.grey)
+    ))
 
     doc.build(story)
     return pdf_path

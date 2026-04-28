@@ -1,0 +1,175 @@
+{
+  "job_id": "z7n04s5nzka62f",
+  "status": "done",
+  "error": "",
+  "force_refresh": false,
+  "include_replies": true,
+  "created_at": "2026-04-28 18:57:36",
+  "updated_at": "2026-04-28 18:57:44",
+  "tasks": [
+    {
+      "task": {
+        "task_id": "ded6kfrr2w",
+        "url": "https://www.youtube.com/watch?v=ejRcMxeU0oc",
+        "platform": "youtube",
+        "video_id": "ejRcMxeU0oc",
+        "status": "done",
+        "source": "fresh",
+        "limit": 50,
+        "include_replies": true,
+        "progress": 0,
+        "raw_count": 3,
+        "cleaned_count": 3,
+        "main_count": 3,
+        "reply_count": 0,
+        "stance_stats": {
+          "support": 0,
+          "oppose": 0,
+          "neutral": 3,
+          "joke": 0,
+          "question": 0
+        },
+        "top_influence_comments": [
+          {
+            "user": "@cstuart1",
+            "text": "Rough editing",
+            "like": 3,
+            "reply_count": 0,
+            "influence_score": 3.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@realshinygentleman",
+            "text": "Wow, could this video be any faster. It's hard to follow when there is a cut like every 4 seconds.",
+            "like": 0,
+            "reply_count": 0,
+            "influence_score": 0.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "@lenn.satori",
+            "text": "thanks for the update :)",
+            "like": 0,
+            "reply_count": 0,
+            "influence_score": 0.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          }
+        ],
+        "clusters": [
+          {
+            "title": "rough editing",
+            "keywords": [
+              "rough",
+              "editing"
+            ],
+            "count": 1,
+            "like_weight": 3,
+            "representative_comments": [
+              {
+                "user": "@cstuart1",
+                "text": "Rough editing",
+                "like": 3
+              }
+            ]
+          },
+          {
+            "title": "wow could this video",
+            "keywords": [
+              "wow",
+              "could",
+              "this"
+            ],
+            "count": 1,
+            "like_weight": 0,
+            "representative_comments": [
+              {
+                "user": "@realshinygentleman",
+                "text": "Wow, could this video be any faster. It's hard to follow when there is a cut like every 4 seconds.",
+                "like": 0
+              }
+            ]
+          },
+          {
+            "title": "thanks for the update",
+            "keywords": [
+              "thanks",
+              "for",
+              "the"
+            ],
+            "count": 1,
+            "like_weight": 0,
+            "representative_comments": [
+              {
+                "user": "@lenn.satori",
+                "text": "thanks for the update :)",
+                "like": 0
+              }
+            ]
+          }
+        ],
+        "controversies": [],
+        "summary": "本次分析共抓取 3 条评论，清洗后保留 3 条（移除空内容/表情/重复等 0 条）。 评论区整体以「中立/补充」为主，共 3 条，占比约 100%。 主要讨论围绕以下主题展开：rough editing、wow could this video、thanks for the update。 平台：YouTube。",
+        "video_summary": {
+          "has_subtitle": false,
+          "summary": "暂无字幕内容，无法生成视频摘要。请配置 OPENAI_API_KEY 以启用 AI 摘要功能。",
+          "key_points": [],
+          "accuracy_note": "未检测到字幕，摘要准确性较低"
+        },
+        "video_type": {
+          "primary": "其他",
+          "secondary": "",
+          "confidence": 0.3,
+          "reason": "未能识别明确类型，归类为其他类视频"
+        },
+        "cleaning_summary": {
+          "original_count": 3,
+          "cleaned_count": 3,
+          "removed_count": 0,
+          "low_info_count": 0,
+          "duplicate_count": 0,
+          "strategy": "标准策略：基础过滤，保持内容质量"
+        },
+        "content_comment_comparison": {
+          "video_focus": [],
+          "audience_focus": [
+            "rough editing",
+            "wow could this video",
+            "thanks for the update"
+          ],
+          "gap_analysis": "评论区关注但视频未深入：rough editing、wow could this video、thanks for the update",
+          "audience_needs": [],
+          "missed_topics": [
+            "rough editing",
+            "wow could this video",
+            "thanks for the update"
+          ]
+        },
+        "visualization_recommendation": {
+          "chart_type": "立场分布",
+          "reason": "基础可视化，展示评论的立场分布",
+          "fallback": "立场统计",
+          "data_status": "insufficient"
+        },
+        "files": {
+          "json": "/api/jobs/z7n04s5nzka62f/ded6kfrr2w/comments",
+          "markdown": "/api/jobs/z7n04s5nzka62f/ded6kfrr2w/report",
+          "pdf": "/api/jobs/z7n04s5nzka62f/ded6kfrr2w/pdf"
+        },
+        "error": "",
+        "warnings": [
+          "字幕检测: 无"
+        ],
+        "created_at": "2026-04-28 18:57:36",
+        "updated_at": "2026-04-28 18:57:44"
+      },
+      "paths": {
+        "comments_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\z7n04s5nzka62f\\ded6kfrr2w\\www-youtube-com-fab78edafb1f.comments.json",
+        "report_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\z7n04s5nzka62f\\ded6kfrr2w\\www-youtube-com-fab78edafb1f.report.md",
+        "pdf_path": "C:\\Users\\15858\\Desktop\\Comment_Intelligence_Reports\\2026-04-28\\youtube_ejRcMxeU0oc_report_2026-04-28_1857.pdf"
+      }
+    }
+  ]
+}

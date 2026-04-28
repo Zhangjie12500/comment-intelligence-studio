@@ -1,0 +1,619 @@
+{
+  "job_id": "4dkseb6pq8oy5d",
+  "status": "done",
+  "error": "",
+  "force_refresh": false,
+  "include_replies": true,
+  "created_at": "2026-04-28 23:35:48",
+  "updated_at": "2026-04-28 23:35:55",
+  "tasks": [
+    {
+      "task": {
+        "task_id": "03ocbs20u1",
+        "url": "https://www.bilibili.com/video/BV1iHXsBfEjJ/?spm_id_from=333.337.search-card.all.click&vd_source=7e9435332132eb135fd3ef62caab01f2",
+        "platform": "bilibili",
+        "video_id": "BV1iHXsBfEjJ",
+        "status": "done",
+        "source": "cache",
+        "limit": 200,
+        "include_replies": true,
+        "progress": 0,
+        "raw_count": 200,
+        "cleaned_count": 164,
+        "main_count": 19,
+        "reply_count": 145,
+        "stance_stats": {
+          "support": 11,
+          "oppose": 1,
+          "neutral": 120,
+          "joke": 2,
+          "question": 30
+        },
+        "top_influence_comments": [
+          {
+            "user": "被风吹过的夏天uu",
+            "text": "感觉up可以把能量 怪兽15号再加一个便携档位，自带百W快充线加长柱体，好用又好携带，昨天刚到的",
+            "like": 117,
+            "reply_count": 18,
+            "influence_score": 153.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "努力生活开心到老",
+            "text": "真有这么多人买这些好几百的充电宝吗？19元的怪兽，美团，小电之类的，充一次充满足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，100元能用5年，为啥要买这些100+的呢。除了野外或者徒步，我真没遇上一天要用充电宝，充满两次的场景",
+            "like": 37,
+            "reply_count": 44,
+            "influence_score": 125.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "嘎嘎嘎嗝咧咧咧",
+            "text": "是不是充电宝充华为手机都很巨慢啊[笑哭]，换一个又一个，又换了个酷态科的，结果给手机充半个小时，就冲了10格电[笑哭]我真服了，华为自家的充电宝又贵电容量还没人家大[笑哭]",
+            "like": 15,
+            "reply_count": 29,
+            "influence_score": 73.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "银河光泛海",
+            "text": "我买的是西圣半固态充电宝，很好用，额定容量有6600mAh的差不多可以给手机充2-3次",
+            "like": 40,
+            "reply_count": 4,
+            "influence_score": 48.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "不爱喝奶茶的NAICHA",
+            "text": "你这种话适用于任何场景，比如:\n真有这么多人买这些好几千的手机吗？几百块的入门级之类的，能打电话刷视频足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，几百元能用5年，为啥要买这些几千甚至一万多的呢。除了游戏或者vlog，我真没遇上要用几千块钱手机的场景",
+            "like": 43,
+            "reply_count": 0,
+            "influence_score": 43.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "greenlemon__",
+            "text": "跟着up买了西圣pbs，确实和我之前的充电宝不一样，充得挺快的，也不会发烫",
+            "like": 36,
+            "reply_count": 3,
+            "influence_score": 42.0,
+            "stance": "support",
+            "translation_zh": ""
+          },
+          {
+            "user": "戏罢曾无理曲时",
+            "text": "现在买充电宝还是买半固态电芯的吧，我之前买的都不耐用，买了西圣的半固态充电宝之后很久没换过了",
+            "like": 37,
+            "reply_count": 1,
+            "influence_score": 39.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "LQF-loading",
+            "text": "充电宝，有点意思，不知道能不能满足我[doge][doge][doge]",
+            "like": 21,
+            "reply_count": 4,
+            "influence_score": 29.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "江俞听",
+            "text": "我感觉西圣除了便携，性价比也挺高的，用了这么久都没出现什么问题",
+            "like": 22,
+            "reply_count": 2,
+            "influence_score": 26.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "为什么要忘却",
+            "text": "跟着up买了西圣pbs了",
+            "like": 14,
+            "reply_count": 6,
+            "influence_score": 26.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          }
+        ],
+        "clusters": [
+          {
+            "summary": "感觉 可以把能量 怪兽 号再加一个便携档位自带百",
+            "sentiment": "neutral",
+            "ratio": 0.006097560975609756,
+            "count": 1,
+            "keywords": [
+              "感觉",
+              "可以把能量",
+              "怪兽"
+            ],
+            "like_weight": 117,
+            "examples": [
+              "感觉up可以把能量 怪兽15号再加一个便携档位，自带百W快充线加长柱体，好用又好携带，昨天刚到的"
+            ],
+            "representative_comments": [
+              {
+                "user": "被风吹过的夏天uu",
+                "text": "感觉up可以把能量 怪兽15号再加一个便携档位，自带百W快充线加长柱体，好用又好携带，昨天刚到的",
+                "like": 117
+              }
+            ]
+          },
+          {
+            "summary": "你这种话适用于任何场景比如 真有这么多人买这些好几千的手机吗几百块的入门级之类的",
+            "sentiment": "neutral",
+            "ratio": 0.006097560975609756,
+            "count": 1,
+            "keywords": [
+              "你这种话适用于任何场景比如",
+              "真有这么多人买这些好几千的手机吗几百块的入门级之类的能打电话刷视频足够了还能带着去任何地方某多上一搜一大堆买一个用一年几百元能用",
+              "年为啥要买这些几千甚至一万多的呢除了游戏或者"
+            ],
+            "like_weight": 43,
+            "examples": [
+              "你这种话适用于任何场景，比如:\n真有这么多人买这些好几千的手机吗？几百块的入门级之类的，能打电话刷视频足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，几百元能用5年，为啥要买这些几千甚至一"
+            ],
+            "representative_comments": [
+              {
+                "user": "不爱喝奶茶的NAICHA",
+                "text": "你这种话适用于任何场景，比如:\n真有这么多人买这些好几千的手机吗？几百块的入门级之类的，能打电话刷视频足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，几百元能用5年，为啥要买这些几千甚至一万多的呢。除了游戏或者vlog，我真没遇上要用几千块钱手机的场景",
+                "like": 43
+              }
+            ]
+          },
+          {
+            "summary": "我买的是西圣半固态充电宝很好用额定容量有 mah 的差不多可以给手机充",
+            "sentiment": "neutral",
+            "ratio": 0.006097560975609756,
+            "count": 1,
+            "keywords": [
+              "我买的是西圣半固态充电宝很好用额定容量有",
+              "mah",
+              "的差不多可以给手机充"
+            ],
+            "like_weight": 40,
+            "examples": [
+              "我买的是西圣半固态充电宝，很好用，额定容量有6600mAh的差不多可以给手机充2-3次"
+            ],
+            "representative_comments": [
+              {
+                "user": "银河光泛海",
+                "text": "我买的是西圣半固态充电宝，很好用，额定容量有6600mAh的差不多可以给手机充2-3次",
+                "like": 40
+              }
+            ]
+          },
+          {
+            "summary": "现在买充电宝还是买半固态电芯的吧我之前买的都不耐用买了西圣的半固态充电宝之后很久",
+            "sentiment": "neutral",
+            "ratio": 0.006097560975609756,
+            "count": 1,
+            "keywords": [
+              "现在买充电宝还是买半固态电芯的吧我之前买的都不耐用买了西圣的半固态充电宝之后很久没换过了"
+            ],
+            "like_weight": 37,
+            "examples": [
+              "现在买充电宝还是买半固态电芯的吧，我之前买的都不耐用，买了西圣的半固态充电宝之后很久没换过了"
+            ],
+            "representative_comments": [
+              {
+                "user": "戏罢曾无理曲时",
+                "text": "现在买充电宝还是买半固态电芯的吧，我之前买的都不耐用，买了西圣的半固态充电宝之后很久没换过了",
+                "like": 37
+              }
+            ]
+          },
+          {
+            "summary": "真有这么多人买这些好几百的充电宝吗 元的怪兽美团小电之类的充一次充满足够了还能带",
+            "sentiment": "neutral",
+            "ratio": 0.006097560975609756,
+            "count": 1,
+            "keywords": [
+              "真有这么多人买这些好几百的充电宝吗",
+              "元的怪兽美团小电之类的充一次充满足够了还能带着去任何地方某多上一搜一大堆买一个用一年",
+              "元能用"
+            ],
+            "like_weight": 37,
+            "examples": [
+              "真有这么多人买这些好几百的充电宝吗？19元的怪兽，美团，小电之类的，充一次充满足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，100元能用5年，为啥要买这些100+的呢。除了野外或者徒步，"
+            ],
+            "representative_comments": [
+              {
+                "user": "努力生活开心到老",
+                "text": "真有这么多人买这些好几百的充电宝吗？19元的怪兽，美团，小电之类的，充一次充满足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，100元能用5年，为啥要买这些100+的呢。除了野外或者徒步，我真没遇上一天要用充电宝，充满两次的场景",
+                "like": 37
+              }
+            ]
+          },
+          {
+            "summary": "跟着 买了西圣 pbs 确实和我之前的充电宝不一样充得挺快的也不会发烫",
+            "sentiment": "neutral",
+            "ratio": 0.006097560975609756,
+            "count": 1,
+            "keywords": [
+              "跟着",
+              "买了西圣",
+              "pbs"
+            ],
+            "like_weight": 36,
+            "examples": [
+              "跟着up买了西圣pbs，确实和我之前的充电宝不一样，充得挺快的，也不会发烫"
+            ],
+            "representative_comments": [
+              {
+                "user": "greenlemon__",
+                "text": "跟着up买了西圣pbs，确实和我之前的充电宝不一样，充得挺快的，也不会发烫",
+                "like": 36
+              }
+            ]
+          },
+          {
+            "summary": "我感觉西圣除了便携性价比也挺高的用了这么久都没出现什么问题",
+            "sentiment": "neutral",
+            "ratio": 0.006097560975609756,
+            "count": 1,
+            "keywords": [
+              "我感觉西圣除了便携性价比也挺高的用了这么久都没出现什么问题"
+            ],
+            "like_weight": 22,
+            "examples": [
+              "我感觉西圣除了便携，性价比也挺高的，用了这么久都没出现什么问题"
+            ],
+            "representative_comments": [
+              {
+                "user": "江俞听",
+                "text": "我感觉西圣除了便携，性价比也挺高的，用了这么久都没出现什么问题",
+                "like": 22
+              }
+            ]
+          },
+          {
+            "summary": "充电宝有点意思不知道能不能满足我 doge doge doge",
+            "sentiment": "neutral",
+            "ratio": 0.006097560975609756,
+            "count": 1,
+            "keywords": [
+              "充电宝有点意思不知道能不能满足我",
+              "doge"
+            ],
+            "like_weight": 21,
+            "examples": [
+              "充电宝，有点意思，不知道能不能满足我[doge][doge][doge]"
+            ],
+            "representative_comments": [
+              {
+                "user": "LQF-loading",
+                "text": "充电宝，有点意思，不知道能不能满足我[doge][doge][doge]",
+                "like": 21
+              }
+            ]
+          },
+          {
+            "summary": "我用过西圣的感觉还不错我表姐用了一下觉得好用我就送她了",
+            "sentiment": "neutral",
+            "ratio": 0.006097560975609756,
+            "count": 1,
+            "keywords": [
+              "我用过西圣的感觉还不错我表姐用了一下觉得好用我就送她了"
+            ],
+            "like_weight": 21,
+            "examples": [
+              "我用过西圣的，感觉还不错，我表姐用了一下觉得好用我就送她了"
+            ],
+            "representative_comments": [
+              {
+                "user": "理性囚笼",
+                "text": "我用过西圣的，感觉还不错，我表姐用了一下觉得好用我就送她了",
+                "like": 21
+              }
+            ]
+          },
+          {
+            "summary": "自带线充电速度最高真有百瓦吗",
+            "sentiment": "neutral",
+            "ratio": 0.006097560975609756,
+            "count": 1,
+            "keywords": [
+              "自带线充电速度最高真有百瓦吗"
+            ],
+            "like_weight": 19,
+            "examples": [
+              "自带线充电速度最高真有百瓦吗"
+            ],
+            "representative_comments": [
+              {
+                "user": "别打了我是酱油g",
+                "text": "自带线充电速度最高真有百瓦吗",
+                "like": 19
+              }
+            ]
+          },
+          {
+            "summary": "是不是充电宝充华为手机都很巨慢啊 笑哭 换一个又一个又换了个酷态科的结果给手机充",
+            "sentiment": "neutral",
+            "ratio": 0.006097560975609756,
+            "count": 1,
+            "keywords": [
+              "是不是充电宝充华为手机都很巨慢啊",
+              "笑哭",
+              "换一个又一个又换了个酷态科的结果给手机充半个小时就冲了"
+            ],
+            "like_weight": 15,
+            "examples": [
+              "是不是充电宝充华为手机都很巨慢啊[笑哭]，换一个又一个，又换了个酷态科的，结果给手机充半个小时，就冲了10格电[笑哭]我真服了，华为自家的充电宝又贵电容量还没人家大[笑哭]"
+            ],
+            "representative_comments": [
+              {
+                "user": "嘎嘎嘎嗝咧咧咧",
+                "text": "是不是充电宝充华为手机都很巨慢啊[笑哭]，换一个又一个，又换了个酷态科的，结果给手机充半个小时，就冲了10格电[笑哭]我真服了，华为自家的充电宝又贵电容量还没人家大[笑哭]",
+                "like": 15
+              }
+            ]
+          },
+          {
+            "summary": "跟着 买了西圣 pbs",
+            "sentiment": "neutral",
+            "ratio": 0.006097560975609756,
+            "count": 1,
+            "keywords": [
+              "跟着",
+              "买了西圣",
+              "pbs"
+            ],
+            "like_weight": 14,
+            "examples": [
+              "跟着up买了西圣pbs了"
+            ],
+            "representative_comments": [
+              {
+                "user": "为什么要忘却",
+                "text": "跟着up买了西圣pbs了",
+                "like": 14
+              }
+            ]
+          }
+        ],
+        "opinion_clusters": {
+          "opinion_clusters": [
+            {
+              "summary": "感觉 可以把能量 怪兽 号再加一个便携档位自带百",
+              "sentiment": "neutral",
+              "ratio": 0.006097560975609756,
+              "examples": [
+                "感觉up可以把能量 怪兽15号再加一个便携档位，自带百W快充线加长柱体，好用又好携带，昨天刚到的"
+              ]
+            },
+            {
+              "summary": "你这种话适用于任何场景比如 真有这么多人买这些好几千的手机吗几百块的入门级之类的",
+              "sentiment": "neutral",
+              "ratio": 0.006097560975609756,
+              "examples": [
+                "你这种话适用于任何场景，比如:\n真有这么多人买这些好几千的手机吗？几百块的入门级之类的，能打电话刷视频足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，几百元能用5年，为啥要买这些几千甚至一"
+              ]
+            },
+            {
+              "summary": "我买的是西圣半固态充电宝很好用额定容量有 mah 的差不多可以给手机充",
+              "sentiment": "neutral",
+              "ratio": 0.006097560975609756,
+              "examples": [
+                "我买的是西圣半固态充电宝，很好用，额定容量有6600mAh的差不多可以给手机充2-3次"
+              ]
+            },
+            {
+              "summary": "现在买充电宝还是买半固态电芯的吧我之前买的都不耐用买了西圣的半固态充电宝之后很久",
+              "sentiment": "neutral",
+              "ratio": 0.006097560975609756,
+              "examples": [
+                "现在买充电宝还是买半固态电芯的吧，我之前买的都不耐用，买了西圣的半固态充电宝之后很久没换过了"
+              ]
+            },
+            {
+              "summary": "真有这么多人买这些好几百的充电宝吗 元的怪兽美团小电之类的充一次充满足够了还能带",
+              "sentiment": "neutral",
+              "ratio": 0.006097560975609756,
+              "examples": [
+                "真有这么多人买这些好几百的充电宝吗？19元的怪兽，美团，小电之类的，充一次充满足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，100元能用5年，为啥要买这些100+的呢。除了野外或者徒步，"
+              ]
+            },
+            {
+              "summary": "跟着 买了西圣 pbs 确实和我之前的充电宝不一样充得挺快的也不会发烫",
+              "sentiment": "neutral",
+              "ratio": 0.006097560975609756,
+              "examples": [
+                "跟着up买了西圣pbs，确实和我之前的充电宝不一样，充得挺快的，也不会发烫"
+              ]
+            },
+            {
+              "summary": "我感觉西圣除了便携性价比也挺高的用了这么久都没出现什么问题",
+              "sentiment": "neutral",
+              "ratio": 0.006097560975609756,
+              "examples": [
+                "我感觉西圣除了便携，性价比也挺高的，用了这么久都没出现什么问题"
+              ]
+            },
+            {
+              "summary": "充电宝有点意思不知道能不能满足我 doge doge doge",
+              "sentiment": "neutral",
+              "ratio": 0.006097560975609756,
+              "examples": [
+                "充电宝，有点意思，不知道能不能满足我[doge][doge][doge]"
+              ]
+            },
+            {
+              "summary": "我用过西圣的感觉还不错我表姐用了一下觉得好用我就送她了",
+              "sentiment": "neutral",
+              "ratio": 0.006097560975609756,
+              "examples": [
+                "我用过西圣的，感觉还不错，我表姐用了一下觉得好用我就送她了"
+              ]
+            },
+            {
+              "summary": "自带线充电速度最高真有百瓦吗",
+              "sentiment": "neutral",
+              "ratio": 0.006097560975609756,
+              "examples": [
+                "自带线充电速度最高真有百瓦吗"
+              ]
+            },
+            {
+              "summary": "是不是充电宝充华为手机都很巨慢啊 笑哭 换一个又一个又换了个酷态科的结果给手机充",
+              "sentiment": "neutral",
+              "ratio": 0.006097560975609756,
+              "examples": [
+                "是不是充电宝充华为手机都很巨慢啊[笑哭]，换一个又一个，又换了个酷态科的，结果给手机充半个小时，就冲了10格电[笑哭]我真服了，华为自家的充电宝又贵电容量还没人家大[笑哭]"
+              ]
+            },
+            {
+              "summary": "跟着 买了西圣 pbs",
+              "sentiment": "neutral",
+              "ratio": 0.006097560975609756,
+              "examples": [
+                "跟着up买了西圣pbs了"
+              ]
+            }
+          ]
+        },
+        "controversies": [
+          {
+            "title": "评论区存在反对或质疑声音",
+            "description": "共有 1 条评论表达质疑或反对观点，占比约 0%。",
+            "related_count": 1,
+            "sample_comments": []
+          },
+          {
+            "title": "评论区存在较多追问和求证",
+            "description": "共有 30 条评论提出问题，占比约 18%。",
+            "related_count": 30,
+            "sample_comments": [
+              "真有这么多人买这些好几百的充电宝吗？19元的怪兽，美团，小电之类的，充一次充满足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，100元能用5年，为啥要买这些100+的呢。除了野外或者徒步，我真没遇上一天要用充电宝，充满两次的场景",
+              "你这种话适用于任何场景，比如:\n真有这么多人买这些好几千的手机吗？几百块的入门级之类的，能打电话刷视频足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，几百元能用5年，为啥要买这些几千甚至一万多的呢。除了游戏或者vlog，我真没遇上要用几千块钱手机的场景",
+              "我感觉西圣除了便携，性价比也挺高的，用了这么久都没出现什么问题"
+            ]
+          },
+          {
+            "title": "支持与反对观点并存",
+            "description": "支持观点 11 条，反对观点 1 条，评论区存在明显观点分歧。",
+            "related_count": 12,
+            "sample_comments": [
+              "跟着up买了西圣pbs，确实和我之前的充电宝不一样，充得挺快的，也不会发烫"
+            ]
+          }
+        ],
+        "summary": {
+          "title": "评论区整体分析",
+          "summary": "本次分析共抓取 200 条评论，清洗后保留 164 条。 评论区整体以「中立/补充」为主，共 120 条，占比约 73%。 存在 1 条质疑或反对声音（占比约 0%），评论区存在一定观点分歧。 共有 30 条提问或求证类评论，部分用户在寻求更多信息。 正面情感占绝对主导，观众整体态度积极。",
+          "points": [
+            "主要讨论围绕：感觉 可以把能量 怪兽 号再加一个便携档位自带百；你这种话适用于任何场景比如 真有这么多人买这些好几千的手机吗几百块的入门级之类的；我买的是西圣半固态充电宝很好用额定容量有 mah 的差不多可以给手机充",
+            "存在 1 条反对/质疑声音，需关注用户疑虑",
+            " 30 条评论提出问题，可考虑补充相关内容"
+          ],
+          "sections": {
+            "核心主题": [
+              "感觉 可以把能量 怪兽 号再加一个便携档位自带百",
+              "你这种话适用于任何场景比如 真有这么多人买这些好几千的手机吗几百块的入门级之类的",
+              "我买的是西圣半固态充电宝很好用额定容量有 mah 的差不多可以给手机充",
+              "现在买充电宝还是买半固态电芯的吧我之前买的都不耐用买了西圣的半固态充电宝之后很久",
+              "真有这么多人买这些好几百的充电宝吗 元的怪兽美团小电之类的充一次充满足够了还能带"
+            ],
+            "关注点": [
+              "存在 1 条反对/质疑声音（0%）"
+            ],
+            "用户疑问": [
+              " 30 条评论提出问题或求证"
+            ]
+          },
+          "_fallback": true
+        },
+        "ai_status": {
+          "enabled": true,
+          "model": "gpt-4o-mini",
+          "message": "AI总结已启用。",
+          "error": null,
+          "opinion_clusters_enabled": false
+        },
+        "video_summary": {
+          "has_subtitle": false,
+          "summary": "视频标题：未知\n\n基于评论分析：\n感觉up可以把能量 怪兽15号再加一个便携档位，自带百W快充线加长柱体，好用又好携带，昨天刚到的 真有这么多人买这些好几百的充电宝吗？19元的怪兽，美团，小电之类的，充一次充满足够了，还能带着去任何地方，某多上一搜一大堆，买一个用一年，100元能用5年，为啥要买这些100+的呢。除了野外或者徒步，我真没遇上一天要用充电宝，充满两次的场景 是不是充电宝充华为手机都很巨慢啊[笑哭]，换一个又一个，又换了个酷态科的，结果给手机充半个小时，就冲了10格电[笑哭]我真服了，华为自家的充电宝又贵电容量还没人家大[笑哭] 我买的是西圣半固态充电宝，很好用，额定容量有6600mAh的差不多可以给手机充2-3次...",
+          "key_points": [
+            "笑哭",
+            "真有这么多人",
+            "还能带着去任",
+            "何地方",
+            "某多上一搜一"
+          ],
+          "accuracy_note": "未检测到字幕，摘要基于评论推测生成，准确度有限"
+        },
+        "video_type": {
+          "primary": "测评类",
+          "secondary": "攻略类",
+          "confidence": 0.33,
+          "reason": "根据关键词「使用感受」判断为测评类内容，辅以攻略类特征"
+        },
+        "cleaning_summary": {
+          "original_count": 200,
+          "cleaned_count": 164,
+          "removed_count": 36,
+          "low_info_count": 0,
+          "duplicate_count": 36,
+          "strategy": "严格策略：重点过滤低信息密度评论，保留高质量反馈"
+        },
+        "content_comment_comparison": {
+          "video_focus": [
+            "笑哭",
+            "真有这么多人",
+            "还能带着去任",
+            "何地方",
+            "某多上一搜一"
+          ],
+          "audience_focus": [
+            "笑哭",
+            "真有这么多人",
+            "还能带着去任",
+            "何地方",
+            "某多上一搜一"
+          ],
+          "gap_analysis": "一致关注点：某多上一搜一、真有这么多人、何地方",
+          "audience_needs": [],
+          "missed_topics": [
+            "价格/性价比讨论",
+            "购买渠道/优惠信息"
+          ]
+        },
+        "visualization_recommendation": {
+          "chart_type": "heatmap",
+          "reason": "适合展示商品/产品 × 评价维度的对比分析，直观呈现各商品优劣势",
+          "fallback": "基础立场分布饼图 + 高赞评论列表",
+          "data_status": "ready"
+        },
+        "heatmap_data": {
+          "x_axis": [],
+          "y_axis": [],
+          "unit": "评论倾向值",
+          "value_explanation": "该数值基于评论数量、语义相关性和情绪倾向估算，仅代表评论区反馈，不代表客观评分。",
+          "values": []
+        },
+        "files": {
+          "json": "/api/jobs/4dkseb6pq8oy5d/03ocbs20u1/comments",
+          "markdown": "/api/jobs/4dkseb6pq8oy5d/03ocbs20u1/report",
+          "pdf": "/api/jobs/4dkseb6pq8oy5d/03ocbs20u1/pdf"
+        },
+        "error": "",
+        "warnings": [
+          "字幕检测: 无"
+        ],
+        "created_at": "2026-04-28 23:35:48",
+        "updated_at": "2026-04-28 23:35:55"
+      },
+      "paths": {
+        "comments_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\4dkseb6pq8oy5d\\03ocbs20u1\\www-bilibili-com-fc7fc3c14529.comments.json",
+        "report_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\4dkseb6pq8oy5d\\03ocbs20u1\\www-bilibili-com-fc7fc3c14529.report.md",
+        "pdf_path": "C:\\Users\\15858\\Desktop\\Comment_Intelligence_Reports\\2026-04-28\\bilibili_BV1iHXsBfEjJ_report_2026-04-28_2335.pdf"
+      }
+    }
+  ]
+}

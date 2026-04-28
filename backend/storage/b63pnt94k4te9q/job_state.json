@@ -1,0 +1,99 @@
+{
+  "job_id": "b63pnt94k4te9q",
+  "status": "failed",
+  "error": "name 'compute_summary_ai_with_status' is not defined",
+  "force_refresh": false,
+  "include_replies": true,
+  "created_at": "2026-04-28 23:14:32",
+  "updated_at": "2026-04-28 23:14:34",
+  "tasks": [
+    {
+      "task": {
+        "task_id": "xct4wxg0q5",
+        "url": "https://www.youtube.com/watch?v=I0DrcsDf3Os",
+        "platform": "youtube",
+        "video_id": "I0DrcsDf3Os",
+        "status": "failed",
+        "source": "cache",
+        "limit": 50,
+        "include_replies": true,
+        "progress": 0,
+        "raw_count": 50,
+        "cleaned_count": 49,
+        "main_count": 49,
+        "reply_count": 0,
+        "stance_stats": {
+          "support": 0,
+          "oppose": 0,
+          "neutral": 0,
+          "joke": 0,
+          "question": 0
+        },
+        "top_influence_comments": [],
+        "clusters": [],
+        "controversies": [],
+        "summary": "",
+        "ai_status": {
+          "enabled": false,
+          "model": "gpt-4o-mini",
+          "message": "AI总结不可用，已使用规则分析结果。",
+          "error": null
+        },
+        "video_summary": {
+          "has_subtitle": false,
+          "summary": "",
+          "key_points": [],
+          "accuracy_note": ""
+        },
+        "video_type": {
+          "primary": "",
+          "secondary": "",
+          "confidence": 0.0,
+          "reason": ""
+        },
+        "cleaning_summary": {
+          "original_count": 0,
+          "cleaned_count": 0,
+          "removed_count": 0,
+          "low_info_count": 0,
+          "duplicate_count": 0,
+          "strategy": ""
+        },
+        "content_comment_comparison": {
+          "video_focus": [],
+          "audience_focus": [],
+          "gap_analysis": "",
+          "audience_needs": [],
+          "missed_topics": []
+        },
+        "visualization_recommendation": {
+          "chart_type": "",
+          "reason": "",
+          "fallback": "",
+          "data_status": "insufficient"
+        },
+        "heatmap_data": {
+          "x_axis": [],
+          "y_axis": [],
+          "unit": "评论倾向值",
+          "value_explanation": "",
+          "values": []
+        },
+        "files": {
+          "json": "",
+          "markdown": "",
+          "pdf": ""
+        },
+        "error": "name 'compute_summary_ai_with_status' is not defined",
+        "warnings": [],
+        "created_at": "2026-04-28 23:14:32",
+        "updated_at": "2026-04-28 23:14:34"
+      },
+      "paths": {
+        "comments_path": "",
+        "report_path": "",
+        "pdf_path": ""
+      }
+    }
+  ]
+}

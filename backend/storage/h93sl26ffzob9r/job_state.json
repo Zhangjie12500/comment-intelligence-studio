@@ -1,0 +1,400 @@
+{
+  "job_id": "h93sl26ffzob9r",
+  "status": "done",
+  "error": "",
+  "force_refresh": false,
+  "include_replies": true,
+  "created_at": "2026-04-28 18:59:03",
+  "updated_at": "2026-04-28 18:59:11",
+  "tasks": [
+    {
+      "task": {
+        "task_id": "000ykwt9ln",
+        "url": "https://www.bilibili.com/video/BV1HfodBzEoF/?spm_id_from=333.337.search-card.all.click&vd_source=7e9435332132eb135fd3ef62caab01f2",
+        "platform": "bilibili",
+        "video_id": "BV1HfodBzEoF",
+        "status": "done",
+        "source": "fresh",
+        "limit": 50,
+        "include_replies": true,
+        "progress": 0,
+        "raw_count": 50,
+        "cleaned_count": 50,
+        "main_count": 7,
+        "reply_count": 43,
+        "stance_stats": {
+          "support": 2,
+          "oppose": 1,
+          "neutral": 36,
+          "joke": 1,
+          "question": 10
+        },
+        "top_influence_comments": [
+          {
+            "user": "红魔面具Kane",
+            "text": "同价位华莱士无人可敌",
+            "like": 38,
+            "reply_count": 15,
+            "influence_score": 68.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "心宁姚",
+            "text": "为什么我吃有些炸全鸡他会感觉到明显的腥味。吃肯德基也是。",
+            "like": 35,
+            "reply_count": 15,
+            "influence_score": 65.0,
+            "stance": "question",
+            "translation_zh": ""
+          },
+          {
+            "user": "逢坂大河oAQ",
+            "text": "以前上学最喜欢点叫了个鸡，后来315爆出来在厕所腌洗，那厕所还是蹲坑式，我真的记忆犹新，一直没点过这家了，，",
+            "like": 32,
+            "reply_count": 13,
+            "influence_score": 58.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "捞德吹水华",
+            "text": "叫了只炸鸡，颜色越深的炸鸡，证明油很久没更换了，炸了很多天的油才会炸出这么黑的鸡。不太健康，建议少吃。",
+            "like": 35,
+            "reply_count": 0,
+            "influence_score": 35.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "Anisfiller",
+            "text": "就没有跟华莱士同价位的[笑哭]",
+            "like": 24,
+            "reply_count": 0,
+            "influence_score": 24.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "可靠的鱼子酱-",
+            "text": "我吃着没有[笑哭]",
+            "like": 8,
+            "reply_count": 0,
+            "influence_score": 8.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "丛雨綾ムラサメ呀",
+            "text": "我感觉华莱士的全鸡味道算国内快餐好的那一档了",
+            "like": 7,
+            "reply_count": 0,
+            "influence_score": 7.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "瑞雪之下",
+            "text": "确实有，店家提醒说提前重料腌制过，不然会很腥",
+            "like": 7,
+            "reply_count": 0,
+            "influence_score": 7.0,
+            "stance": "support",
+            "translation_zh": ""
+          },
+          {
+            "user": "吃我宇宙级鬼斩",
+            "text": "...看到你这条我真是天都塌了",
+            "like": 6,
+            "reply_count": 0,
+            "influence_score": 6.0,
+            "stance": "neutral",
+            "translation_zh": ""
+          },
+          {
+            "user": "飞飞即兴喜剧演员",
+            "text": "只有一个人觉得塔斯汀越来越贵了吗？反观华莱士，品质越来越好，联名产品也不贵，至少我没有喷",
+            "like": 6,
+            "reply_count": 0,
+            "influence_score": 6.0,
+            "stance": "question",
+            "translation_zh": ""
+          }
+        ],
+        "clusters": [
+          {
+            "title": "同价位华莱士无人可敌",
+            "keywords": [
+              "同价位华莱士无人可敌"
+            ],
+            "count": 1,
+            "like_weight": 38,
+            "representative_comments": [
+              {
+                "user": "红魔面具Kane",
+                "text": "同价位华莱士无人可敌",
+                "like": 38
+              }
+            ]
+          },
+          {
+            "title": "叫了只炸鸡颜色越深的炸鸡证明油很久没更换了炸了很多天的油才会炸出这么黑的鸡不太健",
+            "keywords": [
+              "叫了只炸鸡颜色越深的炸鸡证明油很久没更换了炸了很多天的油才会炸出这么黑的鸡不太健康建议少吃"
+            ],
+            "count": 1,
+            "like_weight": 35,
+            "representative_comments": [
+              {
+                "user": "捞德吹水华",
+                "text": "叫了只炸鸡，颜色越深的炸鸡，证明油很久没更换了，炸了很多天的油才会炸出这么黑的鸡。不太健康，建议少吃。",
+                "like": 35
+              }
+            ]
+          },
+          {
+            "title": "为什么我吃有些炸全鸡他会感觉到明显的腥味吃肯德基也是",
+            "keywords": [
+              "为什么我吃有些炸全鸡他会感觉到明显的腥味吃肯德基也是"
+            ],
+            "count": 1,
+            "like_weight": 35,
+            "representative_comments": [
+              {
+                "user": "心宁姚",
+                "text": "为什么我吃有些炸全鸡他会感觉到明显的腥味。吃肯德基也是。",
+                "like": 35
+              }
+            ]
+          },
+          {
+            "title": "以前上学最喜欢点叫了个鸡后来 爆出来在厕所腌洗那厕所还是蹲坑式我真的记忆犹新一直",
+            "keywords": [
+              "以前上学最喜欢点叫了个鸡后来",
+              "爆出来在厕所腌洗那厕所还是蹲坑式我真的记忆犹新一直没点过这家了"
+            ],
+            "count": 1,
+            "like_weight": 32,
+            "representative_comments": [
+              {
+                "user": "逢坂大河oAQ",
+                "text": "以前上学最喜欢点叫了个鸡，后来315爆出来在厕所腌洗，那厕所还是蹲坑式，我真的记忆犹新，一直没点过这家了，，",
+                "like": 32
+              }
+            ]
+          },
+          {
+            "title": "就没有跟华莱士同价位的 笑哭",
+            "keywords": [
+              "就没有跟华莱士同价位的",
+              "笑哭"
+            ],
+            "count": 1,
+            "like_weight": 24,
+            "representative_comments": [
+              {
+                "user": "Anisfiller",
+                "text": "就没有跟华莱士同价位的[笑哭]",
+                "like": 24
+              }
+            ]
+          },
+          {
+            "title": "我吃着没有 笑哭",
+            "keywords": [
+              "我吃着没有",
+              "笑哭"
+            ],
+            "count": 1,
+            "like_weight": 8,
+            "representative_comments": [
+              {
+                "user": "可靠的鱼子酱-",
+                "text": "我吃着没有[笑哭]",
+                "like": 8
+              }
+            ]
+          },
+          {
+            "title": "我感觉华莱士的全鸡味道算国内快餐好的那一档了",
+            "keywords": [
+              "我感觉华莱士的全鸡味道算国内快餐好的那一档了"
+            ],
+            "count": 1,
+            "like_weight": 7,
+            "representative_comments": [
+              {
+                "user": "丛雨綾ムラサメ呀",
+                "text": "我感觉华莱士的全鸡味道算国内快餐好的那一档了",
+                "like": 7
+              }
+            ]
+          },
+          {
+            "title": "确实有店家提醒说提前重料腌制过不然会很腥",
+            "keywords": [
+              "确实有店家提醒说提前重料腌制过不然会很腥"
+            ],
+            "count": 1,
+            "like_weight": 7,
+            "representative_comments": [
+              {
+                "user": "瑞雪之下",
+                "text": "确实有，店家提醒说提前重料腌制过，不然会很腥",
+                "like": 7
+              }
+            ]
+          },
+          {
+            "title": "看到你这条我真是天都塌了",
+            "keywords": [
+              "看到你这条我真是天都塌了"
+            ],
+            "count": 1,
+            "like_weight": 6,
+            "representative_comments": [
+              {
+                "user": "吃我宇宙级鬼斩",
+                "text": "...看到你这条我真是天都塌了",
+                "like": 6
+              }
+            ]
+          },
+          {
+            "title": "只有一个人觉得塔斯汀越来越贵了吗反观华莱士品质越来越好联名产品也不贵至少我没有喷",
+            "keywords": [
+              "只有一个人觉得塔斯汀越来越贵了吗反观华莱士品质越来越好联名产品也不贵至少我没有喷"
+            ],
+            "count": 1,
+            "like_weight": 6,
+            "representative_comments": [
+              {
+                "user": "飞飞即兴喜剧演员",
+                "text": "只有一个人觉得塔斯汀越来越贵了吗？反观华莱士，品质越来越好，联名产品也不贵，至少我没有喷",
+                "like": 6
+              }
+            ]
+          },
+          {
+            "title": "华莱士和华莱士之间差距极大",
+            "keywords": [
+              "华莱士和华莱士之间差距极大"
+            ],
+            "count": 1,
+            "like_weight": 5,
+            "representative_comments": [
+              {
+                "user": "月半三king",
+                "text": "华莱士和华莱士之间差距极大。",
+                "like": 5
+              }
+            ]
+          },
+          {
+            "title": "回复 anisfiller 享多味 吃瓜",
+            "keywords": [
+              "回复",
+              "anisfiller",
+              "享多味"
+            ],
+            "count": 1,
+            "like_weight": 3,
+            "representative_comments": [
+              {
+                "user": "非洲刘德Fa",
+                "text": "回复 @Anisfiller :享多味[吃瓜]",
+                "like": 3
+              }
+            ]
+          }
+        ],
+        "controversies": [
+          {
+            "title": "评论区存在反对或质疑声音",
+            "description": "共有 1 条评论表达质疑或反对观点，占比约 2%。",
+            "related_count": 1,
+            "sample_comments": []
+          },
+          {
+            "title": "评论区存在较多追问和求证",
+            "description": "共有 10 条评论提出问题，占比约 20%。",
+            "related_count": 10,
+            "sample_comments": [
+              "为什么我吃有些炸全鸡他会感觉到明显的腥味。吃肯德基也是。",
+              "只有一个人觉得塔斯汀越来越贵了吗？反观华莱士，品质越来越好，联名产品也不贵，至少我没有喷"
+            ]
+          },
+          {
+            "title": "支持与反对观点并存",
+            "description": "支持观点 2 条，反对观点 1 条，评论区存在明显观点分歧。",
+            "related_count": 3,
+            "sample_comments": [
+              "确实有，店家提醒说提前重料腌制过，不然会很腥"
+            ]
+          }
+        ],
+        "summary": "本次分析共抓取 50 条评论，清洗后保留 50 条（移除空内容/表情/重复等 0 条）。 评论区整体以「中立/补充」为主，共 36 条，占比约 72%。 存在 1 条质疑或反对声音（占比约 2%），评论区存在一定观点分歧。 共有 10 条提问或求证类评论（占比约 20%），部分用户在寻求更多信息。 主要讨论围绕以下主题展开：同价位华莱士无人可敌、叫了只炸鸡颜色越深的炸鸡证明油很久没更换了炸了很多天的油才会炸出这么黑的鸡不太健、为什么我吃有些炸全鸡他会感觉到明显的腥味吃肯德基也是。 平台：B站（bilibili）。",
+        "video_summary": {
+          "has_subtitle": false,
+          "summary": "暂无字幕内容，无法生成视频摘要。请配置 OPENAI_API_KEY 以启用 AI 摘要功能。",
+          "key_points": [],
+          "accuracy_note": "未检测到字幕，摘要准确性较低"
+        },
+        "video_type": {
+          "primary": "科普类",
+          "secondary": "带货类",
+          "confidence": 0.67,
+          "reason": "根据关键词「为什么, 知识」判断为科普类内容，辅以带货类特征"
+        },
+        "cleaning_summary": {
+          "original_count": 50,
+          "cleaned_count": 50,
+          "removed_count": 0,
+          "low_info_count": 0,
+          "duplicate_count": 0,
+          "strategy": "严格策略：过滤调侃类评论，保留知识点讨论"
+        },
+        "content_comment_comparison": {
+          "video_focus": [],
+          "audience_focus": [
+            "同价位华莱士无人可敌",
+            "叫了只炸鸡颜色越深的炸鸡证明油很久没更换了炸了很多天的油才会",
+            "为什么我吃有些炸全鸡他会感觉到明显的腥味吃肯德基也是",
+            "以前上学最喜欢点叫了个鸡后来 爆出来在厕所腌洗那厕所还是蹲坑",
+            "就没有跟华莱士同价位的 笑哭"
+          ],
+          "gap_analysis": "评论区关注但视频未深入：以前上学最喜欢点叫了个鸡后来 爆出来在厕所腌洗那厕所还是蹲坑、为什么我吃有些炸全鸡他会感觉到明显的腥味吃肯德基也是、叫了只炸鸡颜色越深的炸鸡证明油很久没更换了炸了很多天的油才会",
+          "audience_needs": [],
+          "missed_topics": [
+            "以前上学最喜欢点叫了个鸡后来 爆出来在厕所腌洗那厕所还是蹲坑",
+            "为什么我吃有些炸全鸡他会感觉到明显的腥味吃肯德基也是",
+            "叫了只炸鸡颜色越深的炸鸡证明油很久没更换了炸了很多天的油才会",
+            "知识点纠错/补充"
+          ]
+        },
+        "visualization_recommendation": {
+          "chart_type": "知识点关注度 + 争议点列表",
+          "reason": "适合展示科普内容的知识要点分布和观众讨论的争议焦点",
+          "fallback": "知识点汇总 + 高赞评论",
+          "data_status": "ready"
+        },
+        "files": {
+          "json": "/api/jobs/h93sl26ffzob9r/000ykwt9ln/comments",
+          "markdown": "/api/jobs/h93sl26ffzob9r/000ykwt9ln/report",
+          "pdf": "/api/jobs/h93sl26ffzob9r/000ykwt9ln/pdf"
+        },
+        "error": "",
+        "warnings": [
+          "字幕检测: 无"
+        ],
+        "created_at": "2026-04-28 18:59:03",
+        "updated_at": "2026-04-28 18:59:11"
+      },
+      "paths": {
+        "comments_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\h93sl26ffzob9r\\000ykwt9ln\\www-bilibili-com-88a2b556b271.comments.json",
+        "report_path": "D:\\Cursor Demo\\comment-intelligence-studio\\backend\\storage\\h93sl26ffzob9r\\000ykwt9ln\\www-bilibili-com-88a2b556b271.report.md",
+        "pdf_path": "C:\\Users\\15858\\Desktop\\Comment_Intelligence_Reports\\2026-04-28\\bilibili_BV1HfodBzEoF_report_2026-04-28_1859.pdf"
+      }
+    }
+  ]
+}
