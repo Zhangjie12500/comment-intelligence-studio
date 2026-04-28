@@ -12,10 +12,15 @@ services:
         sync: false
       - key: OPENAI_API_KEY
         sync: false
+      - key: OPENAI_BASE_URL
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: BILIBILI_COOKIE
+        sync: false
       - key: CORS_ORIGINS
-        # 部署后替换为你的 Vercel 前端 URL
-        # 格式: https://your-frontend-app.vercel.app
-        # 多个用逗号分隔
-        value: https://your-frontend.vercel.app
+        # 允许的域名列表，逗号分隔
+        # 生产环境需要包含你的 Vercel 前端地址
+        value: https://comment-intelligence-studio-zhangjie12500s-projects.vercel.app,http://localhost:5173,http://127.0.0.1:5173
       - key: PYTHON_VERSION
         value: "3.11"

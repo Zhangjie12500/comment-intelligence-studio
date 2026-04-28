@@ -1,368 +1,265 @@
-# 部署指南 — Comment Intelligence Studio
+# ViewLens 部署指南
 
-本文档提供将项目部署到公网的完整步骤。
-
----
+本文档说明如何将 ViewLens 前后端部署到云端服务。
 
 ## 架构概览
 
 ```
-用户浏览器
-    │
-    ├── https://your-frontend.vercel.app   (前端，静态托管)
-    │
-    └── https://your-backend.onrender.com  (后端，FastAPI)
-
-本地环境额外：
-    └── http://localhost:5173  (前端开发服务器)
-    └── http://localhost:8010  (后端 API 开发服务器)
+┌─────────────────────────────────────────────────────────┐
+│                    Vercel Frontend                      │
+│  https://comment-intelligence-studio-xxx.vercel.app   │
+└─────────────────────┬───────────────────────────────────┘
+                      │ HTTP 请求 (API 调用)
+                      ▼
+┌─────────────────────────────────────────────────────────┐
+│                   Render Backend                         │
+│  https://comment-intelligence-backend.onrender.com      │
+│                                                          │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  │
+│  │  FastAPI     │  │  评论抓取    │  │  AI 分析     │  │
+│  │  (端口 8010) │  │  B站/YouTube│  │  OpenAI API  │  │
+│  └──────────────┘  └──────────────┘  └──────────────┘  │
+└─────────────────────────────────────────────────────────┘
 ```
 
----
+## 一、部署后端到 Render
 
-## 第一步：准备密钥
+### 1. 创建 Render 账号
 
-> ⚠️ **安全警告**：不要把包含真实密钥的 `.env` 文件提交到 GitHub。
+访问 [render.com](https://render.com) 并注册账号（可用 GitHub 登录）。
 
-1. **B站 Cookie**（必须）
-   - 打开 Chrome，登录 B站
-   - 按 F12 → Network → 随便点一个 B站 API 请求
-   - 在 Request Headers 里找到 `Cookie:` 字段
-   - 复制完整 Cookie 值（很长，包含 `SESSDATA=` 等）
+### 2. 连接 GitHub 仓库
 
-2. **YouTube API Key**（必须）
-   - 打开 [Google Cloud Console](https://console.cloud.google.com/)
-   - 新建项目 → 启用 **YouTube Data API v3**
-   - 凭据 → 创建 API Key
-   - 复制 Key
-
-3. **OpenAI API Key**（可选，不影响基础功能）
-   - 访问 [platform.openai.com](https://platform.openai.com/)
-   - API Keys → 创建新密钥
-   - 用于 AI 分析总结；不配置则使用本地规则
-
----
-
-## 第二步：部署后端 → Render（推荐）
-
-Render 比 Railway 更稳定，免费套餐足够日常使用。
-
-### 2.1 上传代码到 GitHub
-
-```bash
-cd "d:\Cursor Demo\comment-intelligence-studio"
-
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/comment-intelligence-studio.git
-git push -u origin main
-```
-
-### 2.2 创建 Render Web Service
-
-1. 打开 [render.com](https://render.com/) → Sign Up（用 GitHub 登录）
-2. Dashboard → **New +** → **Web Service**
-3. Connect your GitHub repo `comment-intelligence-studio`
-4. 配置如下：
+1. 在 Render Dashboard 点击 "New +" → "Web Service"
+2. 选择你的 GitHub 仓库
+3. 配置以下设置：
 
 | 配置项 | 值 |
 |--------|-----|
 | Name | `comment-intelligence-backend` |
-| Region | `Oregon` |
+| Region | Oregon (或离你最近的) |
 | Branch | `main` |
-| Root Directory | 留空（仓库根目录） |
-| Runtime | `Python 3.11` |
-| Build Command | `pip install -r backend/requirements.txt` |
+| Root Directory | `backend` |
+| Runtime | Python 3.11 |
+| Build Command | `pip install -r requirements.txt` |
 | Start Command | `uvicorn backend.main:app --host 0.0.0.0 --port $PORT` |
 
-5. **Environment Variables**（点击 Add Environment Variable，逐条添加）：
+### 3. 配置环境变量
 
-| Key | Value |
-|-----|-------|
-| `YOUTUBE_API_KEY` | 你的 YouTube API Key |
-| `BILIBILI_COOKIE` | 你的 B站 Cookie |
-| `OPENAI_API_KEY` | 你的 OpenAI Key（可选） |
-| `CORS_ORIGINS` | `https://your-frontend.vercel.app`（等前端部署完再填） |
-| `PYTHON_VERSION` | `3.11` |
+在 Render 控制台添加以下环境变量（点击 "Environment" → "Add Environment Variable"）：
 
-6. 点击 **Create Web Service**
+| 变量名 | 值 | 说明 |
+|--------|-----|------|
+| `OPENAI_API_KEY` | `sk-xxxxx` | OpenAI API 密钥（从 openai.com 获取） |
+| `OPENAI_BASE_URL` | `https://turingai.plus/v1` | API 中转地址（如果使用中转） |
+| `OPENAI_MODEL` | `gpt-4o-mini` | 默认模型 |
+| `YOUTUBE_API_KEY` | `AIza...` | YouTube API 密钥（可选，用于 YouTube 视频） |
+| `BILIBILI_COOKIE` | `buvid3=xxx` | B站 Cookie（用于抓取 B站评论） |
+| `CORS_ORIGINS` | 见下方 | 允许的前端域名 |
 
-### 2.3 等待构建（约 2~3 分钟）
-
-构建日志会显示：
-```
-pip install -r backend/requirements.txt
-   -> Installing collected packages: fastapi, uvicorn, ...
-uvicorn backend.main:app --host 0.0.0.0 --port $PORT
-   Application startup complete.
-```
-
-### 2.4 记录后端地址
-
-部署成功后，Render 会给你一个 URL：
-```
-https://comment-intelligence-backend.onrender.com
-```
-
-验证后端是否正常：
-```
-https://comment-intelligence-backend.onrender.com/api/health
-```
-应返回：
-```json
-{"ok": true, "jobs": 0}
-```
-
----
-
-## 第三步：部署前端 → Vercel
-
-### 3.1 修改 `frontend/.env.production`
-
-打开 `frontend/.env.production`，把 `https://comment-intelligence.onrender.com/api`
-替换为你在第二步拿到的真实后端地址：
-
-```env
-VITE_API_BASE_URL=https://your-backend-xxxx.onrender.com/api
-```
-
-### 3.2 更新 Render 的 CORS_ORIGINS
-
-回到 Render Dashboard → 你的 Web Service → Environment：
-
-把 `CORS_ORIGINS` 改成你的 Vercel 域名（下一步会拿到）：
+**CORS_ORIGINS 值（重要！）**：
 
 ```
-CORS_ORIGINS=https://your-frontend.vercel.app
+https://comment-intelligence-studio-zhangjie12500s-projects.vercel.app,http://localhost:5173,http://127.0.0.1:5173
 ```
 
-### 3.3 Vercel 部署
+> 注意：将第一个域名替换为你实际的 Vercel 前端地址。
 
-**方式一：Vercel CLI（推荐，最简单）**
+### 4. 部署
+
+1. 点击 "Create Web Service"
+2. 等待构建完成（约 2-3 分钟）
+3. 部署成功后，访问 `https://comment-intelligence-backend.onrender.com/api/health` 确认后端正常运行
+
+### 5. 验证后端
 
 ```bash
-# 在项目根目录下，不是 frontend 下
-cd "d:\Cursor Demo\comment-intelligence-studio"
+# 健康检查
+curl https://comment-intelligence-backend.onrender.com/api/health
 
-# 安装 Vercel CLI
-npm i -g vercel
-
-# 登录（弹出浏览器）
-vercel login
-
-# 部署到预览环境
-vercel
-
-# 回答交互问题：
-# ? Set up and deploy? <Yes>
-# ? Which scope? <your-username>
-# ? Link to existing project? <No>
-# ? Project name? comment-intelligence-studio
-# ? Directory? ./frontend
-# ? Override settings? <No>
-
-# 部署成功后会显示预览 URL，例如：
-# https://comment-intelligence-studio.vercel.app
-
-# 如果满意，部署到生产：
-vercel --prod
+# AI 健康检查
+curl https://comment-intelligence-backend.onrender.com/api/ai/health
 ```
 
-**方式二：Vercel 网页（不需要 CLI）**
+## 二、部署前端到 Vercel
 
-1. 打开 [vercel.com](https://vercel.com/) → Sign Up（GitHub 登录）
-2. Import Project → 选择 `comment-intelligence-studio` 仓库
-3. 配置：
+### 1. 创建 Vercel 账号
+
+访问 [vercel.com](https://vercel.com) 并注册账号（可用 GitHub 登录）。
+
+### 2. 导入项目
+
+1. 点击 "New Project"
+2. 选择你的 GitHub 仓库
+3. 配置以下设置：
 
 | 配置项 | 值 |
 |--------|-----|
-| Framework Preset | `Vite` |
-| Root Directory | `./frontend` |
-| Build Command | `npm install && npm run build` |
+| Framework Preset | Vite |
+| Root Directory | `./` 或 `frontend` |
+| Build Command | `npm run build` |
 | Output Directory | `dist` |
-| Install Command | `npm install` |
 
-4. **Environment Variables**：
+### 3. 配置环境变量
 
-| Key | Value |
-|-----|-------|
-| `VITE_API_BASE_URL` | `https://your-backend-xxxx.onrender.com/api` |
+在 Vercel 控制台点击 "Environment Variables" 添加：
 
-5. 点击 **Deploy**
+| 变量名 | 值 |
+|--------|-----|
+| `VITE_API_BASE_URL` | `https://comment-intelligence-backend.onrender.com/api` |
 
-### 3.4 记录前端地址
+> 注意：将 URL 替换为你实际的 Render 后端地址（不带末尾斜杠）。
 
-Vercel 部署完成后得到：
+### 4. 部署
+
+1. 点击 "Deploy"
+2. 等待部署完成
+3. 访问你获得的 Vercel URL 确认部署成功
+
+## 三、测试清单
+
+部署完成后，按以下顺序测试：
+
+### 1. 测试后端健康检查
+
+在浏览器中打开：
 ```
-https://comment-intelligence-studio.vercel.app
-```
-
-这就是你的公网访问地址。
-
----
-
-## 第四步：最终配置
-
-### 4.1 回到 Render，更新 CORS_ORIGINS
-
-Render Dashboard → Backend → Environment：
-
-```
-CORS_ORIGINS=https://comment-intelligence-studio.vercel.app
+https://comment-intelligence-backend.onrender.com/api/health
 ```
 
-点击 **Save Changes**，Render 会自动重启后端。
-
-### 4.2 添加 Vercel 到 CORS 白名单（备用）
-
-如果用 Vercel 的自动分配的 `.vercel.app` 域名（带分支名），后端 `CORS_ORIGINS` 需要包含所有可能的子域名。
-
-为了方便，可以设置通配符方式（Render 支持）：
-```
-CORS_ORIGINS=https://comment-intelligence-studio.vercel.app,https://comment-intelligence-studio-*.vercel.app
+应返回：
+```json
+{"status": "ok", "service": "ViewLens backend", "jobs": 0}
 ```
 
----
-
-## 第五步：验证部署
-
-用浏览器打开你的 Vercel 前端 URL：
+### 2. 测试 AI 健康检查
 
 ```
-https://comment-intelligence-studio.vercel.app
+https://comment-intelligence-backend.onrender.com/api/ai/health
 ```
 
-### 手动测试 API
+应返回（如果配置了 OpenAI API Key）：
+```json
+{"enabled": true, "model": "gpt-4o-mini", "status": "ok"}
+```
+
+或（如果未配置）：
+```json
+{"enabled": false, "error": "OPENAI_API_KEY 未配置", "status": "error"}
+```
+
+### 3. 测试 Vercel 前端
+
+1. 打开你的 Vercel 前端 URL
+2. 输入一个视频链接测试分析功能
+3. 打开浏览器 DevTools → Network，确认请求地址不是 localhost，而是 Render 后端地址
+
+### 4. 验证跨域请求
+
+如果请求成功，说明 CORS 配置正确。如果失败，检查：
+- 后端 `CORS_ORIGINS` 是否包含你的 Vercel 前端地址
+- Render 部署日志中是否有 CORS 相关错误
+
+## 四、本地开发
+
+### 启动后端
 
 ```bash
-# 测试健康检查
-curl https://your-backend-xxxx.onrender.com/api/health
-
-# 测试创建任务
-curl -X POST https://your-backend-xxxx.onrender.com/api/jobs \
-  -H "Content-Type: application/json" \
-  -d '{"urls":["https://www.bilibili.com/video/BV1GJ411x7h7"],"limit":5,"force_refresh":true,"include_replies":false}'
-```
-
-### 前端功能检查清单
-
-- [ ] 页面正常加载，无白屏
-- [ ] 输入 B站链接，点击"开始分析"
-- [ ] 任务状态从"等待中"变为"抓取中"
-- [ ] 完成后饼图展示立场分布
-- [ ] JSON / Markdown / PDF 下载按钮可用
-- [ ] 控制台无 CORS 报错
-- [ ] 控制台无 JavaScript 报错
-
----
-
-## 第六步：自定义域名（可选）
-
-### Vercel 添加自定义域名
-
-1. Vercel Dashboard → 你的项目 → Settings → Domains
-2. 添加你的域名（如 `comment.example.com`）
-3. 按提示在 DNS 添加 CNAME 记录
-4. 等待验证通过（约 5 分钟）
-
-### Render 自定义域名
-
-1. Render Dashboard → 你的 Web Service → Settings → Custom Domains
-2. 添加你的域名
-3. DNS 添加 CNAME 指向 `comment-intelligence-backend.onrender.com`
-
----
-
-## 本地开发指南
-
-```bash
-# 克隆后安装依赖
-git clone https://github.com/YOUR_USERNAME/comment-intelligence-studio.git
 cd comment-intelligence-studio
-
-# 安装后端依赖
 cd backend
+
+# 安装依赖
 pip install -r requirements.txt
 
-# 安装前端依赖
-cd ../frontend
+# 复制环境变量模板
+cp .env.example .env
+# 编辑 .env 填入你的 API Key
+
+# 启动后端
+python -m uvicorn backend.main:app --port 8010 --reload
+```
+
+### 启动前端
+
+```bash
+cd frontend
+
+# 安装依赖
 npm install
 
-# 启动后端（端口 8010）
-cd ..
-uvicorn backend.main:app --port 8010 --reload
-
-# 启动前端（新终端）
-cd frontend
+# 启动开发服务器
 npm run dev
 ```
 
-前端开发服务器地址：`http://localhost:5173`
+### 本地环境变量
 
----
-
-## 故障排查
-
-### 1. CORS 报错
-
+前端 `.env.development` 已配置本地后端地址：
 ```
-Access to fetch at 'https://backend.onrender.com/api/jobs' from origin
-'https://frontend.vercel.app' has been blocked by CORS policy
+VITE_API_BASE_URL=http://localhost:8010/api
 ```
 
-**解决**：确认 Render 后端的环境变量 `CORS_ORIGINS` 包含你的 Vercel 域名，并重启后端。
+## 五、常见问题
 
-### 2. 后端 500 错误
+### Q: 后端显示 "OPENAI_API_KEY 未配置"？
 
-查看 Render 构建日志：
-Dashboard → 你的 Web Service → Logs
+确保在 Render 环境变量中正确配置了 `OPENAI_API_KEY`。
 
-常见原因：
-- `YOUTUBE_API_KEY` 未设置
-- `BILIBILI_COOKIE` 未设置（登录 B站后才能抓评论）
-- 依赖安装失败（检查 `requirements.txt`）
+### Q: 前端提示 "无法连接云端后端服务"？
 
-### 3. 前端 API 请求超时
+1. 检查 Render 后端是否正常运行
+2. 检查 Vercel 的 `VITE_API_BASE_URL` 是否正确配置
+3. 检查后端 `CORS_ORIGINS` 是否包含你的 Vercel 前端地址
+4. Redeploy 前端（在 Vercel 控制台点击 "Redeploy"）
 
-Render 免费套餐有冷启动（约 30 秒休眠）。第一次请求后端会等待唤醒，这是正常的。
+### Q: B站评论抓取失败？
 
-### 4. B站评论抓取失败
+1. 检查 `BILIBILI_COOKIE` 是否配置
+2. Cookie 是否过期（需要定期更新）
+3. 检查 B站账号是否被限制
 
-检查：
-- B站 Cookie 是否过期（Cookie 有时效，建议 30 天更新一次）
-- Cookie 是否有 `SESSDATA` 字段
-- B站视频是否为私有/删稿件
+### Q: YouTube 评论抓取失败？
 
-### 5. YouTube 429 配额超限
+1. 检查 `YOUTUBE_API_KEY` 是否配置
+2. 检查 API Key 是否有 YouTube Data API v3 权限
+3. 检查 API 配额是否用尽
 
-YouTube Data API 有每日配额（默认 10000 units/天）。超额后：
-- 等待次日配额重置
-- 申请更高配额（需要 Google Cloud Billing 绑定信用卡）
+### Q: 免费版 Render 休眠？
 
----
+Render 免费版在 15 分钟无活动后会休眠，唤醒需要 30 秒 - 1 分钟。首次请求时会有冷启动延迟。
 
-## 更新部署
+## 六、环境变量速查表
 
-代码更新后：
+### Render 后端环境变量
 
-```bash
-# 本地提交
-git add .
-git commit -m "Fix bug"
-git push
+| 变量名 | 是否必需 | 说明 |
+|--------|----------|------|
+| `OPENAI_API_KEY` | 推荐 | OpenAI API 密钥 |
+| `OPENAI_BASE_URL` | 可选 | API 中转地址 |
+| `OPENAI_MODEL` | 可选 | 模型名称，默认 gpt-4o-mini |
+| `YOUTUBE_API_KEY` | YouTube 必需 | YouTube API v3 密钥 |
+| `BILIBILI_COOKIE` | B站必需 | B站登录 Cookie |
+| `CORS_ORIGINS` | 必须 | 允许的前端域名 |
+| `PORT` | 自动 | Render 自动提供 |
 
-# Vercel 自动检测到 GitHub push，自动重新部署
-# Render 也可开启 Auto-Deploy from GitHub
-```
+### Vercel 前端环境变量
 
----
+| 变量名 | 是否必需 | 说明 |
+|--------|----------|------|
+| `VITE_API_BASE_URL` | 必须 | 后端 API 地址 |
 
-## 费用说明
+## 七、修改后重新部署
 
-| 服务 | 套餐 | 限制 |
-|------|------|------|
-| Vercel | Hobby (免费) | 100GB 带宽/月，休眠不降级 |
-| Render | Free | 冷启动 30s，15 分钟无活动休眠，750h/月 |
-| Railway | Hobby (免费) | $5 免费额度/月，休眠后需手动唤醒 |
+### 重新部署后端
+
+Render 会自动检测 Git 推送并重新部署。如需手动触发：
+1. 登录 Render Dashboard
+2. 点击你的后端服务
+3. 点击 "Manual Deploy" → "Deploy latest commit"
+
+### 重新部署前端
+
+1. 登录 Vercel Dashboard
+2. 点击你的前端项目
+3. 点击 "Deployments" → 选择最新部署旁边的 "..." → "Redeploy"
+
+> 注意：修改环境变量后必须重新部署才能生效！

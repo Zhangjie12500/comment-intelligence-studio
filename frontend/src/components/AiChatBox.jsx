@@ -128,7 +128,12 @@ export default function AiChatBox({ analysisData }) {
         setMessages(prev => [...prev, { role: 'assistant', content: data.reply }]);
       }
     } catch (err) {
-      setError('AI 对话请求失败，请检查后端服务或网络连接。');
+      let errorMsg = 'AI 对话请求失败，请检查后端服务或网络连接。';
+      const errStr = err.message || String(err);
+      if (errStr.includes('Failed to fetch') || errStr.includes('NetworkError') || errStr.includes('network')) {
+        errorMsg = '无法连接云端后端服务，请检查 Render 后端是否已启动。';
+      }
+      setError(errorMsg);
     } finally {
       setIsLoading(false);
     }

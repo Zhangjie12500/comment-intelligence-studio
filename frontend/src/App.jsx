@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Circle, Download, Info, FileJson, FileDown, FileText } from 'lucide-react';
-import { createJob, getJob } from './lib/api';
+import { createJob, getJob, getFullUrl } from './lib/api';
 import InputPanel from './components/InputPanel';
 import JobStatusPanel from './components/JobStatusPanel';
 import TaskCard from './components/TaskCard';
@@ -79,7 +79,14 @@ export default function App() {
     } catch (err) {
       submittingSinceRef.current = null;
       setIsSubmitting(false);
-      setPageError(err.message || '请求失败，请检查后端是否启动');
+      // Provide more helpful error messages for common issues
+      let errorMsg = err.message || '请求失败';
+      if (errorMsg.includes('Failed to fetch') || errorMsg.includes('NetworkError') || errorMsg.includes('network')) {
+        errorMsg = '无法连接云端后端服务，请检查 Render 后端是否已启动或 VITE_API_BASE_URL 是否配置正确。';
+      } else if (errorMsg.includes('CORS') || errorMsg.includes('cross-origin')) {
+        errorMsg = '请求被跨域阻止，请检查后端 CORS 配置是否允许本前端域名。';
+      }
+      setPageError(errorMsg);
     }
   }
 
@@ -154,18 +161,18 @@ export default function App() {
           {/* Export buttons */}
           {allDone && doneTasks.length > 0 && (
             <div className="flex items-center gap-2 mr-4">
-              <ExportButton 
-                href={`/api/jobs/${job.job_id}/${doneTasks[0].task_id}/comments`}
+              <ExportButton
+                href={getFullUrl(`/api/jobs/${job.job_id}/${doneTasks[0].task_id}/comments`)}
                 icon={<FileJson size={14} />}
                 label="JSON"
               />
-              <ExportButton 
-                href={`/api/jobs/${job.job_id}/${doneTasks[0].task_id}/report`}
+              <ExportButton
+                href={getFullUrl(`/api/jobs/${job.job_id}/${doneTasks[0].task_id}/report`)}
                 icon={<FileText size={14} />}
                 label="Markdown"
               />
-              <ExportButton 
-                href={`/api/jobs/${job.job_id}/${doneTasks[0].task_id}/pdf`}
+              <ExportButton
+                href={getFullUrl(`/api/jobs/${job.job_id}/${doneTasks[0].task_id}/pdf`)}
                 icon={<FileDown size={14} />}
                 label="PDF"
               />

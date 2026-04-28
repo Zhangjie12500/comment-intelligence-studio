@@ -942,7 +942,7 @@ async def chat(request: ChatRequest) -> ChatResponse:
 
 @app.get("/api/health")
 async def health():
-    return JSONResponse({"ok": True, "jobs": len(jobs)})
+    return JSONResponse({"status": "ok", "service": "ViewLens backend", "jobs": len(jobs)})
 
 
 @app.get("/api/ai/health")
